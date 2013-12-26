@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Antonio Espinosa> -- <Back-end> -- <@antespi>
+    <Abraham Aranda> -- <Front-end>
+    <Jose Manuel Alvarez> -- <Design>
+
+# THANKS
+
+    <Bootstrap>
+    <Roots theme> -- <@retlehs>
+    <Wordpress>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+
