@@ -95,7 +95,9 @@ class PLL_Admin extends PLL_Base {
 		$scripts = array(
 			'admin' => array( array('settings_page_mlang'), array('jquery', 'wp-ajax-response', 'postbox'), 1 ),
 			'post'  => array( array('post', 'media', 'async-upload', 'edit'),  array('jquery', 'wp-ajax-response', 'inline-edit-post'), 0 ),
-			'term'  => array( array('edit-tags'), array('jquery', 'wp-ajax-response', 'inline-edit-tax'), 0 ),
+// AEA - No load 'inline-edit-tax', breaks javascript in edit-tags page
+//			'term'  => array( array('edit-tags'), array('jquery', 'wp-ajax-response', 'inline-edit-tax'), 0 ),
+			'term'  => array( array('edit-tags'), array('jquery', 'wp-ajax-response'), 0 ),
 			'user'  => array( array('profile', 'user-edit'), array('jquery'), 0 ),
 		);
 
