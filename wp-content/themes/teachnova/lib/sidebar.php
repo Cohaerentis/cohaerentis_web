@@ -14,14 +14,16 @@
 class Roots_Sidebar {
   private $conditionals;
   private $templates;
+  private $extra;
 
   public $display = true;
 
 // AEA - We could have several sidebar types
 //  function __construct($conditionals = array(), $templates = array()) {
-  function __construct($type = 'side', $conditionals = array(), $templates = array()) {
+  function __construct($type = 'side', $conditionals = array(), $templates = array(), $extra = null) {
     $this->conditionals = $conditionals;
     $this->templates    = $templates;
+    $this->extra        = $extra;
 
     $conditionals = array_map(array($this, 'check_conditional_tag'), $this->conditionals);
     $templates    = array_map(array($this, 'check_page_template'), $this->templates);
@@ -31,7 +33,7 @@ class Roots_Sidebar {
     // AEA - Config sidebars by template
     } else {
       $barname_func = "roots_{$type}bar_by_template";
-      $sidebar = $barname_func();
+      $sidebar = $barname_func($this->extra);
       if (empty($sidebar) || !is_active_sidebar($sidebar)) {
          $this->display = false;
       }
@@ -52,47 +54,21 @@ class Roots_Sidebar {
 }
 
 // AEA - Config sidebars by template
-function roots_sidebar_by_template() {
-   switch (Roots_Wrapping::$base) {
-      case 'page': if (is_front_page())   return 'home-sidebar';
-                   else                   return 'page-sidebar';
-      case 'page-home':                   return 'home-sidebar';
-      case 'archive-activity':
-      case 'archive':                     return 'archive-sidebar';
-      case 'single':                      return 'single-sidebar';
-      case 'single-activity':             return 'activity-sidebar';
-      case 'taxonomy-country':            return 'country-sidebar';
-   }
-   return false;
+function roots_sidebar_by_template($extra = null) {
+  switch (Roots_Wrapping::$base) {
+    case 'single':                      return 'post-sidebar';
+    case 'archive':                     return 'blog-sidebar';
+  }
+  return false;
 }
 
-function roots_topbar_by_template() {
-   switch (Roots_Wrapping::$base) {
-      case 'page': if (is_front_page())   return 'home-topbar';
-                   else                   return false;
-      case 'page-home':                   return 'home-topbar';
-      case 'archive-activity':
-      case 'archive':                     return 'archive-topbar';
-      case 'single-activity':             return 'activity-topbar';
-      case 'taxonomy-country':            return 'country-topbar';
-   }
-   return false;
+function roots_homebar_by_template($extra = null) {
+  if (is_front_page()) return 'homebar';
+  return false;
 }
 
-function roots_bottombar_by_template() {
-   switch (Roots_Wrapping::$base) {
-      case 'page': if (is_front_page())   return 'home-bottombar';
-                   else                   return false;
-      case 'page-home':                   return 'home-bottombar';
-   }
-   return false;
+function roots_footerbar_by_template($extra = null) {
+  return $extra . '-footerbar';
 }
 
-function roots_footer_topbar_by_template() {
-   return 'footer-topbar';
-}
 
-function roots_footer_bottombar_by_template() {
-   return 'footer-bottombar';
-}
-?>

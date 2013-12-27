@@ -17,17 +17,6 @@
     }
   ?>
 
-  <?php // AEA - Topbar ?>
-  <?php if (roots_display_topbar()) : ?>
-  <div class="container">
-    <div class="row">
-      <aside class="topbar" class="<?php echo roots_sidebar_class('top'); ?>" role="complementary">
-          <?php include roots_sidebar_path('top'); ?>
-      </aside><!-- /.topbar -->
-    </div>
-  </div>
-  <?php endif; ?>
-
   <div class="wrap container" role="document">
     <div class="content row">
   <?php /* AEA - For debugging propuses * /
@@ -39,19 +28,19 @@
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class('side'); ?>" role="complementary">
+        <aside class="wp-sidebar sidebar <?php echo roots_sidebar_class('side'); ?>" role="complementary">
           <?php include roots_sidebar_path('side'); ?>
         </aside><!-- /.sidebar -->
       <?php endif; ?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
-  <?php // AEA - Bottombar ?>
-  <?php if (roots_display_bottombar()) : ?>
+  <?php // AEA - Homebar for scrolldown ?>
+  <?php if (roots_display_homebar()) : ?>
   <div class="container">
     <div class="row">
-      <aside class="bottombar" class="<?php echo roots_sidebar_class('bottom'); ?>" role="complementary">
-        <?php include roots_sidebar_path('bottom'); ?>
+      <aside class="wp-sidebar homebar <?php echo roots_sidebar_class('home'); ?>" role="complementary">
+        <?php include roots_sidebar_path('home'); ?>
       </aside>
     </div>
   </div>

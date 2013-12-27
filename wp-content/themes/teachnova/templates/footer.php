@@ -1,9 +1,11 @@
+<?php $cols = array('one', 'two', 'three', 'four', 'five'); ?>
 <footer class="content-info container" role="contentinfo">
   <div class="row">
-    <div class="col-lg-12">
-      <?php dynamic_sidebar('sidebar-footer'); ?>
-      <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-    </div>
+    <?php foreach($cols as $col) : if (roots_display_footerbar($col)) : ?>
+    <aside class="wp-sidebar <?php echo $col; ?>-footerbar <?php echo roots_sidebar_class($col . '-footer'); ?>" role="complementary">
+      <?php dynamic_sidebar($col . '-footerbar'); ?>
+    </aside>
+    <?php endif; endforeach; ?>
   </div>
 </footer>
 

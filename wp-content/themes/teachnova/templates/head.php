@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wordpress Base by Teachnova">
-  <meta name="author" content="Antonio Espinosa">
+  <meta name="description" content="Cohaerentis SL">
+  <meta name="author" content="Antonio Espinosa, Abraham Aranda, Jose Manuel Alvarez">
   <link rel="shortcut icon" href="/favicon.ico">
   <link type="text/plain" rel="author" href="/humans.txt" />
   <title><?php wp_title('|', true, 'right'); ?></title>

@@ -3,121 +3,75 @@
  * Register sidebars and widgets
  */
 function roots_widgets_init() {
-  // AEA - Register widgetized areas
   register_sidebar(array(
-    'name'          => __('Home Topbar', 'roots'),
-    'id'            => 'home-topbar',
+    'name'          => __('Homebar', 'roots'),
+    'id'            => 'homebar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-home-topbar-title">',
+    'before_title'  => '<div class="widget-homebar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Home Sidebar', 'roots'),
-    'id'            => 'home-sidebar',
+    'name'          => __('Blog Sidebar', 'roots'),
+    'id'            => 'blog-sidebar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-home-sidebar-title">',
+    'before_title'  => '<div class="widget-blog-sidebar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Home Bottombar', 'roots'),
-    'id'            => 'home-bottombar',
+    'name'          => __('Post Sidebar', 'roots'),
+    'id'            => 'post-sidebar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-home-bottombar-title">',
+    'before_title'  => '<div class="widget-post-sidebar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Page Sidebar', 'roots'),
-    'id'            => 'page-sidebar',
+    'name'          => __('Footer Col 1', 'roots'),
+    'id'            => 'one-footerbar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-page-sidebar-title">',
+    'before_title'  => '<div class="widget-one-footerbar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Single Sidebar', 'roots'),
-    'id'            => 'single-sidebar',
+    'name'          => __('Footer Col 2', 'roots'),
+    'id'            => 'two-footerbar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-single-sidebar-title">',
+    'before_title'  => '<div class="widget-two-footerbar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Archive Topbar', 'roots'),
-    'id'            => 'archive-topbar',
+    'name'          => __('Footer Col 3', 'roots'),
+    'id'            => 'three-footerbar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-archive-topbar-title">',
+    'before_title'  => '<div class="widget-three-footerbar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Archive Sidebar', 'roots'),
-    'id'            => 'archive-sidebar',
+    'name'          => __('Footer Col 4', 'roots'),
+    'id'            => 'four-footerbar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-archive-sidebar-title">',
+    'before_title'  => '<div class="widget-four-footerbar-title">',
     'after_title'   => '</div>',
   ));
 
   register_sidebar(array(
-    'name'          => __('Activity Topbar', 'roots'),
-    'id'            => 'activity-topbar',
+    'name'          => __('Footer Col 5', 'roots'),
+    'id'            => 'five-footerbar',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-activity-topbar-title">',
-    'after_title'   => '</div>',
-  ));
-
-  register_sidebar(array(
-    'name'          => __('Activity Sidebar', 'roots'),
-    'id'            => 'activity-sidebar',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-activity-sidebar-title">',
-    'after_title'   => '</div>',
-  ));
-
-  register_sidebar(array(
-    'name'          => __('Country Topbar', 'roots'),
-    'id'            => 'country-topbar',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-country-topbar-title">',
-    'after_title'   => '</div>',
-  ));
-
-  register_sidebar(array(
-    'name'          => __('Country Sidebar', 'roots'),
-    'id'            => 'tematica-sidebar',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-tematica-sidebar-title">',
-    'after_title'   => '</div>',
-  ));
-
-  register_sidebar(array(
-    'name'          => __('Footer Topbar', 'roots'),
-    'id'            => 'footer-topbar',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-footer-topbar-title">',
-    'after_title'   => '</div>',
-  ));
-
-  register_sidebar(array(
-    'name'          => __('Footer Bottombar', 'roots'),
-    'id'            => 'footer-bottombar',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<div class="widget-footer-bottombar-title">',
+    'before_title'  => '<div class="widget-five-footerbar-title">',
     'after_title'   => '</div>',
   ));
 

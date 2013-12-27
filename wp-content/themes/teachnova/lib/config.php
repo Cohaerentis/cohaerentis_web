@@ -20,10 +20,10 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'col-sm-8';
+    $class = 'col-lg-8 col-md-8 col-sm-8 col-xs-12';
   } else {
     // Classes on full width pages
-    $class = 'col-sm-12';
+    $class = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
   }
 
   return $class;
@@ -42,10 +42,14 @@ function roots_template_class() {
 // AEA - Multiple sidebars
 function roots_sidebar_class($type = 'side') {
   switch($type) {
-    case 'top' :    return roots_main_class();
-    case 'bottom' : return roots_main_class();
+    case 'home' :         return roots_main_class();
+    case 'one-footer' :   return 'col-lg-3 col-md-3 col-sm-6 col-xs-12';
+    case 'two-footer' :   return 'col-lg-3 col-md-3 col-sm-6 col-xs-12';
+    case 'three-footer' : return 'col-lg-2 col-md-2 col-sm-4 col-xs-12';
+    case 'four-footer' :  return 'col-lg-2 col-md-2 col-sm-4 col-xs-12';
+    case 'five-footer' :  return 'col-lg-2 col-md-2 col-sm-4 col-xs-12';
     case 'side' :
-    default:        return 'col-sm-4';
+    default:              return 'col-lg-4 col-md-4 col-sm-4 col-xs-12';
   }
 }
 
@@ -69,40 +73,29 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_front_page',
+      'is_page'
     ),
     /**
      * Page template checks (via is_page_template())
      * Any of these page templates that return true won't show the sidebar
      */
-    array(
-      'template-custom.php'
-    )
+    array()
   );
 
   return apply_filters('roots_display_sidebar', $sidebar_config->display);
 }
 
-// AEA - Topbar config
-function roots_display_topbar() {
-  $sidebar_config = new Roots_Sidebar(
-    'top',
-    array('is_404', 'is_front_page'),
-    array('template-custom.php')
-  );
-
-  return apply_filters('roots_display_sidebar', $sidebar_config->display);
+// AEA - Homebar config
+function roots_display_homebar() {
+  $sidebar_config = new Roots_Sidebar('home', array(), array());
+  return apply_filters('roots_display_homebar', $sidebar_config->display);
 }
 
-// AEA - Bootombar config
-function roots_display_bottombar() {
-  $sidebar_config = new Roots_Sidebar(
-    'bottom',
-    array('is_404', 'is_front_page'),
-    array('template-custom.php')
-  );
-
-  return apply_filters('roots_display_sidebar', $sidebar_config->display);
+// AEA - Footerbar config
+function roots_display_footerbar($extra) {
+  $sidebar_config = new Roots_Sidebar('footer', array(), array(), $extra);
+  return apply_filters('roots_display_footerbar', $sidebar_config->display, $extra);
 }
 
 /**
