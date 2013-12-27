@@ -37,7 +37,7 @@ require WPMU_PLUGIN_DIR . '/easy-bootstrap-shortcodes/osc_bootstrap_shortcode.ph
 require WPMU_PLUGIN_DIR . '/tinymce-advanced/tinymce-advanced.php';
 
 // AEA - Conflict with Wordpress fullscreen, enable only in development phase
-require WPMU_PLUGIN_DIR . '/html-editor-syntax-highlighter/html-editor-syntax-highlighter.php';
+// require WPMU_PLUGIN_DIR . '/html-editor-syntax-highlighter/html-editor-syntax-highlighter.php';
 
 require WPMU_PLUGIN_DIR . '/page-list/page-list.php';
 

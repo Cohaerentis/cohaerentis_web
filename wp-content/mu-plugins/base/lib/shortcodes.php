@@ -3,10 +3,10 @@
  * Custom shortcodes
  */
 
-$prefix = 'base_';
+$prefix = 'tn_';
 
 /**
- * [follow] shortcode
+ * [tn_follow] shortcode
  *
  * Follow links
  *  - title       : h3 title
@@ -21,9 +21,9 @@ $prefix = 'base_';
  *  - rss         : RSS
  *
  * Example:
- * [follow]
+ * [tn_follow]
  */
-function base_shortcode_follow($atts) {
+function tn_shortcode_follow($atts) {
    extract(shortcode_atts(array(
       'title' => '',
       'description' => '',
@@ -42,19 +42,19 @@ function base_shortcode_follow($atts) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'follow', 'base_shortcode_follow');
+add_shortcode($prefix . 'follow', 'tn_shortcode_follow');
 
 /**
- * [yt_videos_mosaic] shortcode
+ * [tn_yt_videos_mosaic] shortcode
  *
  * Mosaic of last YouTube videos
  *  - n       : Number of videos (default 8)
  *  - ytuser  : YouTube username
  *
  * Example:
- * [yt_videos_mosaic ytuser="youruserid"]
+ * [tn_yt_videos_mosaic ytuser="youruserid"]
  */
-function base_shortcode_yt_videos_mosaic($atts) {
+function tn_shortcode_yt_videos_mosaic($atts) {
    extract(shortcode_atts(array(
       'ytuser' => '',
       'n' => 8,
@@ -66,7 +66,7 @@ function base_shortcode_yt_videos_mosaic($atts) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'yt_videos_mosaic', 'base_shortcode_yt_videos_mosaic');
+add_shortcode($prefix . 'yt_videos_mosaic', 'tn_shortcode_yt_videos_mosaic');
 
 /**
  * [tn_modal] shortcode
@@ -74,7 +74,7 @@ add_shortcode($prefix . 'yt_videos_mosaic', 'base_shortcode_yt_videos_mosaic');
  * Example:
  * [tn_modal type='hotelchain']
  */
-function base_shortcode_tn_modal($atts, $content) {
+function tn_shortcode_modal($atts, $content) {
    extract(shortcode_atts(array(
       'title'        => '',
       'btn_label'    => 'Open Modal',
@@ -94,7 +94,7 @@ function base_shortcode_tn_modal($atts, $content) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'tn_modal', 'base_shortcode_tn_modal');
+add_shortcode($prefix . 'modal', 'tn_shortcode_modal');
 
 /**
  * [tn_fa_icon] shortcode
@@ -102,7 +102,7 @@ add_shortcode($prefix . 'tn_modal', 'base_shortcode_tn_modal');
  * Example:
  * [tn_fa_icon name='info-circle']
  */
-function base_shortcode_tn_fa_icon($atts) {
+function tn_shortcode_fa_icon($atts) {
    extract(shortcode_atts(array(
       'name'         => 'info',
       'size'         => '',   // lg, x2, x3, x4, x5
@@ -121,7 +121,7 @@ function base_shortcode_tn_fa_icon($atts) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'tn_fa_icon', 'base_shortcode_tn_fa_icon');
+add_shortcode($prefix . 'fa_icon', 'tn_shortcode_fa_icon');
 
 /**
  * [tn_fa_stack] shortcode
@@ -129,7 +129,7 @@ add_shortcode($prefix . 'tn_fa_icon', 'base_shortcode_tn_fa_icon');
  * Example:
  * [tn_fa_stack]
  */
-function base_shortcode_tn_fa_stack($atts, $content) {
+function tn_shortcode_fa_stack($atts, $content) {
    extract(shortcode_atts(array(
       'size'         => '', // lg, x2, x3, x4, x5
       'css_id'       => '',
@@ -141,4 +141,5 @@ function base_shortcode_tn_fa_stack($atts, $content) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'tn_fa_stack', 'base_shortcode_tn_fa_stack');
+add_shortcode($prefix . 'fa_stack', 'tn_shortcode_fa_stack');
+

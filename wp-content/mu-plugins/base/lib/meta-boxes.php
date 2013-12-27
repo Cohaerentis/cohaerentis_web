@@ -11,48 +11,246 @@
 function base_meta_boxes($meta_boxes) {
 
    /**
-    * Activity meta box
+    * Subservice meta box
     */
-   $prefix = 'activity_';
+   $prefix = 'subservice_';
    $meta_boxes[] = array(
-      'id'         => 'activity',
-      'title'      => __('Activity options'),
-      'pages'      => array('activity'),
+      'id'         => 'subservice',
+      'title'      => __('Subservice options'),
+      'pages'      => array('subservice'),
       'context'    => 'normal',
       'priority'   => 'high',
       'show_names' => true,
       'fields'     => array(
          array(
-            'name' => __('Place'),
-            'desc' => __('Place where this activity will occur'),
-            'id' => $prefix . 'place',
-            'type' => 'text'
+            'name' => __('Description'),
+            'desc' => __('Short description of this service'),
+            'id' => $prefix . 'description',
+            'type' => 'wysiwyg',
+            'options' => array('textarea_rows' => 6),
          ),
          array(
-            'name' => __('Date'),
-            'desc' => __('Activity date'),
-            'id' => $prefix . 'date',
-            'type' => 'text_date_timestamp'
+            'name' => __('Service brochure'),
+            'desc' => __('PDF file'),
+            'id' => $prefix . 'download',
+            'type' => 'file',
+            'save_id' => false, // save ID using true
+            'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
          ),
          array(
-            'name' => __('Contact'),
-            'desc' => __('Email contact for people interested in this activity'),
-            'id' => $prefix . 'contact',
-            'type' => 'text'
+            'name' => __('Related documents'),
+            'desc' => __('Other files related with this service'),
+            'id' => $prefix . 'related',
+            'type' => 'file_list',
+         ),
+      ),
+   );
+
+   /**
+    * Knowledge meta box
+    */
+   $prefix = 'knowledge_';
+   $meta_boxes[] = array(
+      'id'         => 'knowledge',
+      'title'      => __('Knowledge options'),
+      'pages'      => array('knowledge'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('Description'),
+            'desc' => __('Short description of this knowledge'),
+            'id' => $prefix . 'description',
+            'type' => 'wysiwyg',
+            'options' => array('textarea_rows' => 6),
          ),
          array(
-            'name' => __('Landing page'),
-            'desc' => __('Activity landing page'),
-            'id' => $prefix . 'landingpage',
-            'type' => 'text'
+            'name' => __('Knowledge map'),
+            'desc' => __('FreeMind file'),
+            'id' => $prefix . 'download',
+            'type' => 'file',
+            'save_id' => false, // save ID using true
+            'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
          ),
+         array(
+            'name' => __('Related documents'),
+            'desc' => __('Other files related with this knowledge'),
+            'id' => $prefix . 'related',
+            'type' => 'file_list',
+         ),
+      ),
+   );
+
+   /**
+    * Link meta box
+    */
+   $prefix = 'link_';
+   $meta_boxes[] = array(
+      'id'         => 'link',
+      'title'      => __('Link options'),
+      'pages'      => array('link'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('URL'),
+            'desc' => __('URL link'),
+            'id' => $prefix . 'url',
+            'type' => 'text',
+         ),
+      ),
+   );
+
+   /**
+    * Customer meta box
+    */
+   $prefix = 'customer_';
+   $meta_boxes[] = array(
+      'id'         => 'customer',
+      'title'      => __('Customer options'),
+      'pages'      => array('customer'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('URL'),
+            'desc' => __('URL link'),
+            'id' => $prefix . 'url',
+            'type' => 'text',
+         ),
+      ),
+   );
+
+   /**
+    * Partner meta box
+    */
+   $prefix = 'partner_';
+   $meta_boxes[] = array(
+      'id'         => 'partner',
+      'title'      => __('Partner options'),
+      'pages'      => array('partner'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
          array(
             'name' => __('Infographic'),
-            'desc' => __('Image that describe activity without words.'),
+            'desc' => __('Partner full image'),
             'id' => $prefix . 'infographic',
             'type' => 'file',
-            'save_id' => false,                       // save ID using true
-            'allow' => array( 'url', 'attachment' )   // limit to just attachments with array( 'attachment' )
+            'save_id' => false, // save ID using true
+            'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+         ),
+         array(
+            'name' => __('Website'),
+            'desc' => __('Website URL'),
+            'id' => $prefix . 'website',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Blog'),
+            'desc' => __('Blog URL'),
+            'id' => $prefix . 'blog',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Facebook'),
+            'desc' => __('Facebook URL'),
+            'id' => $prefix . 'facebook',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Twitter'),
+            'desc' => __('Twitter URL'),
+            'id' => $prefix . 'twitter',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('LinkedIn'),
+            'desc' => __('LinkedIn URL'),
+            'id' => $prefix . 'linkedin',
+            'type' => 'text',
+         ),
+      ),
+   );
+
+   /**
+    * Person meta box
+    */
+   $prefix = 'person_';
+   $meta_boxes[] = array(
+      'id'         => 'person',
+      'title'      => __('Person options'),
+      'pages'      => array('person'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('Mobile'),
+            'desc' => __('Mobile phone'),
+            'id' => $prefix . 'mobile',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Email'),
+            'desc' => __('Email address'),
+            'id' => $prefix . 'email',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Skype'),
+            'desc' => __('Skype user'),
+            'id' => $prefix . 'skype',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Blog'),
+            'desc' => __('Blog URL'),
+            'id' => $prefix . 'blog',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Twitter'),
+            'desc' => __('Twitter URL'),
+            'id' => $prefix . 'twitter',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('LinkedIn'),
+            'desc' => __('LinkedIn URL'),
+            'id' => $prefix . 'linkedin',
+            'type' => 'text',
+         ),
+      ),
+   );
+
+   /**
+    * Space meta box
+    */
+   $prefix = 'space_';
+   $meta_boxes[] = array(
+      'id'         => 'space',
+      'title'      => __('Space options'),
+      'pages'      => array('space'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('URL'),
+            'desc' => __('URL link'),
+            'id' => $prefix . 'url',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Gallery'),
+            'desc' => __('NGG Gallery name'),
+            'id' => $prefix . 'gallery',
+            'type' => 'text',
          ),
       ),
    );
@@ -75,32 +273,49 @@ function base_register_taxonomy_meta_boxes()
 
    $meta_sections = array();
 
-   // first meta section
-   $prefix = 'country_';
+   // Service meta section
+   $prefix = 'service_';
    $meta_sections[] = array(
-      'title' => __('Country options'),         // section title
-      'taxonomies' => array('country'),         // list of taxonomies. Default is array('category', 'post_tag'). Optional
+      'title' => __('Service options'),         // section title
+      'taxonomies' => array('service'),         // list of taxonomies. Default is array('category', 'post_tag'). Optional
       'id' => $prefix . 'section',              // ID of each section, will be the option name
 
       'fields' => array(                        // list of meta fields
          array(
-            'name' => __('Flag'),               // field name
-            'desc' => __('Country flag'),       // field description, optional
-            'id' => $prefix . 'flag',           // field id, i.e. the meta key
+            'name' => __('Infographic'),               // field name
+            'desc' => __('Image that describe this service'),       // field description, optional
+            'id' => $prefix . 'infographic',           // field id, i.e. the meta key
             'type' => 'image'                   // image upload
          ),
          array(
-            'name' => __('Summary'),
-            'desc' => __('Brief introduction to this country'),
-            'id' => $prefix . 'summary',
+            'name' => __('Content'),
+            'desc' => __('Short content of this service'),
+            'id' => $prefix . 'content',
             'type' => 'wysiwyg',                // WYSIWYG editor
             'std' => ''                         // default value, optional
          ),
+      )
+   );
+
+   // Experience meta section
+   $prefix = 'experience_';
+   $meta_sections[] = array(
+      'title' => __('Experience options'),         // section title
+      'taxonomies' => array('experience'),         // list of taxonomies. Default is array('category', 'post_tag'). Optional
+      'id' => $prefix . 'section',              // ID of each section, will be the option name
+
+      'fields' => array(                        // list of meta fields
          array(
-            'name' => __('GoogleMap'),
-            'desc' => __('Address for Google Map'),
-            'id' => $prefix . 'gmap',
-            'type' => 'text',                   // text box
+            'name' => __('Infographic'),               // field name
+            'desc' => __('Image that describe this experience'),       // field description, optional
+            'id' => $prefix . 'infographic',           // field id, i.e. the meta key
+            'type' => 'image'                   // image upload
+         ),
+         array(
+            'name' => __('Content'),
+            'desc' => __('Short content of this experience'),
+            'id' => $prefix . 'content',
+            'type' => 'wysiwyg',                // WYSIWYG editor
             'std' => ''                         // default value, optional
          ),
       )
