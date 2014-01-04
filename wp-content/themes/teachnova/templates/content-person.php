@@ -10,10 +10,6 @@ ini_set( 'display_errors', 'On' );
 /* */
 ?>
 <?php if (have_posts()) : the_post(); ?>
-    <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
-        <div class="page-header">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-        </div>
 <?php
     $name       = get_the_title();
     $position   = get_the_excerpt();
@@ -38,6 +34,47 @@ ini_set( 'display_errors', 'On' );
                   'title' => $name);
     $photo      = get_the_post_thumbnail($post->ID, 'medium', $attr);
 ?>
+<article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
+        <div class="row page-header single-person">
+            <div class="single-person-photo col-lg-2">
+                <?php echo $photo; ?>
+            </div>
+            <div class="single-person-info col-lg-10">
+                <h2 class="entry-title"><?php the_title(); ?></h2>
+                <p><?php echo $position; ?></p>
+                <div class="single-person-contact">
+                    <div class="single-person-qr col-lg-2">
+                        <img src="<?php echo $qr; ?>"/>
+                    </div>
+                    <div class="single-person-social col-lg-3">
+                        <ul>
+                            <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-vimeo-square"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>">vCard</a><br></li>
+                            <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span></li>
+                            <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
+                        </ul>
+                    </div>
+                    <div class="single-person-social col-lg-3">
+                        <ul>
+                            <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
+                            <li><span style="font-size: 25px;"><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
+                            <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tabs-content">
+            <?php the_content(); ?>
+        </div>
+        <div class="row single-person-share">
+            <ul>
+                <li>Compartir en: </li>
+                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
+                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
+                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
+                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
+            </ul>
+        </div>
 <pre>
     mobile = <?php var_export($mobile); ?><br>
     email = <?php var_export($email); ?><br>
