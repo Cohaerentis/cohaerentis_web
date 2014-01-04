@@ -17,7 +17,7 @@
     }
   ?>
 
-  <?php // AAA: ?>
+  <?php // AAA: we need to check if we are or not in tthe front page so we can decide if the container is fluid ?>
   <?php if(is_front_page()):?>
   <?php echo '<div class="wrap container-fluid" role="document">
     <div class="content row home">';?>
