@@ -17,8 +17,14 @@
     }
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="content row">
+  <?php // AAA: ?>
+  <?php if(is_front_page()):?>
+  <?php echo '<div class="wrap container-fluid" role="document">
+    <div class="content row home">';?>
+  <?php else:?>
+  <?php echo '<div class="wrap container" role="document">
+    <div class="content row">';?>
+  <?php endif;?>
   <?php /* AEA - For debugging propuses * /
   wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
   wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));

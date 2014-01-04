@@ -5,7 +5,13 @@
 
 body {
    font-family: sans;
+   height: 100%;
 }
+
+
+   pre{
+      margin-top: 100px;
+   }
 
 
 /* ==========================================================================
@@ -177,15 +183,14 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 /* ==========================================================================
    Content
    ========================================================================== * /
-#wrap {
-   margin-top: 20px;
-}
+ #wrap {
+   }
 
-#content { }
+ #content { }
 
-.mosaic-row {
-   margin-bottom: 20px;
-}
+ .mosaic-row {
+    margin-bottom: 20px;
+ }
 
 
 /* ==========================================================================
@@ -389,9 +394,16 @@ article .hide {
 }
 
 /* ==========================================================================
-   Footer
-   ========================================================================== * /
+   Footer: AAA
+   ========================================================================== */
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #ccc;
+}
 
+/*
 #content-info { }
 
 div.teachnova-repeat-footer-bg {
@@ -419,7 +431,7 @@ div.teachnova-footer {
 .teachnova-footer a {
    text-transform: uppercase;
    color: #fff;
-}
+}*/
 
 /* ==========================================================================
    Tematicas
@@ -699,3 +711,210 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     padding-top: 0;
   }
 }
+*/
+
+ /*==========================================================================
+   Home & Navigation: AAA
+   ========================================================================== */
+
+header{
+   background: url(http://www.cohaerentis.teachnova.net/media/banner_back.jpg)no-repeat;
+   background-size: 100%;
+   height: 102px;
+   padding-top: 40px;
+}
+.navbar{
+   margin-bottom: 0px;
+}
+   .navbar-default{
+      border: none;
+   }
+   .navbar-default .navbar-nav>li>a {
+      color: #aaa;
+   }
+   .navbar-default .navbar-nav>li>a:hover {
+      color: #fff;
+   }
+   .navbar-nav{
+      float: right;
+      margin-right: -65px;
+   }
+   .navbar-header{
+      margin-left: -60px!important;
+      margin-top: -20px;
+   }
+.row.home{
+   margin: 0px;
+   padding: 0px;
+}
+.main{
+   margin: 0px;
+   padding: 0px;
+}
+
+.home-background{
+   max-width: 100%;
+}
+   .home-background img{
+      max-width: 100%;
+      max-height: 100%;
+   }
+
+.home-content{
+   color: white;
+   position: absolute;
+   top: 150px;
+   left: 80px;
+}
+   .home-content .slogan-title{
+      color: #7AAB7E;
+   }
+   .home-content .slogan{
+      font-size: 10px;
+   }
+   .textwidget{
+      min-height: 100%;
+      height: auto;
+      /* Negative indent footer by its height */
+      margin: 0 auto -60px;
+      /* Pad bottom by footer height */
+      padding: 0 0 60px;
+   }
+
+ /*==========================================================================
+   Quienes Somos: AAA
+   ========================================================================== */
+
+   .more{
+      margin-left: 100px;
+   }
+   .who{
+      display: none!important;
+   }
+   .entry-content{
+      margin-bottom: 30px;
+   }
+   .who-text{
+      float: right;
+   }
+   .who-ul{
+      list-style: none;
+      float: left;
+      margin-top: 50px;
+   }
+   .who-li{
+      float: left;
+      width: 260px;
+   }
+
+   /* ==========================================================================
+   Equipo: AAA
+   ========================================================================== */
+   .content-team{
+      margin-top: 50px;
+   }
+   .content-team ul{
+      list-style: none;
+      float: left;
+   }
+   .content-team li{
+      margin-top: 10px;
+   }
+
+      .content-team img{
+         border-radius: 180px;
+         width: 125px;
+         height: 125px;
+         margin-top: -10px;
+      }
+      .content-team #name{
+         font-size: 20px;
+         font-weight: bold;
+      }
+      .content-team #name a{
+         color: #000;
+      }
+      .content-team ul .social{
+         float: left;
+         padding-right: 5px;
+         padding-top: 10px;
+      }
+
+
+
+   /* ==========================================================================
+   Persona: AAA
+   ========================================================================== */
+
+      .single-person-photo{
+         margin-top:30px;
+      }
+      .single-person-info{
+         float:left;
+      }
+
+      .single-person-qr {
+         /*border: 1px solid;*/
+         height: 100px;
+      }
+
+      .single-person-qr img{
+         height: 75px;
+      }
+
+      .single-person-social ul{
+         list-style: none;
+         margin-left: -50px;
+      }
+      .single-person-share ul{
+      list-style: none;
+      }
+      .single-person-share ul li{
+         float:left;
+      }
+
+      .tabs-content {
+         margin-bottom: 20px;
+      }
+
+      .link{
+         position: relative;
+         top: -3px;
+         left: 10px;
+      }
+
+
+
+
+
+   /* ==========================================================================
+   Partners: AAA
+   ========================================================================== */
+   .content-partner{
+         border: 1px solid;
+
+      }
+   /* ==========================================================================
+   Single-partner: AAA
+   ========================================================================== */
+
+   .single-partner-social ul{
+      list-style: none;
+      margin-left: -40px;
+      padding-top: 10px;
+   }
+   .single-partner-social ul li{
+      padding-top: 10px;
+   }
+   .single-partner-share ul{
+      list-style: none;
+   }
+   .single-partner-share ul li{
+      float:left;
+   }
+   .share{
+      position: relative;
+      left: 10px;
+      top: -7px;
+      padding-left: 10px;
+   }
