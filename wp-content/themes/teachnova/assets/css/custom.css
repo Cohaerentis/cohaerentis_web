@@ -980,6 +980,45 @@ header{
       margin-top: 30px;
    }
 
+
+   /* ==========================================================================
+   Single Knowledge: AAA
+   ========================================================================== */
+
+   .knowledge-title{
+      border: none;
+      margin-top: -20px;
+   }
+      .knowledge-title h1{
+         font-size: 30px;
+      }
+
+   .knowledge-description{
+
+   }
+
+   .knowledge-content{
+      margin-top: 30px;
+   }
+
+   .link-to-map{
+      font-size: 20px;
+      margin-left: 20px;
+   }
+      .link-to-map a{
+         color: #555;
+      }
+
+   .single-knowlegde-share{
+      margin-top: 25px;
+   }
+   .single-knowlegde-share ul{
+      list-style: none;
+   }
+      .single-knowlegde-share ul li{
+         float:left;
+      }
+
    /* ==========================================================================
    Slider: AAA
    ========================================================================== */
