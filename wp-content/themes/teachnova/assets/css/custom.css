@@ -943,3 +943,53 @@ header{
       top: -7px;
       padding-left: 10px;
    }
+
+
+   /* ==========================================================================
+   Taxonomy Mosaic: AAA
+   ========================================================================== */
+
+   .tn-taxonomy-term{
+      margin-top: 50px;
+      margin-left: 50px;
+   }
+   .tn-taxonomy-term img{
+      border-radius: 180px;
+      border: 1px solid;
+   }
+
+   .tn-taxonomy-description{
+      margin-top: 30px;
+   }
+
+
+   /* ==========================================================================
+   Knowledge Mosaic: AAA
+   ========================================================================== */
+
+   .content-knowledges-mosaic{
+      margin-top: 50px;
+      margin-left: 50px;
+   }
+      .content-knowledges-mosaic img{
+         border-radius: 180px;
+         border: 1px solid;
+      }
+
+   .tn-knowledge-excerpt{
+      margin-top: 30px;
+   }
+
+   /* ==========================================================================
+   Slider: AAA
+   ========================================================================== */
+   .tn-customers-slider{
+      margin-bottom: 50px!important;
+   }
+
+   .tn-customers-slider ul{
+      list-style: none;
+   }
+   .tn-customers-slider li{
+      float: left;
+   }
