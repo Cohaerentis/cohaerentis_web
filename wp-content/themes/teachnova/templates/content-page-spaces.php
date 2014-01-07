@@ -27,11 +27,13 @@
 ?>
 <?php if (have_posts()) : the_post(); ?>
     <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
-        <div class="page-header">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-        </div>
-        <div class="entry-content">
-            <?php the_content(); ?>
+        <div class="row>">
+            <div class="page-header  col-lg-2 space-title">
+                <h1 class="entry-title"><?php the_title(); ?></h1>
+            </div>
+            <div class="entry-content col-lg-10 knowledge-description">
+                <?php the_content(); ?>
+            </div>
         </div>
         <div class="spaces-mosaic">
             <?php get_template_part('templates/element-spaces-mosaic'); ?>

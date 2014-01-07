@@ -1032,3 +1032,35 @@ header{
    .tn-customers-slider li{
       float: left;
    }
+
+   /* ==========================================================================
+   Espacio y redes: AAA
+   ========================================================================== */
+
+   .net-ul{
+      list-style: none;
+      float: left;
+      margin-top: 50px;
+   }
+   .net-li{
+      float: left;
+      width: 260px;
+   }
+
+
+   /* ==========================================================================
+   Espacio: AAA
+   ========================================================================== */
+
+
+   .space-title{
+      border: none;
+      margin-top: -20px;
+   }
+      .space-title h1{
+         font-size: 30px;
+      }
+
+   .spaces-mosaic{
+      margin-left: 30px;
+   }
