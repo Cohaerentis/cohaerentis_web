@@ -30,6 +30,13 @@ function base_meta_boxes($meta_boxes) {
             'options' => array('textarea_rows' => 6),
          ),
          array(
+            'name' => __('Subtitle'),
+            'desc' => __('Content shown at the right side of the title'),
+            'id' => $prefix . 'subtitle',
+            'type' => 'wysiwyg',
+            'options' => array('textarea_rows' => 6),
+         ),
+         array(
             'name' => __('Service brochure'),
             'desc' => __('PDF file'),
             'id' => $prefix . 'download',
@@ -62,6 +69,13 @@ function base_meta_boxes($meta_boxes) {
             'name' => __('Description'),
             'desc' => __('Short description of this knowledge'),
             'id' => $prefix . 'description',
+            'type' => 'wysiwyg',
+            'options' => array('textarea_rows' => 6),
+         ),
+         array(
+            'name' => __('Subtitle'),
+            'desc' => __('Content shown at the right side of the title'),
+            'id' => $prefix . 'subtitle',
             'type' => 'wysiwyg',
             'options' => array('textarea_rows' => 6),
          ),
@@ -251,6 +265,28 @@ function base_meta_boxes($meta_boxes) {
             'desc' => __('NGG Gallery name'),
             'id' => $prefix . 'gallery',
             'type' => 'text',
+         ),
+      ),
+   );
+
+   /**
+    * Pages meta box
+    */
+   $prefix = 'page_';
+   $meta_boxes[] = array(
+      'id'         => 'page',
+      'title'      => __('Page options'),
+      'pages'      => array('page'),
+      'context'    => 'normal',
+      'priority'   => 'high',
+      'show_names' => true,
+      'fields'     => array(
+         array(
+            'name' => __('Subtitle'),
+            'desc' => __('Content shown at the right side of the title'),
+            'id' => $prefix . 'subtitle',
+            'type' => 'wysiwyg',
+            'options' => array('textarea_rows' => 6),
          ),
       ),
    );

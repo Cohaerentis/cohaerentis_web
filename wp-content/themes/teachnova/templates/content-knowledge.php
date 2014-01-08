@@ -11,14 +11,8 @@
     $related     = get_post_meta( $post->ID, 'knowledge_related' );
 ?>
     <article <?php post_class() ?> id="knowledge-<?php echo $term->term_id; ?>">
-        <div class="row">
-            <div class="page-header col-lg-2 knowledge-title">
-                <h1 class="entry-title"><?php the_title(); ?></h1>
-            </div>
-            <div class="entry-description col-lg-10 knowledge-description">
-                <?php echo $description; ?>
-            </div>
-        </div>
+        <?php /*AAA*/ ?>
+         <?php get_template_part('templates/element-title-content'); ?>
 
         <div class="entry-content knowledge-content">
             <?php the_content(); ?>

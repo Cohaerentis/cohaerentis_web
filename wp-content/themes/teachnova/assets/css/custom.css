@@ -781,7 +781,19 @@ header{
       padding: 0 0 60px;
    }
 
- /*==========================================================================
+   /*==========================================================================
+   Element-title-content: AAA
+   ========================================================================== */
+
+   .header .title{
+      margin-top: -25px;
+   }
+
+   .subtitle ul{
+      list-style: none;
+   }
+
+   /*==========================================================================
    Quienes Somos: AAA
    ========================================================================== */
 
@@ -1064,3 +1076,30 @@ header{
    .spaces-mosaic{
       margin-left: 30px;
    }
+
+
+   .carousel{
+      margin-top: 50px;
+      border-radius: 5px;
+      border:1px solid #ccc;
+
+   }
+
+   .carousel-inner img{
+      width: 100px;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+   }
+   .carousel-inner .item img{
+      display: inline-block;
+   }
+
+   .carousel-control{
+      background-image: none!important;
+      width: 50px;
+      margin-top: -20px;
+   }
+      .carousel-control .glyphicon{
+         color: grey;
+      }

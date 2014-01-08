@@ -45,7 +45,7 @@ function base_register_customer_post_type() {
       'can_export'          => true,
       'hierarchical'        => false,
       'menu_position'       => null,
-      'supports'            => array('title', 'thumbnail')
+      'supports'            => array('title', 'thumbnail', 'custom-fields')
    );
 
    register_post_type('customer', $args);
