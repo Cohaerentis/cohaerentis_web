@@ -38,11 +38,15 @@
 ?>
 <?php if (!empty($term)) : ?>
     <article <?php post_class() ?> id="service-<?php echo $term->term_id; ?>">
-        <div class="page-header">
-            <h1 class="entry-title"><?php echo $term->name; ?></h1>
-        </div>
-        <div class="entry-content">
-            <?php echo $content; ?>
+        <div class="row page-header service">
+            <div class="service-title col-lg-3 col-md-12 col-sd-12 col-xs-12">
+                <h1 class="entry-title"><?php echo $term->name; ?></h1>
+            </div>
+            <div class="service-description col-lg-9 col-md-12 col-sd-12 col-xs-12">
+                <?php echo $term->description; ?>
+            </div>
+        <div class="row entry-content">
+            <?php echo do_shortcode($content); ?>
         </div>
         <div class="services-mosaic">
             <?php get_template_part('templates/element-subservices-mosaic'); ?>

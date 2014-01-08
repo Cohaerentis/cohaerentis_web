@@ -905,13 +905,18 @@ header{
    .content-partners{
       margin-top: 50px;
    }
-   .content-partners ul{
-      list-style: none;
-      float: left;
-   }
-   .content-partners li{
-      margin-top: 10px;
-   }
+      .content-partners ul{
+         list-style: none;
+         float: left;
+      }
+         .content-partners ul .social{
+            float: left;
+            padding-right: 5px;
+            padding-top: 10px;
+         }
+      .content-partners li{
+         margin-top: 10px;
+      }
 
       .content-partners img{
          border-radius: 180px;
@@ -923,14 +928,10 @@ header{
          font-size: 20px;
          font-weight: bold;
       }
-      .content-partnes #name a{
-         color: #000;
-      }
-      .content-partners ul .social{
-         float: left;
-         padding-right: 5px;
-         padding-top: 10px;
-      }
+         .content-partnes #name a{
+            color: #000;
+         }
+
    /* ==========================================================================
    Single-partner: AAA
    ========================================================================== */
@@ -972,6 +973,30 @@ header{
 
    .tn-taxonomy-description{
       margin-top: 30px;
+   }
+
+   /* ==========================================================================
+   Service: AAA
+   ========================================================================== */
+   .service-title h1{
+      margin-top: 0px;
+   }
+
+   .services-mosaic{
+      margin-left: 50px;
+   }
+
+      .services-mosaic img{
+         border: 1px solid;
+         border-radius: 180px;
+         margin-bottom: 30px;
+      }
+
+   /* ==========================================================================
+   Service: AAA
+   ========================================================================== */
+   .subservice-title{
+      margin-bottom: 50px;
    }
 
 
@@ -1024,25 +1049,27 @@ header{
    .single-knowlegde-share{
       margin-top: 25px;
    }
-   .single-knowlegde-share ul{
-      list-style: none;
-   }
-      .single-knowlegde-share ul li{
-         float:left;
+      .single-knowlegde-share ul{
+         list-style: none;
+         float: left;
       }
+         .single-knowlegde-share ul li{
+            float:left;
+         }
 
    /* ==========================================================================
-   Slider: AAA
+   Single experience: AAA
    ========================================================================== */
-   .tn-customers-slider{
-      margin-bottom: 50px!important;
+   .experience-slider{
+      margin-top: 50px;
    }
 
-   .tn-customers-slider ul{
-      list-style: none;
+   .experience-slider li{
+      padding-left: 30px;
    }
-   .tn-customers-slider li{
-      float: left;
+
+   .experience-image img{
+      border-radius: 180px;
    }
 
    /* ==========================================================================
