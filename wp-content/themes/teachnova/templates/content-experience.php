@@ -52,12 +52,13 @@
         </div>
         <div class="entry-meta">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="experience-slider col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <?php get_template_part('templates/element-customers-slider'); ?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="experience-image col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <img src="<?php echo $term->src; ?>" class="img-responsive">
                 </div>
+            </div>
         </div>
     </article>
 <?php else : ?>
