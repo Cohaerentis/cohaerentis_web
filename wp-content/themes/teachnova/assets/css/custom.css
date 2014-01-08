@@ -1081,15 +1081,17 @@ header{
    .carousel{
       margin-top: 50px;
       border-radius: 5px;
-      border:1px solid #ccc;
+      border-top:1px solid #ccc;
+      border-bottom:1px solid #ccc;
 
+   }
+   .carousel-inner ul{
+      list-style: none;
    }
 
    .carousel-inner img{
       width: 100px;
-      margin-left: 100px;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-top: 10px;
    }
    .carousel-inner .item img{
       display: inline-block;
