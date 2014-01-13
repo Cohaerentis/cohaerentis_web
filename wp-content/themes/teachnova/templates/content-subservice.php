@@ -34,9 +34,9 @@ ini_set( 'display_errors', 'On' );
             <?php the_content(); ?>
         </div>
         <div class="row knowledge-links">
-            <div class="knowledge-map col-lg-6">
+            <div class="knowledge-map col-lg-6 col-md-6 col-sd-6 col-xs-12">
                 <span style="font-size: 45px;"><span class="fa fa-download"></span></span><span class="link-to-map"><a href="<?php echo $download; ?>">Descarga la ficha del servicio</a></span>
-                <div class="row single-knowlegde-share">
+                <div class="row single-knowlegde-share col-lg-12 col-md-12 col-sd-12 col-xs-12">
                     <ul>
                         <li>Compartir en: </li>
                         <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
@@ -44,14 +44,14 @@ ini_set( 'display_errors', 'On' );
                         <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
                         <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
                     </ul>
-                    <ul>
-                        <?php if(!empty($qr)):?>
-                        <li><img src="<?php echo $qr; ?>"></li>
-                        <?php endif;?>
-                    </ul>
+                    <?php if(!empty($qr)):?>
+                        <div class="col-lg-12 col-md-12 col-sd-12 col-xs-12">
+                        <img src="<?php echo $qr; ?>">
+                        </div>
+                    <?php endif;?>
                 </div>
             </div>
-            <div class="knowledge-docs col-lg-6">
+            <div class="knowledge-docs col-lg-6 col-md-6 col-sd-6 col-xs-12">
                 <span style="font-size: 45px;"><span class="fa fa-folder"></span></span><span class="link-to-map">Otra documentación</span>
                 <?php foreach ($related[0] as $doc):?>
                     <ul>
