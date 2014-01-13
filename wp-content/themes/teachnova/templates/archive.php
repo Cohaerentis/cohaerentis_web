@@ -9,14 +9,18 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      <?php get_template_part('templates/entry-meta'); ?>
     </header>
-    <div class="entry-summary">
-      <?php the_excerpt(); ?>
+    <div class="row header-post-list">
+        <?php echo the_date('d F Y - ');?><?php echo the_tags('#',', #','.');?>
     </div>
-    <footer>
-      <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
-    </footer>
+    <div class="row entry-summary post-list-content">
+      <div class="post-list-thumb col-lg-3">
+        <?php the_post_thumbnail('thumbnail'); ?>
+      </div>
+      <div class="post-list-excerpt col-lg-6">
+        <?php the_excerpt(); ?>
+      </div>
+    </div>
   </article>
 <?php endwhile; ?>
 
