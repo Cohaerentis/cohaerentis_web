@@ -11,7 +11,7 @@
 			<h2><?php echo $title;?></h2>
 		</div>
 		<div class = "row subtitle col-lg-9 col-md-12 col-sd-12 col-xs-12">
-			<?php echo $subtitle; ?>
+			<?php echo do_shortcode($subtitle); ?>
 		</div>
 	</div>
 

@@ -1203,3 +1203,36 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    .post-content{
       margin-left: -10px;
    }
+
+   /*==========================================================================
+   Contacto: AAA
+   ========================================================================== */
+
+   .contact-add .list-group-item{
+      border: none!important;
+      padding-bottom: 0px;
+   }
+   .contact-info .list-group-item{
+      border: none!important;
+      padding-bottom: 0px;
+   }
+
+   .contact-content{
+      margin-top: 50px;
+   }
+
+   .formmsg{
+      float: right;
+   }
+      .formmsg input[type="submit"]{
+         float: right;
+         margin-top: 10px;
+      }
+      .msg{
+         margin-left: -160px;
+      }
+    .contact-upper img{
+      width: 150px!important;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
