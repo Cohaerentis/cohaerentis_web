@@ -15,7 +15,7 @@
     </div>
     <div class="row entry-summary post-list-content">
       <div class="post-list-thumb col-lg-3">
-        <?php the_post_thumbnail('thumbnail'); ?>
+        <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(100,100)); ?></a>
       </div>
       <div class="post-list-excerpt col-lg-6">
         <?php the_excerpt(); ?>
@@ -23,5 +23,4 @@
     </div>
   </article>
 <?php endwhile; ?>
-
 <?php get_template_part('templates/element-posts-pagination'); ?>
