@@ -69,7 +69,7 @@ ini_set( 'display_errors', 'On' );
               <?php echo the_excerpt(); ?>
           </div>
           <div>
-            <span><a href="<?php echo $url;?>"><strong>Visitar sitio</strong></a></span>
+            <span><a href="<?php echo $url;?>" target="_blank"><strong>Visitar sitio</strong></a></span>
           </div>
             <?php get_template_part('templates/element-social-share'); ?>
         </div>
