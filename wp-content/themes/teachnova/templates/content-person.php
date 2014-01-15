@@ -37,11 +37,11 @@ ini_set( 'display_errors', 'On' );
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
         <div class="page-header single-person container-fluid">
             <div class="row">
-                <div class="single-person-info col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="single-person-info col-lg-12 col-md-12 col-sm-12 col-xs-6">
                     <div class="single-person-photo col-lg-3 col-md-3 col-sm-4 col-xs-12">
                         <?php echo $photo; ?>
                     </div>
-                    <div class="single-person-contact col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="single-person-contact col-lg-4 col-md-4 col-sm-4 col-xs-8">
                         <h2 class="entry-title name"><?php the_title(); ?></h2>
                         <p class="name"><?php echo $position; ?></p>
                         <div class="single-person-social col-lg-4 col-md-6 col-sm-6 col-xs-3">
@@ -65,18 +65,10 @@ ini_set( 'display_errors', 'On' );
                 </div>
             </div>
         </div>
-        <div class="row tabs-content">
+        <div class="row tabs-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <?php the_content(); ?>
         </div>
-        <div class="row single-person-share">
-            <ul>
-                <li>Compartir en: </li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
-            </ul>
-        </div>
+        <?php get_template_part('templates/element-social-share'); ?>
 <pre>
     mobile = <?php var_export($mobile); ?><br>
     email = <?php var_export($email); ?><br>
