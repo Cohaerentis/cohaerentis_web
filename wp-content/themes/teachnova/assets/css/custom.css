@@ -11,7 +11,7 @@ body {
 
    pre{
       margin-top: 100px;
-      /*display: none;*/
+      display: none;
    }
    article{
       margin-top: 125px;
@@ -863,34 +863,48 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    ========================================================================== */
 
       .single-person-photo{
-         margin-top:30px;
+         /*margin-top:30px;*/
       }
       .single-person-info{
-         float:left;
+
       }
+      .single-person-contact{
+         /*margin-left: 50px;*/
+      }
+      .single-person-contact h2{
+         /*margin-top: -7px;*/
+      }
+         .single-person-contact .name{
+            margin-top: 0px;
+         }
 
       .single-person-qr {
-         /*border: 1px solid;*/
-         height: 100px;
-         margin-top: -50px;
       }
 
       .single-person-qr img{
-         height: 170px;
+         height: 180px;
+         margin-top: 30px;
+      }
+      .single-person-social {
+         margin-top: 25px;
       }
 
-      .single-person-social ul{
-         list-style: none;
-         margin-left: -50px;
-      }
+         .single-person-social ul{
+            list-style: none;
+            margin-left: -53px;
+         }
+            .single-person-social ul li{
+               /*float: left;*/
+            }
       .single-person-share ul{
-      list-style: none;
+         list-style: none;
       }
       .single-person-share ul li{
-         float:left;
+         float: left;
       }
 
       .tabs-content {
+         mar
          margin-bottom: 20px;
       }
 
@@ -1236,3 +1250,75 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       margin-left: 50px;
       margin-top: 10px;
     }
+
+div{
+  /* border: 1px solid;*/
+}
+    /* Large desktop */
+@media (max-width: 1200px) {
+   .single-person-contact h2{
+      font-size: 2.5rem;
+   }
+   .single-person-qr img {
+      width: 67%;
+      height: auto;
+      margin-top: 65px;
+   }
+   .single-person-social ul li span{
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 990px) {
+   /*.single-person-contact .name{
+      text-align: center;
+      margin-left: -100px;
+   }
+   .single-person-qr img{
+      width: 50%;
+      margin-top: 20px;
+      margin-left: -15px;
+   }
+   .text{
+      display: none;
+   }
+   .single-person-social a.fa{
+      font-size: 50px;
+   }*/
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+   .text{
+      display: none;
+   }
+   .single-person-contact{
+      width: 350px;
+   }
+   .single-person-social a.fa{
+      font-size: 50px;
+   }
+   .single-person-qr img {
+      width: 160px;
+      margin-top: 0px;
+      margin-left: 25px;
+   }
+   .single-person-social{
+      margin-left: 25px;
+   }5   .single-person-social.last ul li{
+      padding-bottom: 5px;
+      margin-left: -5px;
+   }
+   .single-person-contact .name{
+      text-align: center;
+      margin-left: -120px;
+      margin-top: 10px;
+   }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
