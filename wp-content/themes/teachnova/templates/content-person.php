@@ -48,15 +48,15 @@ ini_set( 'display_errors', 'On' );
                 <div class="single-person-social col-lg-4 col-md-6 col-sm-6 hidden-xs">
                     <ul>
                         <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
-                        <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"> Skype</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"> Google +</span></li>
+                        <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"><a class="link" href="<?php echo $skype; ?>"> Skype</span></a></li>
+                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"><a class="link" href="<?php echo $email; ?>"> Google +</span></a></li>
                     </ul>
                 </div>
                 <div class="single-person-social last col-lg-4 col-md-6 col-sm-6 hidden-xs">
                     <ul>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> Linkedin</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span><span class="text"> Twitter</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span><span class="text"> Blog</span></li>
+                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> <a class="link" href="<?php echo $linkedin; ?>">Linkedin</span></a></li>
+                        <li><span style="font-size: 25px;"><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span><span class="text"> <a class="link" href="<?php echo $twitter; ?>">Twitter</span></a></li>
+                        <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span><span class="text"> <a class="link" href="<?php echo $rss; ?>">Blog</span></a></li>
                     </ul>
                 </div>
             </div>
