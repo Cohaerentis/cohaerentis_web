@@ -39,7 +39,6 @@ ini_set( 'display_errors', 'On' );
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
     <div class="page-header single-person container">
         <div class="row single-person-info">
-<<<<<<< HEAD
             <div class="single-person-photo col-lg-3 col-md-3 col-sm-4 col-xs-4">
                 <?php echo $photo; ?>
             </div>
@@ -98,61 +97,6 @@ ini_set( 'display_errors', 'On' );
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <?php the_content(); ?>
                 </div>
-=======
-            <div class="single-person-photo col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <?php echo $photo; ?>
-            </div>
-            <div class="single-person-contact col-lg-5 col-md-5 hidden-sm hidden-xs">
-                <h2 class="entry-title name"><?php the_title(); ?></h2>
-                <p class="name"><?php echo $position; ?></p>
-                <div class="single-person-social col-lg-4 col-md-6 col-sm-6 col-xs-3">
-                    <ul>
-                        <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
-                        <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"> Skype</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"> Google +</span></li>
-                    </ul>
-                </div>
-                <div class="single-person-social last col-lg-4 col-md-6 col-sm-6 col-xs-3">
-                    <ul>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> Linkedin</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span><span class="text"> Twitter</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span><span class="text"> Blog</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="single-person-qr col-lg-4 col-md-4 hidden-sm hidden-xs">
-                <img src="<?php echo $qr; ?>"/>
-            </div>
-            <div class="single-person-contact hidden-lg hidden-md col-sm-6 col-xs-6 ">
-                <h2 class="entry-title name"><?php the_title(); ?></h2>
-                <p class="name"><?php echo $position; ?></p>
-            </div>
-        </div>
-        <div class="row single-person-info">
-            <div class="single-person-contact hidden-lg hidden-md col-sm-6 col-xs-6 ">
-                <div class="single-person-social col-lg-4 col-md-6 col-sm-6 col-xs-3">
-                    <ul>
-                        <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
-                        <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"> Skype</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"> Google +</span></li>
-                    </ul>
-                </div>
-                <div class="single-person-social last col-lg-4 col-md-6 col-sm-6 col-xs-3">
-                    <ul>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> Linkedin</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $twitter; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span><span class="text"> Twitter</span></li>
-                        <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span><span class="text"> Blog</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="single-person-qr hidden-lg hidden-md col-sm-6 col-xs-6">
-                <img src="<?php echo $qr; ?>"/>
-            </div>
-        </div>
-        <div class="row single-person-content">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <?php the_content(); ?>
->>>>>>> refs/remotes/origin/master
             </div>
         </div>
     </div>
