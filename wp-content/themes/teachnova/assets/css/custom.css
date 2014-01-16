@@ -6,6 +6,7 @@
 body {
    font-family: sans;
    height: 100%;
+   padding-bottom: 50px;
 }
 
 
@@ -22,7 +23,14 @@ body {
    Bugfixes
    ========================================================================== */
 
+#wpadminbar { top:auto; bottom:0 }
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {margin: 6px 6px 0;}
+@media screen and (max-width: 782px) {
+   #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar>a img { top: 3px; }
+}
+@media screen and (max-width: 600px) {
+   #wpadminbar { position: fixed; }
+}
 
 /* ==========================================================================
    Debug sidebars
@@ -42,7 +50,7 @@ body {
 
 /* Fixed Topbar Navigation */
 body.top-navbar { padding-top: 60px; }
-body.admin-bar .navbar-fixed-top { top: 28px; }
+/* body.admin-bar .navbar-fixed-top { top: 28px; } */
 
 #banner .teachnova-repeat-header-bg {
    background: #233671 url('/assets/img/header_repeat_bg.png') repeat-x left top;
