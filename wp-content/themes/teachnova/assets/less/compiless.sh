@@ -22,7 +22,7 @@ CSS_PATH="$BIN_PATH/../css"
 MAIN_CSS="$CSS_PATH/main.css"
 MAIN_MIN_CSS="$CSS_PATH/main.min.css"
 RECESS_BIN=/usr/bin/recess
-if [ ! -x "$RECESS_BIN" ]; then RECESS_BIN=/usr/local/bin/recess fi
+if [ ! -x "$RECESS_BIN" ]; then RECESS_BIN=/usr/local/bin/recess; fi
 
 if [ ! -x "$RECESS_BIN" ]; then
    echo "ERROR : Recess is not globally installed. Please use 'npm install recess -g' to install it"
