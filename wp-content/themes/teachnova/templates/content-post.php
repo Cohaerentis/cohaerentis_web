@@ -15,8 +15,12 @@
         <div class="entry-content post-content">
             <?php the_content(); ?>
         </div>
-
-        <?php get_template_part('templates/element-social-share');?>
+        <div class="row">
+            <?php get_template_part('templates/element-social-share');?>
+        </div>
+        <div class="row single-post-comments"
+            <?php comments_template('comments.php'); ?>
+        </div>
     </article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
