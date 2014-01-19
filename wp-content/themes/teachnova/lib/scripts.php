@@ -14,7 +14,8 @@
  */
 
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.css', false, 'null');
+  //wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
   // AEA - Custom CSS
   // AEA - Already included in wp-visual-icon-fonts
   // wp_enqueue_style('font_awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', false, null);

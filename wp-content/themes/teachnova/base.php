@@ -17,14 +17,12 @@
     }
   ?>
 
-  <?php // AAA: we need to check if we are or not in tthe front page so we can decide if the container is fluid ?>
   <?php if(is_front_page()):?>
-  <?php echo '<div class="wrap container-fluid" role="document">
-    <div class="content row home">';?>
-  <?php else:?>
-  <?php echo '<div class="wrap container" role="document">
-    <div class="content row">';?>
+<div class="wrap bg-home">
+    <?php the_post_thumbnail(array(1351,1366));?>
   <?php endif;?>
+ <?php echo '<div class="wrap container" role="document">
+    <div class="content row">';?>
   <?php /* AEA - For debugging propuses * /
   wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
   wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
@@ -40,6 +38,7 @@
       <?php endif; ?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->
+</div><!-- /. wrap-bg -->
 
   <?php // AEA - Homebar for scrolldown ?>
   <?php if (roots_display_homebar()) : ?>

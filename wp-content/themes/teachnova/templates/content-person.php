@@ -47,7 +47,7 @@ ini_set( 'display_errors', 'On' );
                 <p class="name"><?php echo $position; ?></p>
                 <div class="single-person-social col-lg-4 col-md-6 col-sm-6 hidden-xs">
                     <ul>
-                        <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
+                        <li><span style="font-size: 25px;"><a href="#" class="fa fa-briefcase"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
                         <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"><a class="link" href="<?php echo $skype; ?>"> Skype</span></a></li>
                         <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"><a class="link" href="<?php echo $email; ?>"> Google +</span></a></li>
                     </ul>
@@ -65,7 +65,7 @@ ini_set( 'display_errors', 'On' );
             </div>
             <div class="single-person-social hidden-lg hidden-md col-sm-3 hidden-xs">
                 <ul>
-                    <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
+                    <li><span style="font-size: 25px;"><a href="#" class="fa fa-briefcase"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
                     <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"> Skype</span></li>
                     <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"> Google +</span></li>
                     <li><span style="font-sizemd25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> Linkedin</span></li>
@@ -83,7 +83,7 @@ ini_set( 'display_errors', 'On' );
             </div>
             <div class="single-person-social hidden-lg hidden-md hidden-sm col-xs-12">
                 <ul>
-                    <li><span style="font-size: 25px;"><a href="#" class="glyphicon glyphicon-credit-card fa"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
+                    <li><span style="font-size: 25px;"><a href="#" class="fa fa-briefcase"><span style="color: transparent; display: none;">icon-vimeo</span></a></span><a class="link" href="<?php echo $vcard_url; ?>"><span class="text">vCard</span></a><br></li>
                     <li><span style="font-size: 25px;"><a href="#" class="fa fa-skype"><span style="color: transparent; display: none;">icon-skype</span></a></span><span class="text"> Skype</span></li>
                     <li><span style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span><span class="text"> Google +</span></li>
                     <li><span style="font-sizemd25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span><span class="text"> Linkedin</span></li>
