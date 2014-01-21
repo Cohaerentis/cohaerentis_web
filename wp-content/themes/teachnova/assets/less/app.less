@@ -10,6 +10,22 @@
    ========================================================================== */
 
 body { }
+.bg-home{
+   background: url(/media/background_size.jpeg);
+   height: 665px;
+   font-family: sans;
+}
+
+
+   pre{
+      margin-top: 100px;
+      display: none;
+   }
+   article{
+      margin-top: 125px;
+      margin-bottom: 125px;
+   }
+
 
 
 
@@ -18,6 +34,8 @@ body { }
    ========================================================================== */
 
 .banner { }
+
+
 
 
 
@@ -63,9 +81,67 @@ body { }
 /* ==========================================================================
    Footer
    ========================================================================== */
-
-.content-info { }
-
+.footer{
+   background-color: rgb(213,214,214);
+   border-top: 1px solid #ccc;
+}
+.footer-first{
+   border-right: 1px solid #ccc;
+   padding-top: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+   #img-one{
+      width: 250px!important;
+   }
+   #img-two{
+      width: 200px!important;
+   }
+.footer-second{
+   border-right: 1px solid #ccc;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.footer-second img{
+   width: 100px;
+}
+.footer-news{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   height: 60px;
+}
+   .footer-news span{
+      font-size:  10px;
+   }
+   .footer-news .text{
+      paddin-right: 0px;
+   }
+.footer-third span{
+   font-size: 30px!important;
+}
+.footer-third .links{
+   margin-top:20px;
+}
+.footer-third .links ul{
+   list-style: none;
+   margin-left: -35px;
+}
+.footer-third .social-share{
+   margin-left: -30px!important;
+}
+.footer-third #share, .alter #share {
+   display: none;
+}
+#address{
+   font-size: 13px;
+   margin-left: 20px;
+}
+#search input{
+   margin-left: 20px;
+   margin-top: 10px;
+   border-radius: 25px;
+   border: none;
+}
 
 
 /* ==========================================================================
@@ -83,9 +159,114 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media (max-width: @screen-xs) {
+   .bg-home{
+      background-position-x: -700px!important;
+   }
+   .navbar-nav {
+      margin-right: 0px!important;
+   }
+   #img-one{
+      width: 200px!important;
+      margin-top: 20px;
+   }
+   #img-two{
+      width: 150px!important;
+   }
+}
+@media (min-width: @screen-xs) and (max-width: @screen-sm-min) {
+   .bg-home{
+      background-position-x: -500px!important;
+   }
+   #img-one{
+      width: 250px!important;
+      margin-top: 20px;
+   }
+   #img-two{
 
-@media (min-width: @screen-sm-min) { }
+      width: 200px!important;
+   }
+}
 
-@media (min-width: @screen-md-min) { }
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-sm) {
+   .navbar-nav {
+      margin-right: 0px!important;
+   }
+   #img-one{
+      width: 200px!important;
+      margin-top: 20px;
+   }
+   #img-two{
+      width: 150px!important;
+   }
+}
+
+@media (min-width: @screen-sm) and (max-width: @screen-md-min) {
+   .bg-home{
+      background-position-x: -300px!important;
+   }
+   #img-one{
+      width: 200px!important;
+      margin-top: 20px;
+   }
+   #img-two{
+
+      width: 150px!important;
+   }
+}
+
+@media (max-width: @screen-md-min) {
+   .navbar-nav {
+      margin-right: 0px!important;
+      float:left!important;
+      margin: 0 0 0 0;
+   }
+   .navbar-collapse {
+      padding-right: 1px;
+      padding-left: 0px;
+   }
+   .navbar-collapse ul {
+      width: 100%;
+   }
+   .nav > li:hover {
+      background-color: rgba(179, 181, 181, 0.7);
+   }
+   .navbar-default .navbar-nav>li>a {
+      color: #444!important;
+   }
+   .navbar-default .navbar-nav>li>a:hover {
+      color: #fff!important;
+   }
+   .navbar-collapse {
+      border-top: 0px;
+      box-shadow: none;
+      /*background: linear-gradient(to bottom, rgba(21, 25, 40, 0.8),  rgba(0, 0, 0, 0));*/
+      background-color: rgba(213, 214, 214, 0.7);
+   }
+   #address{
+      font-size: 12px;
+      text-align: center;
+      margin-left: 0px;
+   }
+   .alter .social-share{
+      margin-top: -3px;
+   }
+   .alter .social-share ul{
+      padding-left: 0px;
+   }
+}
+
+@media (max-width: @screen-lg) {
+   #search input {
+      margin-top: 10px;
+   }
+}
+
+@media (min-width: @screen-md) and (max-width: @screen-lg-min) {
+   #search input {
+      margin-top: 10px;
+   }
+}
+
+

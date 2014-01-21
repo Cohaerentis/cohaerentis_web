@@ -3,8 +3,6 @@
     Post-type: Person
     File: content-person
 </pre>
-<!--less-->
-<script type="text/javascript"> localStorage.clear();</script>
 <?php
 /* AEA - For debugging propuses * /
 ini_set( 'error_reporting', -1 );

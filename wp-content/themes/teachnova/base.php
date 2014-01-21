@@ -19,7 +19,7 @@
 
   <?php if(is_front_page()):?>
 <div class="wrap bg-home">
-    <?php the_post_thumbnail(array(1351,1366));?>
+    <?php //the_post_thumbnail();?>
   <?php endif;?>
  <?php echo '<div class="wrap container" role="document">
     <div class="content row">';?>
@@ -51,7 +51,7 @@
   </div>
   <?php endif; ?>
 
-  <?php //get_template_part('templates/footer'); ?>
+  <?php get_template_part('templates/footer'); ?>
 
 </body>
 </html>

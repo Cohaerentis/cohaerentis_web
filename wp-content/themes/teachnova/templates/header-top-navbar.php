@@ -1,5 +1,5 @@
 <header class="banner navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
+  <div class="row">
     <div class="navbar-header col-lg-4 col-md-2 col-sm-12 hidden-xs">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>

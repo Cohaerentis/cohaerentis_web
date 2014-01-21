@@ -1,6 +1,6 @@
 <div class="social-share">
 	<ul>
-		<li>Compartir en: </li>
+		<li id="share">Compartir en: </li>
 		<li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
 		<li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
 		<li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>

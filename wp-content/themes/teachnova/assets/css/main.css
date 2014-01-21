@@ -4544,13 +4544,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 991px) {
   .navbar-nav .open .dropdown-menu {
-    /*position: static;
+    position: static;
     float: none;
     width: auto;
     margin-top: 0;
     background-color: transparent;
     border: 0;
-    box-shadow: none*/;
+    box-shadow: none;
   }
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
@@ -7119,6 +7119,22 @@ td.visible-print {
    Base
    ========================================================================== */
 
+.bg-home {
+  height: 665px;
+  font-family: sans;
+  background: url(/media/background_size.jpeg);
+}
+
+pre {
+  display: none;
+  margin-top: 100px;
+}
+
+article {
+  margin-top: 125px;
+  margin-bottom: 125px;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -7149,6 +7165,84 @@ td.visible-print {
    Footer
    ========================================================================== */
 
+.footer {
+  background-color: #d5d6d6;
+  border-top: 1px solid #ccc;
+}
+
+.footer-first {
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right: 1px solid #ccc;
+}
+
+#img-one {
+  width: 250px!important;
+}
+
+#img-two {
+  width: 200px!important;
+}
+
+.footer-second {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.footer-second img {
+  width: 100px;
+}
+
+.footer-news {
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-news span {
+  font-size: 10px;
+}
+
+.footer-news .text {
+  paddin-right: 0;
+}
+
+.footer-third span {
+  font-size: 30px!important;
+}
+
+.footer-third .links {
+  margin-top: 20px;
+}
+
+.footer-third .links ul {
+  margin-left: -35px;
+  list-style: none;
+}
+
+.footer-third .social-share {
+  margin-left: -30px !important;
+}
+
+.footer-third #share,
+.alter #share {
+  display: none;
+}
+
+#address {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+#search input {
+  margin-top: 10px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -7176,14 +7270,109 @@ figure.alignnone {
    Media Queries
    ========================================================================== */
 
+@media (max-width: 480px) {
+  .bg-home {
+    background-position-x: -700px !important;
+  }
+  .navbar-nav {
+    margin-right: 0!important;
+  }
+  #img-one {
+    width: 200px!important;
+    margin-top: 20px;
+  }
+  #img-two {
+    width: 150px!important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .bg-home {
+    background-position-x: -500px !important;
+  }
+  #img-one {
+    width: 250px!important;
+    margin-top: 20px;
+  }
+  #img-two {
+    width: 200px!important;
+  }
+}
+
 @media (min-width: 768px) {
-
+  .navbar-nav {
+    margin-right: 0!important;
+  }
+  #img-one {
+    width: 200px!important;
+    margin-top: 20px;
+  }
+  #img-two {
+    width: 150px!important;
+  }
 }
 
-@media (min-width: 992px) {
-
+@media (min-width: 768px) and (max-width: 992px) {
+  .bg-home {
+    background-position-x: -300px !important;
+  }
+  #img-one {
+    width: 200px!important;
+    margin-top: 20px;
+  }
+  #img-two {
+    width: 150px!important;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 992px) {
+  .navbar-nav {
+    float: left!important;
+    margin: 0 0 0 0;
+    margin-right: 0!important;
+  }
+  .navbar-collapse {
+    padding-right: 1px;
+    padding-left: 0;
+  }
+  .navbar-collapse ul {
+    width: 100%;
+  }
+  .nav > li:hover {
+    background-color: rgba(179, 181, 181, 0.7);
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #444!important;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #fff!important;
+  }
+  .navbar-collapse {
+    background-color: rgba(213, 214, 214, 0.7);
+    border-top: 0;
+    box-shadow: none;
+  }
+  #address {
+    margin-left: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+  .alter .social-share {
+    margin-top: -3px;
+  }
+  .alter .social-share ul {
+    padding-left: 0;
+  }
+}
 
+@media (max-width: 1200px) {
+  #search input {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #search input {
+    margin-top: 10px;
+  }
 }
