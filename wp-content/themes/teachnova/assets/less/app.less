@@ -6,6 +6,27 @@
 @grid-float-breakpoint:     @screen-md-min;
 @base-color:                #00B975;
 
+/*
+ * Mobile first desing, so declare mobile rules and then the other sizes by media queries
+ * Template :
+.template {
+   /* rules for mobile vertical (< 480) */
+
+   @media (min-width: @screen-xs-min) {
+      /* rules for mobile horizontal (480 > 768)  */
+   }
+   @media (min-width: @screen-sm-min) {
+      /* rules for tablet (768 > 992) */
+   }
+   @media (min-width: @screen-md-min) {
+      /* rules for desktop (992 > 1200) */
+   }
+   @media (min-width: @screen-lg-min) {
+      /* rules for large (> 1200) */
+   }
+}
+
+ */
 /* ==========================================================================
    Base
    ========================================================================== */
