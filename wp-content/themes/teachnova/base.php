@@ -16,40 +16,36 @@
       get_template_part('templates/header');
     }
   ?>
+<div class="wrap">
+  <div class="container" role="document">
+    <?php /* AAA: <div class="content row">*/ ?>
+      <?php /* AEA - For debugging propuses * /
+      wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
+      wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
+      wrout("Frontpage : " . var_export(is_front_page(), true));
+      /* */ ?>
+        <main class="<?php echo roots_main_class(); ?> main" role="main">
+          <?php include roots_template_path(); ?>
+        </main><!-- /.main -->
+        <?php if (roots_display_sidebar()) : ?>
+          <aside class="wp-sidebar sidebar <?php echo roots_sidebar_class('side'); ?>" role="complementary">
+            <?php include roots_sidebar_path('side'); ?>
+          </aside><!-- /.sidebar -->
+        <?php endif; ?>
+    <!--</div> /.content -->
+  </div><!-- /.container -->
+</div><!--  /.wrap -->
 
-  <?php if(is_front_page()):?>
-<div class="wrap bg-home">
-    <?php //the_post_thumbnail();?>
-  <?php endif;?>
- <?php echo '<div class="wrap container" role="document">
-    <div class="content row">';?>
-  <?php /* AEA - For debugging propuses * /
-  wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
-  wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
-  wrout("Frontpage : " . var_export(is_front_page(), true));
-  /* */ ?>
-      <main class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="wp-sidebar sidebar <?php echo roots_sidebar_class('side'); ?>" role="complementary">
-          <?php include roots_sidebar_path('side'); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
-</div><!-- /. wrap-bg -->
-
-  <?php // AEA - Homebar for scrolldown ?>
+  <?php /* AEA - Homebar for scrolldown ?>
   <?php if (roots_display_homebar()) : ?>
   <div class="container">
     <div class="row">
       <aside class="wp-sidebar homebar <?php echo roots_sidebar_class('home'); ?>" role="complementary">
-        <?php include roots_sidebar_path('home'); ?>
+        <?php include //roots_sidebar_path('home'); ?>
       </aside>
     </div>
   </div>
-  <?php endif; ?>
+  <?php endif; */?>
 
   <?php get_template_part('templates/footer'); ?>
 

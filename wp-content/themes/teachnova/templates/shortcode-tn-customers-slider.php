@@ -4,7 +4,7 @@
     $customers = array();
 
     $args = array(
-        'post_per_page' => $max,
+        'posts_per_page' => $max,
         'post_type'   => 'customer',
         'post_status' => 'publish',
     );

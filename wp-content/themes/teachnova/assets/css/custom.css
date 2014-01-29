@@ -1,7 +1,177 @@
+/* =====================
+   página de contacto
+   ===================== */
+   .contact{
+      height: 600px;
+   }
+   .contact h1{
+      font-family: Lato;
+      color: #eee;
+      background-color: #00B975;
+      padding: 10px 0 15px 20px;
+   }
+   .mandatory{
+      font-size: 0.4em;
+      color: white;
+      font-family: Lato-LightItalic;
+      margin-left: 200px;
+   }
+   .form{
+      border: none;
+      height: 40px;
+   }
+   .form:active{
+      border: none;
+      height: 40px;
+   }
+   .form div{
+      margin-top: 15px;
+   }
+
+   .form .box-title{
+      background-color: #00B975;
+      height: 45px;
+
+   }
+      .form .box-title span{
+         color: #eee;
+         font-size: 1.2em;
+         position: relative;
+         top: 25%;
+      }
+   .formmsg .box-title-msg{
+      background-color: #00B975;
+      height: 45px;
+
+   }
+      .formmsg .box-title-msg p{
+         color: #eee;
+         font-size: 1.2em;
+         position: relative;
+         top: 25%;
+         text-align: center;
+      }
+   .form .box-text{
+      border: 1px solid #999;
+      border-left: none;
+      background-color: white;
+      height: 45px;
+      font-family: Lato-LightItalic;
+   }
+   .formmsg{
+      top: 155px;
+   }
+  .formmsg textarea{
+      border: 1px solid #999;
+      border-top: none;
+      width: 100%;
+   }
+
+   .form-button{
+      margin-top: 170px;
+      margin-left: 380px;
+   }
+
+   .form-button input{
+      margin-left: 25px;
+      border: none;
+      background-color: transparent;
+      color: white;
+   }
+   div.wpcf7 {
+      margin-left: -15px;
+      margin-right: -15px;
+   }
+   .su-gmap{
+      margin-top: 20px!important;
+   }
+/* =========fin========= */
+
+.footer-right, .footer-middle{
+   background-color: #181818;;
+   text-align: center;
+}
+.footer-right{
+}
+   .footer-right .blocks{
+      text-align: left;
+      line-height: 17px;
+      float: left;
+   }
+
+.footer-right .blocks ul{
+   list-style: none;
+   margin-top: 20px;
+   padding-left: 0px;
+}
+.footer-right .blocks li{
+   font-size: 0.9em
+}
+.footer-right .blocks li a{
+   color: #999;
+}
+.footer-right .blocks li a:hover{
+   color: #2C63A1;
+   text-decoration: none;
+}
+.footer-right .up-title{
+   font-size: 2em!important;
+   margin-bottom: 10px;
+   color: #999;
+}
+.footer-right .blocks{
+
+}
+
+
+
+
+
+.footer-down{
+   /*height: 75px;*/
+}
+
+   .footer-down #img-one{
+      width: 160px!important;
+      margin-top: 40px;
+      margin-left: 40px;
+   }
+   .footer-down #img-two{
+      width: 120px!important;
+      margin-top: 25px;
+      margin-left: 80px;
+   }
+   .footer-down ul{
+      list-style: none;
+      margin-top: 65px;
+      margin-left: -15px;
+
+   }
+   .footer-down li{
+      float: left;
+   }
+      .footer-down li a{
+         color: #222;
+         margin-left: 5px;
+      }
+   .footer-text{
+      font-size: 0.8em;
+      line-height: 14px!important;
+      margin-top: 10px;
+   }
+   .second{
+      margin-top: 21px!important;
+   }
+
 /* ==========================================================================
    Base
    ========================================================================== */
-
+#team-text{
+   width: 200px;
+}
+#team-text{
+   width: 200px;
+}
 
 
 
@@ -28,1251 +198,94 @@
 
 /* TO REVIEW */
 
-
 /* =============================================================================
    Header
    ========================================================================== */
 
-#banner { }
 
-/* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
-/* body.admin-bar .navbar-fixed-top { top: 28px; } */
-
-#banner .teachnova-repeat-header-bg {
-   background: #233671 url('/assets/img/header_repeat_bg.png') repeat-x left top;
-   height: 100px;
-}
-
-#banner .teachnova-header-bg {
-   background: url('/assets/img/header_bg.png') no-repeat left top;
-   height: 100px;
-}
-
-#banner .teachnova-header {
-   margin: 20px 0px;
-}
-
-#banner a.logo  {
-   margin: 0px 25px 20px 0px;
-   display: block;
-   float: left;
-}
-
-#banner a#teachnova-logo.logo{
-   background: transparent url('/assets/img/teachnova_header_logo.png') no-repeat top left;
-   width: 110px;
-   height: 55px;
-}
-
-#banner a#cohaerentis-logo.logo{
-   background: transparent url('/assets/img/cohaerentis_header_logo.png') no-repeat top left;
-   width: 175px;
-   height: 55px;
-}
-
-#banner .teachnova-langmenu {
-   float: right;
-}
-
-#banner .teachnova-langmenu li {
-   display: inline;
-   padding: 0px 4px 0px 4px;
-   margin: 0px;
-}
-
-#banner .teachnova-langmenu a {
-   text-transform:uppercase;
-   font-size: 0.8em;
-   color: #b2b4c7;
-}
-
-#banner .teachnova-langmenu a:hover {
-   text-decoration: none;
-}
-
-#banner .teachnova-search {
-   padding: 0px;
-   margin: 10px 0px 0px 0px;
-   position: relative;
-}
-
-#banner .teachnova-search form {
-   margin: 0px;
-}
-
-#banner .teachnova-search .teachnova-search-query {
-   background: while;
-   border: 1px solid #b2b4c7;
-   padding: 1px 10px;
-   color: #707070;
-   width: 200px;
-   float: right;
-   margin: 0px;
-}
-
-#banner .teachnova-search .teachnova-search-button {
-   background: transparent url('/assets/img/icon_search.png') no-repeat top left;
-   width: 20px;
-   height: 20px;
-   border: 0px;
-   position: absolute;
-   top: 5px;
-   right: 8px;
-   cursor: pointer;
-}
-
-#banner .navbar .nav>li>a {
-   text-shadow: none;
-   padding: 15px;
-   text-transform: uppercase;
-}
-
-#banner .navbar {
-   font-family: sans;
-}
-
-#banner .navbar .nav>.active>a,
-#banner .navbar .nav>.active>a:hover,
-#banner .navbar .nav>.active>a:focus {
-   color: #303030;
-   background: #transparent;
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   box-shadow: none;
-}
-
-#banner .navbar .navbar-inner {
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   box-shadow: none;
-   border: 0;
-   background: transparent;
-}
-
-#banner .navbar .nav-pills>li>a {
-   -webkit-border-radius: 0;
-   -moz-border-radius: 0;
-   border-radius: 0;
-   border: 0px;
-}
-
-#banner .navbar .nav-pills .dropdown-menu {
-   -webkit-border-radius: 0;
-   -moz-border-radius: 0;
-   border-radius: 0;
-}
-
-@media (max-width: 767px) {
-   #banner .teachnova-repeat-header-bg {
-      margin-left: -20px;
-      margin-right: -20px;
-   }
-
-   #banner .teachnova-header-bg .container {
-      margin-left: 20px;
-      margin-right: 20px;
-   }
-
-   #banner a.logo{
-      display: none;
-   }
-}
 
 /* ==========================================================================
    Content
    ========================================================================== * /
- #wrap {
-   }
 
- #content { }
-
- .mosaic-row {
-    margin-bottom: 20px;
- }
 
 
 /* ==========================================================================
    Primary Content
    ========================================================================== * /
 
-#main { }
 
-.entry-infografia {
-}
-
-.entry-infografia  img {
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-}
-
-.mosaic-item {
-   position: relative;
-   margin-bottom: 20px;
-}
-
-.mosaic-item .entry-title {
-   color: #fff;
-   text-transform: uppercase;
-   font-size: 13px;
-   max-height: 54px;
-   margin: 20px;
-   overflow: hidden;
-   /* padding: 0 20px 20px 0; */
-   border-bottom: 1px solid #777;
-   /*text-overflow: ellipsis;*/
-}
-
-.mosaic-item .activity-date,
-.mosaic-item .teachnova-evento-fecha,
-.mosaic-item .teachnova-curso-duracion,
-.mosaic-item .teachnova-proyecto-xxx,
-.mosaic-item .teachnova-servicio-xxx,
-.mosaic-item .teachnova-convocatoria-fecha {
-   color: #666;
-   position: absolute;
-   bottom: 20px;
-   left: 20px;
-}
-
-article .hide {
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   background-color: rgba( 0, 0, 0, 0.9 );
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 2;
-}
 
 
 /* ==========================================================================
    Topbar
    ========================================================================== */
 
-/*
-#topbar {
-   margin-bottom: 20px;
-}
-*/
 
 /* ==========================================================================
    Sidebar
    ========================================================================== * /
-
-#sidebar {
-   margin: 0px 0px 20px 0px;
-}
-
-#sidebar .teachnova-follow {
-   margin: 0px 0px 30px 0px;
-   background: #e4e4e4;
-   padding: 4px 0px 0px 0px;
-   -webkit-border-radius: 6px;
-   -moz-border-radius: 6px;
-   border-radius: 6px;
-   -webkit-box-shadow: 6px 6px 8px rgba(120, 120, 120, 0.40);
-   -moz-box-shadow:    6px 6px 8px rgba(120, 120, 120, 0.40);
-   box-shadow:         6px 6px 8px rgba(120, 120, 120, 0.40);
-}
-
-#sidebar .teachnova-follow a {
-   width: 34px;
-   height: 34px;
-   display: block;
-   float: left;
-   padding: 0px 3px 5px 0px;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-facebook {
-   background: transparent url('/assets/img/icon_off_facebook.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-facebook {
-   background: transparent url('/assets/img/icon_on_facebook.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-twitter {
-   background: transparent url('/assets/img/icon_off_twitter.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-twitter {
-   background: transparent url('/assets/img/icon_on_twitter.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-linkedin {
-   background: transparent url('/assets/img/icon_off_linkedin.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-linkedin {
-   background: transparent url('/assets/img/icon_on_linkedin.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-youtube {
-   background: transparent url('/assets/img/icon_off_youtube.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-youtube {
-   background: transparent url('/assets/img/icon_on_youtube.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-slideshare {
-   background: transparent url('/assets/img/icon_off_slideshare.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-slideshare {
-   background: transparent url('/assets/img/icon_on_slideshare.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-flickr {
-   background: transparent url('/assets/img/icon_off_flickr.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-flickr {
-   background: transparent url('/assets/img/icon_on_flickr.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-googleplus {
-   background: transparent url('/assets/img/icon_off_googleplus.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-googleplus {
-   background: transparent url('/assets/img/icon_on_googleplus.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a.teachnova-follow-rss {
-   background: transparent url('/assets/img/icon_off_rss.png') no-repeat top left;
-}
-
-#sidebar .teachnova-follow a:hover.teachnova-follow-rss {
-   background: transparent url('/assets/img/icon_on_rss.png') no-repeat top left;
-}
 
 
 /* ==========================================================================
    Posts
    ========================================================================== * /
 
-.hentry header { }
-.hentry time { }
-.hentry p.byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-.home-tab .entry-title a,
-.home-tab .entry-title a:hover {
-   text-decoration: none
-}
-
-.home-tab h4 {
-   margin: 15px 0px 0px 0px;
-}
-
-.home-tab .entry-time {
-   font-weight: bold;
-}
-
-.home a.more {
-   display: block;
-   width: 200px;
-   text-align: center;
-   padding: 4px 8px;
-   margin: 10px auto 0px auto;
-   background: #e1e2e3;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-}
-
-.home a.more:hover {
-   text-decoration: none;
-}
 
 /* ==========================================================================
    Footer: AAA
    ========================================================================== */
 
-.row {
-   margin-right: 0px;
-   margin-left: 0px;
-}
-
-/*
-#content-info { }
-
-div.teachnova-repeat-footer-bg {
-   background: #233671 url('/assets/img/footer_repeat_bg.png') repeat-x left top;
-}
-
-div.teachnova-footer-bg {
-   background: url('/assets/img/footer_bg.png') no-repeat left top;
-}
-
-div.teachnova-footer {
-   color: #dde8fe;
-   height: 100%;
-}
-
-.teachnova-footer {
-   font-size: 0.9em;
-   color: #fff;
-}
-
-.teachnova-footer a:hover {
-   text-decoration: none;
-}
-
-.teachnova-footer a {
-   text-transform: uppercase;
-   color: #fff;
-}*/
 
 /* ==========================================================================
    Tematicas
    ========================================================================== * /
 
-div.tematicas-menu {
-   margin: 0px 0px 10px 0px;
-}
 
-div.tematicas-menu a {
-   display: block;
-   width: 80px;
-   height: 80px;
-   float: left;
-   background: white;
-   border: 1px #ccc;
-   padding: 4px;
-   margin: 0px 14px 14px 0px;
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   -webkit-box-shadow: 14px 14px 20px rgba(50, 50, 50, 0.40);
-   -moz-box-shadow:    14px 14px 20px rgba(50, 50, 50, 0.40);
-   box-shadow:         14px 14px 20px rgba(50, 50, 50, 0.40);
-}
-
-div.tematicas-menu a.unselected {
-   -webkit-box-shadow: 14px 14px 20px rgba(50, 50, 50, 0.20);
-   -moz-box-shadow:    14px 14px 20px rgba(50, 50, 50, 0.20);
-   box-shadow:         14px 14px 20px rgba(50, 50, 50, 0.20);
-}
 
 /* ==========================================================================
    Tweets
    ========================================================================== * /
 
-#sidebar .xmt ul li.tweet_list {
-   min-height: 60px;
-   line-height: 14px;
-   font-size: 0.8em;
-}
-
-#sidebar .xmt .tweet_avatar {
-   margin: 4px 8px 0px 0px;
-   padding: 0px;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   border: 0px;
-}
 
 /* ==========================================================================
    YouTube Mosaic
    ========================================================================== * /
 
-#yt-video-mosaic .modal-header h3 {
-   line-height: 18px;
-   font-size: 1em;
-   font-weight: none;
-}
-
-#yt-video-mosaic .modal {
-   width: 640px;
-}
-
-#yt-video-mosaic .yt-video {
-   float: left;
-   margin: 0px 20px 20px 0px;
-}
-
-#yt-video-mosaic .yt-video-name {
-   font-size: 0.8em;
-   color: #666;
-   line-height: 12px;
-   font-weight: bold;
-   margin: 4px 0px 0px 0px;
-}
-
-#yt-video-mosaic .yt-video-views {
-   font-size: 0.8em;
-   color: #999;
-   line-height: 12px;
-}
 
 /* ==========================================================================
    Plugin : CTC
    ========================================================================== * /
 
-.ctc a:hover {
-   text-decoration: none;
-}
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== * /
-
-.aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
 
 /* ==========================================================================
    Pestañas
    ========================================================================== * /
-.su-tabs {
-   margin: 0 10px 10px 0;
-}
-
-.su-tabs-style-teachnova .su-tabs-nav {
-   padding: 0px 5px 0px 0px;
-   margin: 0;
-   min-height: 30px;
-   background: #E1E2E3;
-   /* border-right: 5px solid #E1E2E3;
-   border-top: 5px solid #E1E2E3;
-   border-left: 5px solid #E1E2E3; */
-   -webkit-border-radius: 5px 5px 0px 0px ;
-   -moz-border-radius: 5px 5px 0px 0px ;
-   border-radius: 5px 5px 0px 0px ;
-}
-.su-tabs-style-teachnova .su-tabs-nav span {
-   display: block;
-   float: right;
-   padding: 10px 20px;
-   margin-left: 5px;
-   cursor: pointer;
-   /* border-top: 1px solid #fff;
-   border-right: 1px solid #fff;
-   border-left: 1px solid #fff; */
-   background: #E1E2E3;
-}
-.su-tabs-style-teachnova .su-tabs-nav span:hover { background: #f1f1f1 }
-.su-tabs-style-teachnova .su-tabs-nav span.su-tabs-current { background: #fff }
-.su-tabs-style-teachnova .su-tabs-pane {
-   padding: 15px;
-   border-right: 5px solid #E1E2E3;
-   border-bottom: 5px solid #E1E2E3;
-   border-left: 5px solid #E1E2E3;
-   -webkit-border-radius: 0px 0px 5px 5px;
-   -moz-border-radius: 0px 0px 5px 5px;
-   border-radius: 0px 0px 5px 5px;
-}
-
 
 
 /* ==========================================================================
    Contacto
    ========================================================================== * /
-.contacto .page-header {
-   background: #E1E2E3;
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   padding: 5px 5px 5px 15px;
-   margin: 0px 10px 10px 0px;
-}
 
-.contacto .page-header h1 {
-   background: transparent url('/assets/img/icon_off_email.png') no-repeat top right;
-   font-size: 1em;
-   margin: 0;
-   padding: 0;
-   line-height: 34px;
-   font-weight: normal;
-}
-
-.contacto p {
-   margin-left: 5px;
-}
-
-.wpcf7 .teachnova-contact-form {
-   margin-left: 15px;
-}
-
-.wpcf7 .teachnova-contact-form input.wpcf7-text,
-.wpcf7 .teachnova-contact-form textarea.wpcf7-textarea {
-   background: #E1E2E3;
-   -webkit-border-radius: 0;
-   -moz-border-radius: 0;
-   border-radius: 0;
-   border: 0;
-   -webkit-box-shadow: none;
-   -moz-box-shadow: none;
-   box-shadow: none;
-   width: 100%;
-}
-
-.wpcf7 .teachnova-contact-form textarea.wpcf7-textarea {
-   background: #E1E2E3;
-}
-
-.wpcf7 .teachnova-contact-form input.wpcf7-submit {
-   background: #373738;
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   border-radius: 3px;
-   color: #fff;
-   border: 0;
-   padding: 5px 10px;
-}
-
-.su-heading.su-heading-style-underline {
-   border: 0;
-   margin: 0px 10px 5px 5px;
-}
-
-.su-heading.su-heading-style-underline .su-heading-shell {
-   border-top: 0;
-   border-bottom: 2px solid #E1E2E3;
-   text-align: left;
-   padding: 0px 0px 4px 0px;
-   font-size: 1.2em;
-}
-
-.su-gmap {
-   margin: 0;
-}
-
-.contact-map {
-   width: 96%;
-   height: 240px;
-}
 
 /* ==========================================================================
    Responsive Slider
    ========================================================================== * /
-.responsive-slider.flexslider {
-   margin-bottom: 0px;
-}
 
-.slide {
-   margin-right: 20px;
-}
-
-.responsive-slider.flexslider .flex-direction-nav li .next {
-   right: 40px !important;
-}
-
-@media (min-width:980px){
-}
-
-@media (min-width:768px) and (max-width:979px){
-   .slide {
-      margin-right: 0px;
-   }
-   .responsive-slider.flexslider .flex-direction-nav li .next {
-      right: 20px !important;
-   }
-}
-
-@media (max-width:767px){
-   .slide {
-      margin-right: 0px;
-   }
-   .responsive-slider.flexslider .flex-direction-nav li .next {
-      right: 20px !important;
-   }
-}
-
-@media (max-width:480px){
-}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== * /
 
-@media (max-width:767px){
-   .su-column {
-      float: none;
-      width: 100%;
-   }
-}
 
-@media (max-width: 979px) {
-  body.top-navbar {
-    padding-top: 0;
-  }
-}
-*/
 
-   /*==========================================================================
-   Home & Navigation: AAA
-   ========================================================================== */
 
-.navbar{
-   background: url(/media/banner_back.jpg)no-repeat;
-   /*background-size: 100%;*/
-   height: 102px;
-   padding-top: 40px;
-}
-.navbar > .container .navbar-brand {
-   margin-left: -15px;
-   margin-top: -10px;
-}
-.navbar{
-   margin-bottom: 0px;
-}
-   .navbar-default{
-      border: none;
-   }
-   .navbar-default .navbar-nav>li>a {
-      color: #aaa;
-   }
-   .navbar-default .navbar-nav>li>a:hover {
-      color: #fff;
-   }
-   .navbar-nav{
-      float: right;
-      /*margin-right: -65px;*/
-   }
-   /*.navbar-header{
-      margin-left: -60px!important;
-      margin-top: -20px;
-   }*/
-.row.home{
-   /*margin: 0px;
-   padding: 0px;*/
-}
-.main{
-   margin: 0px;
-   padding: 0px;
-}
 
-/*.home-background{
-   max-width: 100%;
-}
-   .home-background img{
-      max-width: 100%;
-      max-height: 100%;
-   }*/
+ /* Large desktop */
 
-.home-content{
-   color: white;
-   position: absolute;
-   top: 200px;
-   left: 60px;
-   overflow: hidden;
-   min-width: 250px;
-   max-height: 350px;
-   min-height: 200px;
-   /*background-color: #151928;*/
-   background: linear-gradient(to bottom, rgba(21, 25, 40, 0.8),  rgba(0, 0, 0, 0));
-
-}
-   .home-content .slogan-title{
-      color: #7AAB7E;
-   }
-   .home-content .slogan{
-      font-size: 10px;
-   }
-   .textwidget{
-     /* min-height: 100%;
-      height: auto;
-      /* Negative indent footer by its height */
-      /*margin: 0 auto 60px;
-      /* Pad bottom by footer height */
-      /*padding: 0 0 60px;*/
-   }
-
-   /*==========================================================================
-   Element-title-content: AAA
-   ========================================================================== */
-
-   .header .title{
-      margin-top: -25px;
-   }
-
-   .subtitle ul{
-      list-style: none;
-   }
-
-   /*==========================================================================
-   Quienes Somos: AAA
-   ========================================================================== */
-
-   .more{
-      margin-left: 100px;
-   }
-   .who{
-      display: none!important;
-   }
-   .entry-content{
-      margin-bottom: 30px;
-   }
-   .who-text{
-      float: right;
-   }
-   .who-ul{
-      list-style: none;
-      float: left;
-      margin-top: 50px;
-   }
-   .who-li{
-      float: left;
-      width: 260px;
-   }
-
-   /* ==========================================================================
-   Equipo: AAA
-   ========================================================================== */
-   .content-team{
-      margin-top: 50px;
-   }
-   .content-team ul{
-      list-style: none;
-      float: left;
-   }
-   .content-team li{
-      margin-top: 10px;
-   }
-
-      .content-team img{
-         border-radius: 180px;
-         width: 125px;
-         height: 125px;
-         margin-top: -10px;
-      }
-      .content-team #name{
-         font-size: 20px;
-         font-weight: bold;
-      }
-      .content-team #name a{
-         color: #000;
-      }
-      .content-team ul .social{
-         float: left;
-         padding-right: 5px;
-         padding-top: 10px;
-      }
-
-
-
-   /* ==========================================================================
-   Persona: AAA
-   ========================================================================== */
-
-      .single-person-photo{
-      }
-      .single-person-info{
-
-      }
-      .single-person-contact{
-         /*margin-left: 50px;*/
-      }
-      .single-person-contact h2{
-         /*margin-top: -7px;*/
-      }
-         .single-person-contact .name{
-            margin-top: 0px;
-         }
-
-      .single-person-qr {
-      }
-
-      .single-person-qr img{
-         width: 200px;
-         margin-top: 15px;
-      }
-      .single-person-social {
-         margin-top: 25px;
-      }
-
-         .single-person-social ul{
-            list-style: none;
-            margin-left: -53px;
-         }
-            .single-person-social ul li{
-               /*float: left;*/
-            }
-      .single-person-share ul{
-         list-style: none;
-      }
-      .single-person-share ul li{
-         float: left;
-      }
-
-      .tabs-content {
-         mar
-         margin-bottom: 20px;
-      }
-
-      .link{
-         position: relative;
-         top: -3px;
-         left: 10px;
-      }
-
-      .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-         color: #fff;
-         background-color: #539BD8;
-      }
-      .nav-tabs > li > a {
-         border: none;
-         border-radius: 0px;
-      }
-      .tab-content > .active {
-         margin-left: 15px;
-         margin-top: 10px;
-      }
-
-
-
-   /* ==========================================================================
-   Partners: AAA
-   ========================================================================== */
-   .content-partners{
-      margin-top: 50px;
-   }
-      .content-partners ul{
-         list-style: none;
-         float: left;
-      }
-         .content-partners ul .social{
-            float: left;
-            padding-right: 5px;
-            padding-top: 10px;
-         }
-      .content-partners li{
-         margin-top: 10px;
-      }
-
-      .content-partners img{
-         border-radius: 180px;
-         width: 125px;
-         height: 125px;
-         margin-top: -10px;
-      }
-      .content-partners #name{
-         font-size: 20px;
-         font-weight: bold;
-      }
-         .content-partnes #name a{
-            color: #000;
-         }
-
-   /* ==========================================================================
-   Single-partner: AAA
-   ========================================================================== */
-
-   .single-partner-social ul{
-      list-style: none;
-      margin-left: -40px;
-      padding-top: 10px;
-   }
-   .single-partner-social ul li{
-      padding-top: 10px;
-   }
-   .single-partner-share ul{
-      list-style: none;
-   }
-   .single-partner-share ul li{
-      float:left;
-   }
-   .share{
-      position: relative;
-      left: 10px;
-      top: -7px;
-      padding-left: 10px;
-   }
-
-
-   /* ==========================================================================
-   Taxonomy Mosaic: AAA
-   ========================================================================== */
-
-   .tn-taxonomy-term{
-      margin-top: 50px;
-      margin-left: 50px;
-   }
-   .tn-taxonomy-term img{
-      border-radius: 180px;
-      border: 1px solid;
-   }
-
-   .tn-taxonomy-description{
-      margin-top: 30px;
-   }
-
-   /* ==========================================================================
-   Service: AAA
-   ========================================================================== */
-   .service-title h1{
-      margin-top: 0px;
-   }
-
-   .services-mosaic{
-      margin-left: 50px;
-   }
-
-      .services-mosaic img{
-         border: 1px solid;
-         border-radius: 180px;
-         margin-bottom: 30px;
-      }
-
-   /* ==========================================================================
-   Service: AAA
-   ========================================================================== */
-   .subservice-title{
-      margin-bottom: 50px;
-   }
-
-
-   /* ==========================================================================
-   Knowledge Mosaic: AAA
-   ========================================================================== */
-
-   .content-knowledges-mosaic{
-      margin-top: 50px;
-      margin-left: 35px;
-   }
-      .content-knowledges-mosaic img{
-         border-radius: 180px;
-         border: 1px solid;
-      }
-
-   .tn-knowledge-excerpt{
-      margin-top: 30px;
-   }
-
-
-   /* ==========================================================================
-   Single Knowledge: AAA
-   ========================================================================== */
-
-   .knowledge-title{
-      border: none;
-      margin-top: -20px;
-   }
-      .knowledge-title h1{
-         font-size: 30px;
-      }
-
-   .knowledge-description{
-
-   }
-
-   .knowledge-content{
-      margin-top: 50px;
-   }
-
-   .link-to-map{
-      font-size: 20px;
-      margin-left: 20px;
-   }
-      .link-to-map a{
-         color: #555;
-      }
-
-   .single-knowlegde-share{
-      margin-top: 25px;
-   }
-      .single-knowlegde-share ul{
-         list-style: none;
-         float: left;
-      }
-         .single-knowlegde-share ul li{
-            float:left;
-         }
-
-   /* ==========================================================================
-   Single experience: AAA
-   ========================================================================== */
-   .experience-slider{
-      margin-top: 50px;
-   }
-
-   .experience-slider li{
-      padding-left: 30px;
-   }
-
-   .experience-image img{
-      border-radius: 180px;
-   }
-
-   /* ==========================================================================
-   Espacio y redes: AAA
-   ========================================================================== */
-
-   .net-ul{
-      list-style: none;
-      float: left;
-      margin-top: 50px;
-   }
-   .net-li{
-      float: left;
-      width: 260px;
-   }
-
-
-   /* ==========================================================================
-   Espacio: AAA
-   ========================================================================== */
-
-
-   .space-title{
-      border: none;
-      margin-top: -20px;
-   }
-      .space-title h1{
-         font-size: 30px;
-      }
-
-   .spaces-mosaic{
-      margin-left: 30px;
-   }
-
-
-   .carousel{
-      margin-top: 50px;
-      /*border-radius: 5px;*/
-      border-top:1px solid #ccc;
-      border-bottom:1px solid #ccc;
-
-   }
-   .carousel-inner ul{
-      list-style: none;
-   }
-
-   .carousel-inner img{
-      width: 100px;
-      margin-top: 10px;
-   }
-   .carousel-inner .item img{
-      display: inline-block;
-   }
-
-   .carousel-control{
-      background-image: none!important;
-      width: 50px;
-      margin-top: -20px;
-   }
-      .carousel-control .glyphicon{
-         color: grey;
-      }
-   /*==========================================================================
-   Espacios: AAA
-   ========================================================================== */
-
-   .space-content{
-      margin-bottom: 50px;
-   }
-      .space-content .page-header{
-         border-bottom: none;
-          margin-top: -20px;
-         margin-bottom: -10px;
-      }
-
-      .space-content .social-share{
-         position: relative;
-         left: -40px;
-      }
-
-      .slider-gallery .carousel-inner img {
-         width: 100%;
-         margin-top: 10px;
-      }
-      .slider-gallery .carousel{
-         border: none;
-         margin-top: -20px;
-      }
-
-   /*==========================================================================
-   Social-share: AAA
-   ========================================================================== */
-
-   .social-share{
-      margin-top: 25px;
-   }
-      .social-share ul{
-         list-style: none;
-         float: left;
-      }
-         .social-share ul li{
-            float:left;
-         }
-
-   /*==========================================================================
-   Noticias: AAA
-   ========================================================================== */
-
-   .post-header{
-      margin-bottom: 20px;
-   }
-
-   .header-post-list{
-      margin-left: 0px;
-   }
-
-   .post-title{
-      border: none;
-   }
-   .post-list-content{
-      margin-top: 20px;
-      margin-left: -15px;
-      margin-bottom: -50px!important;
-   }
-
-   .post-content{
-      margin-left: -10px;
-   }
-
-   /*==========================================================================
-   Contacto: AAA
-   ========================================================================== */
-
-   .contact-add .list-group-item{
-      border: none!important;
-      padding-bottom: 0px;
-   }
-   .contact-info .list-group-item{
-      border: none!important;
-      padding-bottom: 0px;
-   }
-
-   .contact-content{
-      margin-top: 50px;
-   }
-
-   .formmsg{
-      float: right;
-   }
-      .formmsg input[type="submit"]{
-         float: right;
-         margin-top: 10px;
-      }
-      .msg{
-         margin-left: -160px;
-      }
-    .contact-upper img{
-      width: 150px!important;
-      margin-left: 50px;
-      margin-top: 10px;
-    }
-
-div{
-  /* border: 1px solid;*/
-}
-    /* Large desktop */
 @media (min-width: 1200px) {
    .single-person-contact h2{
-      font-size: 2.5rem;
+      /*font-size: 2.5rem;*/
    }
    .single-person-qr img {
       /*width: 67%;*/
@@ -1283,38 +296,10 @@ div{
     }
 }
 
-/******************************************
-******************************************/
-.acord-person{
-   margin-top: 30px;
-}
-.acord-person .su-spoiler{
-   background-color: #539BD8;
-   color: white;
-}
-.acord-person .su-spoiler-icon{
-   display: none;
-}
-.acord-person .su-spoiler-title{
-   line-height: 50px;
-   font-size: 20px;
-}
-.acord-person .su-spoiler-content{
-   background-color: white;
-   color: black;
-}
-.acord-person .su-spoiler-content p{
-   margin: 0 10px 10px!important;
-}
-
-
-/*****************************************
-*****************************************/
-
 /* Portrait tablet to landscape and desktop */
+
 @media (min-width: 991px){
     .acord-person{
-      display: none;
    }
 }
 @media (max-width: 991px) {
@@ -1325,13 +310,8 @@ div{
       margin-left: -350px;
    }
    .single-person-contact .name{
-      /*text-align: center;
-      margin-left: -100px;*/
    }
    .single-person-qr img{
-     /* width: 50%;
-      margin-top: 20px;
-      margin-left: -15px;*/
    }
    .text{
       display: none;
@@ -1358,39 +338,11 @@ div{
 }
 
 /* Landscape phone to portrait tablet */
+
 @media (max-width: 768px) {
    .bg-home img{
       margin-left: -450px;
    }
-   /*.text{
-      display: none;
-   }
-   .single-person-contact{
-      width: 350px;
-   }
-   .single-person-social a.fa{
-      font-size: 50px;
-   }
-   .single-person-qr img {
-      width: 160px;
-      margin-top: 0px;
-      margin-left: 25px;
-   }
-   .single-person-social{
-      margin-left: 25px;
-   }
-   .single-person-social.last ul li{
-      padding-bottom: 5px;
-      margin-left: -5px;
-   }
-   .single-person-contact .name{
-      text-align: center;
-      margin-left: -120px;
-      margin-top: 10px;
-   }
-   .single-person-qr img {
-      margin-top: 10px;
-   }*/
    .navbar > .container .navbar-brand {
       margin-left: -15px;
       margin-top: -5px;
@@ -1398,6 +350,7 @@ div{
 }
 
 /* Landscape phones and down */
+
 @media (max-width: 480px) {
    .navbar > .container .navbar-brand {
       margin-left: -15px;

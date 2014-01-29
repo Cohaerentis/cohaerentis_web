@@ -10,6 +10,7 @@
     $args = array(
         'post_type'   => 'knowledge',
         'post_status' => 'publish',
+        'nopaging' => true,
     );
     $knowledges = get_posts($args);
     shuffle($knowledges);

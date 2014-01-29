@@ -5,11 +5,9 @@
 </pre>-->
 
 <?php if (have_posts()) : the_post(); ?>
-		<div class = "home-background">
-			<?php //the_post_thumbnail(); ?>
-		</div>
-			<div class = "container col-lg-4 col-md-4 col-sm-6 col-xs-6 home-content">
+        <div class="row">
+			<div class = "col-lg-6 col-md-6 col-sm-8 col-xs-10 home-content">
 				<?php the_content(); ?>
 			</div>
-		</div>
+        </div>
 <?php endif; ?>

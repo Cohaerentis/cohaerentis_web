@@ -7,8 +7,10 @@
     <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
         <?php /*AAA*/ ?>
          <?php get_template_part('templates/element-title-content'); ?>
-        <div class="entry-content">
-            <?php the_content(); ?>
+         <div class="entry-content">
+            <div class="row">
+                <?php the_content(); ?>
+            </div
         </div>
     </article>
 <?php else : ?>
