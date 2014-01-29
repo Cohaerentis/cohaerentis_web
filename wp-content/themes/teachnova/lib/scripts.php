@@ -17,6 +17,7 @@ function roots_scripts() {
   $cssmain = 'main.min.css';
   $csscustom = 'custom.css';
   $cssfa = 'font-awesome.min.css';
+  $jsroots = 'scripts.min.js';
   $jsjquery = 'jquery-1.10.2.min.js';
   $jsmodernizr = 'modernizr-2.7.0.min.js';
   $jsrespond = 'respond-1.3.0.min.js';
@@ -24,11 +25,12 @@ function roots_scripts() {
     $cssmain = 'main.css';
     $csscustom = 'custom.css';
     $cssfa = 'font-awesome.css';
+    $jsroots = 'scripts.js';
     $jsjquery = 'jquery-1.10.2.js';
     $jsmodernizr = 'modernizr-2.7.0.js';
     $jsrespond = 'respond-1.3.0.js';
   }
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/' . $cssmain, false, '0.1');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/' . $cssmain, false, null);
   // AEA - Custom CSS
   // AEA - Already included in wp-visual-icon-fonts
   // wp_enqueue_style('font_awesome', get_template_directory_uri() . '/assets/css/' . $cssfa, false, null);
@@ -53,9 +55,7 @@ function roots_scripts() {
   wp_register_script('jquery', get_template_directory_uri() . '/assets/js/vendor/' . $jsjquery, false, null, false);
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/' . $jsmodernizr, false, null, false);
   wp_register_script('respond', get_template_directory_uri() . '/assets/js/vendor/' . $jsrespond, false, null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', false, '01d073428e4e54f227f8a0a3bad4b804', true);
-  // AEA - Custom JS
-  wp_register_script('roots_custom', get_template_directory_uri() . '/assets/js/custom.js', false, null, false);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/' . $jsroots, false, null, false);
   wp_enqueue_script('modernizr');
   wp_enqueue_script('respond');
   wp_enqueue_script('jquery');

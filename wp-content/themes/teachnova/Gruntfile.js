@@ -15,17 +15,17 @@ module.exports = function(grunt) {
     less: {
       dist: {
         files: {
-          'assets/css/main.min.css': [
-            'assets/less/app.less'
-          ]
+          'assets/css/main.min.css': 'assets/less/app.less'
         },
         options: {
           compress: true,
-          // LESS source map
-          // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-          sourceMap: false,
-          sourceMapFilename: 'assets/css/main.min.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
+          yuicompress: true,
+          optimization: 2
+        }
+      },
+      devel: {
+        files: {
+          'assets/css/main.css': 'assets/less/app.less'
         }
       }
     },
@@ -56,14 +56,29 @@ module.exports = function(grunt) {
         }
       }
     },
-    version: {
+    concat: {
       options: {
-        file: 'lib/scripts.php',
-        css: 'assets/css/main.min.css',
-        cssHandle: 'roots_main',
-        js: 'assets/js/scripts.min.js',
-        jsHandle: 'roots_scripts'
-      }
+        separator: ';',
+      },
+      dist: {
+        src: [
+          'assets/js/plugins/bootstrap/transition.js',
+          'assets/js/plugins/bootstrap/alert.js',
+          'assets/js/plugins/bootstrap/button.js',
+          'assets/js/plugins/bootstrap/carousel.js',
+          'assets/js/plugins/bootstrap/collapse.js',
+          'assets/js/plugins/bootstrap/dropdown.js',
+          'assets/js/plugins/bootstrap/modal.js',
+          'assets/js/plugins/bootstrap/tooltip.js',
+          'assets/js/plugins/bootstrap/popover.js',
+          'assets/js/plugins/bootstrap/scrollspy.js',
+          'assets/js/plugins/bootstrap/tab.js',
+          'assets/js/plugins/bootstrap/affix.js',
+          'assets/js/plugins/*.js',
+          'assets/js/_*.js'
+        ],
+        dest: 'assets/js/scripts.js',
+      },
     },
     watch: {
       less: {
@@ -71,13 +86,13 @@ module.exports = function(grunt) {
           'assets/less/*.less',
           'assets/less/bootstrap/*.less'
         ],
-        tasks: ['less', 'version']
+        tasks: ['less']
       },
       js: {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'uglify', 'version']
+        tasks: ['jshint', 'uglify']
       },
       livereload: {
         // Browser live reloading
@@ -95,7 +110,9 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: [
+        'assets/css/main.css',
         'assets/css/main.min.css',
+        'assets/js/scripts.js',
         'assets/js/scripts.min.js'
       ]
     }
@@ -107,14 +124,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
     'less',
     'uglify',
-    'version'
+    'concat'
   ]);
   grunt.registerTask('dev', [
     'watch'
