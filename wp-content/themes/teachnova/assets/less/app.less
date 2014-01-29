@@ -42,7 +42,7 @@
    font-family: Lato-Regular;
    src: url('../fonts/Lato/Lato-Regular.ttf');
 }
-body{
+body {
    font-family: Lato;
    /*background-color: #CDD8DA;*/
    /*Gradient for the background*/
@@ -59,10 +59,10 @@ body{
    background-image: -ms-linear-gradient(right, #E0E4E7 0%, #C2D4D5 100%);
    background-image: linear-gradient(to right, #E0E4E7 0%, #C2D4D5 100%);
 }
-.main{
+.main {
 
 }
-.home .wrap{
+.home .wrap {
    background-position: -700px;
    height: 665px;
    margin-top: 48px!important;
@@ -84,13 +84,19 @@ body{
 }
 
 
-pre{
+pre {
    margin-top: 100px;
    display: none;
 }
-article{
-   margin-top: 125px;
-   margin-bottom: 125px;
+article {
+   margin-top: 48px;
+   margin-bottom: 50px;
+   @media (min-width: @screen-hs-min) {
+      margin-top: 68px;
+   }
+   @media (min-width: @screen-sm-min) {
+      margin-top: 80px;
+   }
 }
 
 
@@ -99,13 +105,13 @@ article{
    ========================================================================== */
 
 
-/* .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+/* .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
    color: #aaa!important;
    background-color: transparent!important;
    border-bottom: 10px solid #e7e7e7;
 }*/
 
-.navbar-nav>.active>a {
+.navbar-nav > .active > a {
    background-color: @base-color;
    @media (min-width: @screen-md-min) {
       color: #aaa;
@@ -125,7 +131,7 @@ article{
       padding-bottom: 10px;
    }
 }
-.navbar-default .navbar-nav > .active > a:hover{
+.navbar-default .navbar-nav > .active > a:hover {
    background-color: #476DA5;
    color: #fff;
    @media (min-width: @screen-md-min) {
@@ -145,7 +151,7 @@ article{
     -o-transition: opacity 4s; /* Opera */
     transition: opacity 4s;
 }
-.navbar{
+.navbar {
    background-color: #181818;
    background-size: 800px;
    margin-top: -22px;
@@ -163,7 +169,7 @@ article{
       margin-bottom: 0px;
    }
 }
-.navbar-header{
+.navbar-header {
    height: 70px;
 
    @media (min-width: @screen-hs-min) {
@@ -206,16 +212,16 @@ article{
    }
 
 }
-.nav > li > a{
-padding-right: 5px;
-padding-left: 5px;
-
-@media (max-width: @screen-md-min) {
+.nav > li > a {
    padding-left: 20px;
    padding-right: 20px;
+
+   @media (min-width: @screen-md-min) {
+      padding-right: 5px;
+      padding-left: 5px;
+   }
 }
-}
-.navbar-toggle{
+.navbar-toggle {
    margin-top: 30px;
    @media (min-width: @screen-hs-min) {
       margin-top: 38px;
@@ -235,46 +241,48 @@ padding-left: 5px;
    margin-top: -10px;
 }
 
-.navbar-default{
+.navbar-default {
    border: none;
 }
-.navbar-default .navbar-nav>li>a {
-   color: #aaa;
-   @media (max-width: @screen-md-min) {
-      color: #444;
+.navbar-default .navbar-nav > li > a {
+   color: #444;
+   @media (min-width: @screen-md-min) {
+      color: #aaa;
    }
 }
-.navbar-default .navbar-nav>li>a:hover {
-   color: #4F8C68;
-   @media (max-width: @screen-md-min) {
-      color: #eee;
+.navbar-default .navbar-nav > li > a:hover {
+   color: #eee;
+   @media (min-width: @screen-md-min) {
+      color: #4F8C68;
    }
 }
-.navbar-nav{
-   float: right;
-   margin: 35px 50px 0 0;
-   @media (max-width: @screen-md-min) {
-      margin-top: 0px;
-      margin-right: 0px;
-      float:left;
+.navbar-nav {
+   margin: 0;
+   float:left;
+   @media (min-width: @screen-md-min) {
+      float: right;
+      margin: 35px 50px 0 0;
    }
 }
 
 .navbar-collapse {
-   @media (max-width: @screen-md-min) {
-      box-shadow: none;
-      background-color: rgba(213, 214, 214, 1);
+   box-shadow: none;
+   background-color: rgba(213, 214, 214, 1);
+   @media (min-width: @screen-md-min) {
+      background-color: transparent;
    }
 }
 
 .navbar-collapse ul {
-   @media (max-width: @screen-md-min) {
-      width: 100%;
+   width: 100%;
+   @media (min-width: @screen-md-min) {
+      width: auto;
    }
 }
 .nav > li:hover {
-   @media (max-width: @screen-md-min) {
-      background-color: @base-color;
+   background-color: @base-color;
+   @media (min-width: @screen-md-min) {
+      background-color: transparent;
    }
 }
 
@@ -283,65 +291,68 @@ padding-left: 5px;
    ========================================================================== */
 .footer {
    background-color: #181818;
-   padding-top: 50px;
+   padding-top: 0px;
    padding-bottom: 50px;
+   @media (min-width: @screen-sm-min) {
+      padding-top: 50px;
+   }
 }
-.footer-logos .img-responsive{
+.footer-logos .img-responsive {
    margin: auto;
 }
 
-.footer-left{
+.footer-left {
    background-color: #181818;
 }
-.footer-right, .footer-middle{
+.footer-right, .footer-middle {
    background-color: #181818;;
    text-align: center;
 }
-.footer-right{
+.footer-right {
 }
-.footer-right .blocks{
+.footer-right .blocks {
    text-align: left;
    line-height: 17px;
    float: left;
 }
 
-.footer-right .blocks ul{
+.footer-right .blocks ul {
    list-style: none;
    margin-top: 20px;
    padding-left: 0px;
 }
-.footer-right .blocks li{
+.footer-right .blocks li {
    font-size: 0.9em
 }
-.footer-right .blocks li a{
+.footer-right .blocks li a {
    color: #999;
 }
-.footer-right .blocks li a:hover{
+.footer-right .blocks li a:hover {
    color: #2C63A1;
    text-decoration: none;
 }
-.footer-right .up-title{
+.footer-right .up-title {
    font-size: 2em!important;
    margin-bottom: 10px;
    color: #999;
 }
 
 .news {
-   margin-top: 50px;
+   margin-top: 15px;
 
    @media (min-width: @screen-hs-min) {
    }
    @media (min-width: @screen-sm-min) {
    }
    @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
       margin-top: 20px;
    }
+   @media (min-width: @screen-lg-min) {
+   }
 }
-.news-item{
+.news-item {
    margin-bottom: 30px;
-   min-width: 333px;
+   min-width: 250px;
 
    @media (min-width: @screen-hs-min) {
       margin-bottom: 20px;
@@ -355,21 +366,21 @@ padding-left: 5px;
 
    }
 }
-.news img{
+.news img {
    border-right: 5px solid #CCCCCC;
    float: right;
 }
-.news h3{
+.news h3 {
    margin-top: 0px;
    font-family: Lato-LightItalic;
    color: #999;
 }
-.news-content{
+.news-content {
    color: #999;
    margin-top: 5px;
    font-size: 0.7em;
 }
-.end-line{
+.end-line {
    font-family: Lato-LightItalic;
    text-align: center;
    background-color: #181818;
@@ -377,10 +388,10 @@ padding-left: 5px;
    font-size: 0.8em;
    margin-top: 30px;
 }
-.third{
+.third {
    margin-top: 20px;
 }
-.third input{
+.third input {
    border: none;
    margin-top: 20px;
    width: 100%;
@@ -389,52 +400,52 @@ padding-left: 5px;
    color: #222;
 }
 .third input::-webkit-input-placeholder { color: #333; padding-left: 20px; }
-.blocks .quote{
+.blocks .quote {
    font-family: Lato-LightItalic;
    font-size: 1.2em;
    color: #ccc;
 }
-.blocks .social ul{
+.blocks .social ul {
    list-style: none;
    float: right;
    margin-top: 30px!important;
    margin-right: 10px;
 }
-.social li{
+.social li {
    float: left;
 }
-.footer-news{
+.footer-news {
    margin-top: 20px;
    margin-bottom: 20px;
    height: 60px;
 }
-.footer-news span{
+.footer-news span {
    font-size:  10px;
 }
-.footer-news .text{
+.footer-news .text {
    paddin-right: 0px;
 }
-.footer-third span{
+.footer-third span {
    font-size: 30px!important;
 }
-.footer-third .links{
+.footer-third .links {
    margin-top:20px;
 }
-.footer-third .links ul{
+.footer-third .links ul {
    list-style: none;
    margin-left: -35px;
 }
-.footer-third .social-share{
+.footer-third .social-share {
    margin-left: -30px!important;
 }
 .footer-third #share, .alter #share {
    display: none;
 }
-#address{
+#address {
    font-size: 13px;
    margin-left: 20px;
 }
-#search input{
+#search input {
    margin-left: 20px;
    margin-top: 10px;
    border-radius: 25px;
@@ -452,7 +463,7 @@ padding-left: 5px;
    Home & Navigation: AAA
    ========================================================================== */
 
-.home-content{
+.home-content {
    margin-left: 15px;
    color: white;
    position: absolute;
@@ -464,14 +475,14 @@ padding-left: 5px;
    /*min-height: 200px;*/
    background: linear-gradient(to bottom, rgba(21, 25, 40, 0.8),  rgba(0, 0, 0, 0));
 }
-.home-content h1{
+.home-content h1 {
    color: #7AAB7E;
    font-family: Lato;
    @media (max-width: @screen-xs-max) {
       font-size: 2em;
    }
 }
-.home-content p{
+.home-content p {
    font-size: 1em;
    font-family: Lato;
    @media (max-width: @screen-xs-max) {
@@ -479,19 +490,19 @@ padding-left: 5px;
    }
 }
 
-.textwidget{
+.textwidget {
 }
 
 /* ==========================================================================
    Element-title-content: AAA
    ========================================================================== */
 
-.header .title{
+.header .title {
    background-color: @base-color;
    color: #eee;
    display: inline-block;
 }
-.header .title h2{
+.header .title h2 {
    font-family: Lato;
    font-size: 2.5em;
    margin: 20px;
@@ -502,25 +513,25 @@ padding-left: 5px;
 .subtitle p {
    font-size: 1.4em;
 }
-.entry-content{
+.entry-content {
    margin-top: 50px;
 }
-.entry-content img{
+.entry-content img {
    margin-right: 0px;
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       margin: auto;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
       margin: auto;
    }
 
 }
-.entry-content a{
+.entry-content a {
    position: relative;
 }
 
@@ -528,24 +539,24 @@ padding-left: 5px;
    Quienes Somos: AAA
    ========================================================================== */
 
-.more{
+.more {
    margin-left: 100px;
 }
-.who{
+.who {
    /*display: none!important;*/
 }
-.entry-content{
+.entry-content {
    margin-bottom: 30px;
 }
-.who-text{
+.who-text {
    float: right;
 }
-.who-ul{
+.who-ul {
    list-style: none;
    float: left;
    margin-top: 50px;
 }
-.who-li{
+.who-li {
    float: left;
    width: 260px;
 }
@@ -553,29 +564,23 @@ padding-left: 5px;
 /* ==========================================================================
    Equipo: AAA
    ========================================================================== */
-.content-team{
+.content-team {
    margin-top: 50px;
 }
-.content-team ul{
+.content-team ul {
    list-style: none;
    float: left;
 }
-.content-team li{
+.content-team li {
   /* margin-top: 10px;*/
 }
 
-.content-team img{
+.content-team img {
    border-radius: 180px;
    width: 100%;
    height: 100%;
    /*margin-top: 5px;*/
-   @media (max-width: @screen-lg-min) {
-   }
-   @media (max-width: @screen-md-min) {
-      /*width: 110px;
-      height: 110px;*/
-   }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       /*width: 125px;
       height: 125px;*/
       /*margin-left: 30px;*/
@@ -584,35 +589,38 @@ padding-left: 5px;
       margin-top: 5px;
       float: right!important;
    }
-   @media (max-width: @screen-xs-min) {
-
+   @media (min-width: @screen-md-min) {
+      /*width: 110px;
+      height: 110px;*/
+   }
+   @media (min-width: @screen-lg-min) {
    }
 }
-.content-team ul{
+.content-team ul {
    padding-left: 0px;
 }
-.content-team ul .social{
+.content-team ul .social {
    float: left;
    padding-right: 5px;
    padding-top: 10px;
 }
 
-.social span{
+.social span {
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
       font-size: 2em!important;
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
       font-size: 1.8em!important;
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       font-size: 2.5em!important;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
 
    }
 }
-.content-team hr{
+.content-team hr {
    position: relative;
    margin-top: 0;
    margin-left: -30px;
@@ -621,22 +629,22 @@ padding-left: 5px;
    border-top: 1px solid #777;
    max-width: 300px;
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
       margin-left: -31px;
       max-width: 260px;
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
       max-width: 210px;
       margin-left: -31px;
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       max-width: 390px;
       margin-left: -31px;;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
    }
 }
-.person-info{
+.person-info {
    float: left;
 }
 .person-info .name a {
@@ -644,16 +652,16 @@ padding-left: 5px;
    font-size: 2.5em;
    color:   #777;
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
       font-size: 2.2em
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
       font-size: 1.5em;
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       font-size: 2.6em;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
       font-size: 1.6em!important;
    }
 }
@@ -662,16 +670,16 @@ padding-left: 5px;
    color:   #4F8C68;
    text-decoration: none;
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
       font-size: 2.2em!important;
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
       font-size: 1.5em!important;
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       font-size: 2.6em!important;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
       font-size: 1.6em!important;
    }
 }
@@ -680,16 +688,16 @@ padding-left: 5px;
    font-size: 1.3em;
    color:   #333;
 
-   @media (max-width: @screen-lg-min) {
+   @media (min-width: @screen-lg-min) {
       font-size: 1.2em!important;
    }
-   @media (max-width: @screen-md-min) {
+   @media (min-width: @screen-md-min) {
       font-size: 0.6em!important;
    }
-   @media (max-width: @screen-sm-min) {
+   @media (min-width: @screen-sm-min) {
       font-size: 1.8em!important;
    }
-   @media (max-width: @screen-xs-min) {
+   @media (min-width: @screen-xs-min) {
       font-size: 1em!important;
    }
 }
@@ -699,29 +707,29 @@ padding-left: 5px;
    Persona: AAA
    ========================================================================== */
 
-.single-person-photo{
+.single-person-photo {
 }
-.single-person-info{
+.single-person-info {
 
 }
-.single-person-contact{
+.single-person-contact {
 }
-.single-person-contact h2{
+.single-person-contact h2 {
    font-family: Lato-Regular;
    font-size: 3em;
 }
-.single-person-contact p{
+.single-person-contact p {
    font-size: 2em;
    margin-top: -5px!important;
 }
-.single-person-contact .name{
+.single-person-contact .name {
    margin-top: 0px;
 }
 
 .single-person-qr {
 }
 
-.single-person-qr img{
+.single-person-qr img {
    width: 200px;
    /*margin-top: 15px;*/
 }
@@ -729,17 +737,17 @@ padding-left: 5px;
    margin-top: 5px;
 }
 
-.single-person-social ul{
+.single-person-social ul {
    list-style: none;
    margin-left: -53px;
 }
-.single-person-social ul li{
+.single-person-social ul li {
 
 }
-.single-person-share ul{
+.single-person-share ul {
    list-style: none;
 }
-.single-person-share ul li{
+.single-person-share ul li {
    float: left;
 }
 
@@ -748,7 +756,7 @@ padding-left: 5px;
    margin-bottom: 20px;
 }
 
-.link{
+.link {
    position: relative;
    top: -3px;
    left: 10px;
@@ -767,65 +775,65 @@ padding-left: 5px;
    margin-top: 10px;
 }
 
-.acord-person{
+.acord-person {
    margin-top: 30px;
 }
-.acord-person .su-spoiler{
+.acord-person .su-spoiler {
    background-color: #E5E9EA;
    color: #777;
    margin-top: -6px;
 }
-.acord-person .su-spoiler:hover{
+.acord-person .su-spoiler:hover {
    background-color: #B5D4CE;
 }
-.acord-person .su-spoiler-active{
+.acord-person .su-spoiler-active {
    background-color: #B5D4CE;
 }
-.acord-person .su-spoiler-icon{
+.acord-person .su-spoiler-icon {
    display: none;
 }
-.acord-person .su-spoiler-title{
+.acord-person .su-spoiler-title {
    line-height: 50px;
    font-size: 20px;
 }
-.acord-person .su-spoiler-content{
+.acord-person .su-spoiler-content {
    background-color: white;
    color: black;
 }
-.acord-person .su-spoiler-content p{
+.acord-person .su-spoiler-content p {
    margin: 0 10px 10px!important;
 }
 
 /* ==========================================================================
    Partners: AAA
    ========================================================================== */
-.content-partners{
+.content-partners {
    margin-top: 50px;
 }
-.content-partners ul{
+.content-partners ul {
    list-style: none;
    float: left;
 }
-.content-partners ul .social{
+.content-partners ul .social {
    float: left;
    padding-right: 5px;
    padding-top: 10px;
 }
-.content-partners li{
+.content-partners li {
    margin-top: 10px;
 }
 
-.content-partners img{
+.content-partners img {
    border-radius: 180px;
    width: 125px;
    height: 125px;
    margin-top: -10px;
 }
-.content-partners #name{
+.content-partners #name {
    font-size: 20px;
    font-weight: bold;
 }
-.content-partnes #name a{
+.content-partnes #name a {
    color: #000;
 }
 
@@ -833,21 +841,21 @@ padding-left: 5px;
    Single-partner: AAA
    ========================================================================== */
 
-.single-partner-social ul{
+.single-partner-social ul {
    list-style: none;
    margin-left: -40px;
    padding-top: 10px;
 }
-.single-partner-social ul li{
+.single-partner-social ul li {
    padding-top: 10px;
 }
-.single-partner-share ul{
+.single-partner-share ul {
    list-style: none;
 }
-.single-partner-share ul li{
+.single-partner-share ul li {
    float:left;
 }
-.share{
+.share {
    position: relative;
    left: 10px;
    top: -7px;
@@ -859,31 +867,31 @@ padding-left: 5px;
    Taxonomy Mosaic: AAA
    ========================================================================== */
 
-.tn-taxonomy-term{
+.tn-taxonomy-term {
    margin-top: 50px;
    margin-left: 50px;
 }
-.tn-taxonomy-term img{
+.tn-taxonomy-term img {
    border-radius: 180px;
    border: 1px solid;
 }
 
-.tn-taxonomy-description{
+.tn-taxonomy-description {
    margin-top: 30px;
 }
 
 /* ==========================================================================
    Service: AAA
    ========================================================================== */
-.service-title h1{
+.service-title h1 {
    margin-top: 0px;
 }
 
-.services-mosaic{
+.services-mosaic {
    margin-left: 50px;
 }
 
-.services-mosaic img{
+.services-mosaic img {
    border: 1px solid;
    border-radius: 180px;
    margin-bottom: 30px;
@@ -893,7 +901,7 @@ padding-left: 5px;
    Subservice: AAA
    ========================================================================== */
 
-.subservice-title{
+.subservice-title {
    margin-bottom: 50px;
 }
 
@@ -902,16 +910,16 @@ padding-left: 5px;
    Knowledge Mosaic: AAA
    ========================================================================== */
 
-.content-knowledges-mosaic{
+.content-knowledges-mosaic {
    margin-top: 50px;
    margin-left: 35px;
 }
-   .content-knowledges-mosaic img{
+   .content-knowledges-mosaic img {
       border-radius: 180px;
       border: 1px solid;
    }
 
-.tn-knowledge-excerpt{
+.tn-knowledge-excerpt {
    margin-top: 30px;
 }
 
@@ -920,53 +928,53 @@ padding-left: 5px;
    Single Knowledge: AAA
    ========================================================================== */
 
-.knowledge-title{
+.knowledge-title {
    border: none;
    margin-top: -20px;
 }
-   .knowledge-title h1{
+   .knowledge-title h1 {
       font-size: 30px;
    }
 
-.knowledge-description{
+.knowledge-description {
 
 }
 
-.knowledge-content{
+.knowledge-content {
    margin-top: 50px;
 }
 
-.link-to-map{
+.link-to-map {
    font-size: 20px;
    margin-left: 20px;
 }
-.link-to-map a{
+.link-to-map a {
    color: #555;
 }
 
-.single-knowlegde-share{
+.single-knowlegde-share {
    margin-top: 25px;
 }
-.single-knowlegde-share ul{
+.single-knowlegde-share ul {
    list-style: none;
    float: left;
 }
-.single-knowlegde-share ul li{
+.single-knowlegde-share ul li {
    float:left;
 }
 
 /* ==========================================================================
    Single experience: AAA
    ========================================================================== */
-.experience-slider{
+.experience-slider {
    margin-top: 50px;
 }
 
-.experience-slider li{
+.experience-slider li {
    padding-left: 30px;
 }
 
-.experience-image img{
+.experience-image img {
    border-radius: 180px;
 }
 
@@ -974,12 +982,12 @@ padding-left: 5px;
    Espacio y redes: AAA
    ========================================================================== */
 
-.net-ul{
+.net-ul {
    list-style: none;
    float: left;
    margin-top: 50px;
 }
-.net-li{
+.net-li {
    float: left;
    width: 260px;
 }
@@ -989,59 +997,59 @@ padding-left: 5px;
    Espacio: AAA
    ========================================================================== */
 
-.space-title{
+.space-title {
    border: none;
    margin-top: -20px;
 }
-.space-title h1{
+.space-title h1 {
    font-size: 30px;
 }
 
-.spaces-mosaic{
+.spaces-mosaic {
    margin-left: 30px;
 }
 
-.carousel{
+.carousel {
    margin-top: 50px;
    /*border-radius: 5px;*/
    border-top:1px solid #ccc;
    border-bottom:1px solid #ccc;
 
 }
-.carousel-inner ul{
+.carousel-inner ul {
    list-style: none;
 }
 
-.carousel-inner img{
+.carousel-inner img {
    width: 100px;
    margin-top: 10px;
 }
-.carousel-inner .item img{
+.carousel-inner .item img {
    display: inline-block;
 }
 
-.carousel-control{
+.carousel-control {
    background-image: none!important;
    width: 50px;
    margin-top: -20px;
 }
-.carousel-control .glyphicon{
+.carousel-control .glyphicon {
    color: grey;
 }
 /* ==========================================================================
    Espacios: AAA
    ========================================================================== */
 
-.space-content{
+.space-content {
    margin-bottom: 50px;
 }
-.space-content .page-header{
+.space-content .page-header {
    border-bottom: none;
     margin-top: -20px;
    margin-bottom: -10px;
 }
 
-.space-content .social-share{
+.space-content .social-share {
    position: relative;
    left: -40px;
 }
@@ -1050,7 +1058,7 @@ padding-left: 5px;
    width: 100%;
    margin-top: 10px;
 }
-.slider-gallery .carousel{
+.slider-gallery .carousel {
    border: none;
    margin-top: -20px;
 }
@@ -1059,14 +1067,14 @@ padding-left: 5px;
    Social-share: AAA
    ========================================================================== */
 
-.social-share{
+.social-share {
    margin-top: 25px;
 }
-.social-share ul{
+.social-share ul {
    list-style: none;
    float: left;
 }
-.social-share ul li{
+.social-share ul li {
    float:left;
 }
 
@@ -1074,24 +1082,24 @@ padding-left: 5px;
    Noticias: AAA
    ========================================================================== */
 
-.post-header{
+.post-header {
    margin-bottom: 20px;
 }
 
-.header-post-list{
+.header-post-list {
    margin-left: 0px;
 }
 
-.post-title{
+.post-title {
    border: none;
 }
-.post-list-content{
+.post-list-content {
    margin-top: 20px;
    margin-left: -15px;
    margin-bottom: -50px!important;
 }
 
-.post-content{
+.post-content {
    margin-left: -10px;
 }
 
@@ -1099,16 +1107,16 @@ padding-left: 5px;
    Contacto: AAA
    ========================================================================== */
 
-.contact-add .list-group-item{
+.contact-add .list-group-item {
    border: none!important;
    padding-bottom: 0px;
 }
-.contact-info .list-group-item{
+.contact-info .list-group-item {
    border: none!important;
    padding-bottom: 0px;
 }
 
-.contact-content{
+.contact-content {
    margin-top: 50px;
 }
 
@@ -1156,17 +1164,17 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (max-width: @screen-md-min) {
+@media (min-width: @screen-md-min) {
 
-   #address{
+   #address {
       font-size: 12px;
       text-align: center;
       margin-left: 0px;
    }
-   .alter .social-share{
+   .alter .social-share {
       margin-top: -3px;
    }
-   .alter .social-share ul{
+   .alter .social-share ul {
       padding-left: 0px;
    }
 }
@@ -1178,7 +1186,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 #wpadminbar { top:auto; bottom:0 }
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {margin: 6px 6px 0;}
 @media screen and (max-width: 782px) {
-   #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar>a img { top: 3px; }
+   #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img { top: 3px; }
 }
 @media screen and (max-width: 600px) {
    #wpadminbar { position: fixed; }
