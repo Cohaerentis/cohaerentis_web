@@ -30,6 +30,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// AEA - Bugfix when using anchor tags
+.glyphicon:hover {
+  text-decoration: none
+}
+
 // Individual icons
 .glyphicon-asterisk               { &:before { content: "\2a"; } }
 .glyphicon-plus                   { &:before { content: "\2b"; } }
