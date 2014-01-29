@@ -64,6 +64,19 @@
 .make-grid(@grid-columns, xs, offset);
 
 
+// AEA - Horizontal Small grid
+//
+// Columns, offsets, pushes, and pulls for the horizontal small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-hs-min) {
+  .make-grid-columns-float(hs);
+  .make-grid(@grid-columns, hs, width);
+  .make-grid(@grid-columns, hs, pull);
+  .make-grid(@grid-columns, hs, push);
+  .make-grid(@grid-columns, hs, offset);
+}
+
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
