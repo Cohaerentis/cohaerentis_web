@@ -6,5 +6,7 @@
     if (strtolower($inverse) == 'yes')      $css_class .= ' fa-inverse';
     if (!empty($rotate))                    $css_class .= ' fa-' . $rotate;
     if (!empty($stack))                     $css_class .= ' fa-stack-' . $stack;
+    $param_id = '';
+    if (!empty($css_id)) $param_id = 'id="' . $css_id . '"';
 ?>
-<i class="fa fa-<?php echo $name; ?> <?php echo $css_class; ?>" <?php if (!empty($css_id)) : ?>id="<?php echo $css_id; ?>"<?php endif; ?>></i>
+<i class="fa fa-<?php echo $name; ?> <?php echo $css_class; ?>" <?php echo $param_id; ?>></i>

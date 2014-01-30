@@ -97,6 +97,32 @@ function tn_shortcode_modal($atts, $content) {
 add_shortcode($prefix . 'modal', 'tn_shortcode_modal');
 
 /**
+ * [tn_glyphicon] shortcode
+ *
+ * Example:
+ * [tn_glyphicon name='info-circle']
+ */
+function tn_shortcode_glyphicon($atts) {
+   extract(shortcode_atts(array(
+      'type'         => 'regular',
+      'name'         => 'info',
+      'tag'          => 'span',
+      'href'         => '',
+      'color'        => '',
+      'spin'         => 'no', // yes, no
+      'rotate'       => '',   // rotate-90, rotate-180, rotate-270, flip-horizontal, flip-vertical
+      'css_id'       => '',
+      'css_class'    => '',
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-glyphicon.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'glyphicon', 'tn_shortcode_glyphicon');
+
+/**
  * [tn_fa_icon] shortcode
  *
  * Example:
@@ -143,3 +169,22 @@ function tn_shortcode_fa_stack($atts, $content) {
 }
 add_shortcode($prefix . 'fa_stack', 'tn_shortcode_fa_stack');
 
+/**
+ * [tn_icon_box] shortcode
+ *
+ * Example:
+ * [tn_icon_box]
+ */
+function tn_shortcode_tn_icon_box($atts, $content) {
+   extract(shortcode_atts(array(
+      'label'        => '',
+      'css_id'       => '',
+      'css_class'    => '',
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-icon-box.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'icon_box', 'tn_shortcode_tn_icon_box');
