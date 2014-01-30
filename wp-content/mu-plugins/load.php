@@ -9,7 +9,8 @@ Author URI:   http://benword.com/
 */
 
 require WPMU_PLUGIN_DIR . '/options-framework/options-framework.php';
-require WPMU_PLUGIN_DIR . '/wp-post-formats/cf-post-formats.php';
+// AEA - Disable because is not working in WP 3.8
+// require WPMU_PLUGIN_DIR . '/wp-post-formats/cf-post-formats.php';
 
 // Site specific custom post types, taxonomies, meta boxes and shortcodes
 require WPMU_PLUGIN_DIR . '/base/base.php';
@@ -30,15 +31,17 @@ require WPMU_PLUGIN_DIR . '/polylang/polylang.php';
 
 require WPMU_PLUGIN_DIR . '/contact-form-7/wp-contact-form-7.php';
 
-require WPMU_PLUGIN_DIR . '/shortcodes-ultimate/shortcodes-ultimate.php';
-
+// AEA - Use one of this plugins only, preferrely easy-bootstrap
+// require WPMU_PLUGIN_DIR . '/shortcodes-ultimate/shortcodes-ultimate.php';
 require WPMU_PLUGIN_DIR . '/easy-bootstrap-shortcodes/osc_bootstrap_shortcode.php';
 
 require WPMU_PLUGIN_DIR . '/tinymce-advanced/tinymce-advanced.php';
 
 // AEA - Conflict with Wordpress fullscreen, enable only in development phase
+// AEA - Not working with visual editor in taxonomy editing
 // require WPMU_PLUGIN_DIR . '/html-editor-syntax-highlighter/html-editor-syntax-highlighter.php';
 
 require WPMU_PLUGIN_DIR . '/page-list/page-list.php';
 
-require WPMU_PLUGIN_DIR . '/wp-visual-icon-fonts/wp-visual-icon-fonts.php';
+// AEA - Disable because is not working on WP 3.8
+// require WPMU_PLUGIN_DIR . '/wp-visual-icon-fonts/wp-visual-icon-fonts.php';

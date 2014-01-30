@@ -14,27 +14,23 @@
  */
 
 function roots_scripts() {
-  $cssmain = 'main.min.css';
-  $csscustom = 'custom.css';
-  $cssfa = 'font-awesome.min.css';
-  $jsroots = 'scripts.min.js';
-  $jsjquery = 'jquery-1.10.2.min.js';
-  $jsmodernizr = 'modernizr-2.7.0.min.js';
-  $jsrespond = 'respond-1.3.0.min.js';
+  $csbase = get_template_directory_uri() . '/assets/css/';
+  $jsbase = get_template_directory_uri() . '/assets/js/';
+  $cssmain      = 'main.min.css';
+  $csscustom    = 'custom.css';
+  $jsmodernizr  = 'vendor/modernizr-2.7.0.min.js';
+  $jsjquery     = 'vendor/jquery-1.10.2.min.js';
+  $jsroots      = 'scripts.min.js';
   if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
-    $cssmain = 'main.css';
-    $csscustom = 'custom.css';
-    $cssfa = 'font-awesome.css';
-    $jsroots = 'scripts.js';
-    $jsjquery = 'jquery-1.10.2.js';
-    $jsmodernizr = 'modernizr-2.7.0.js';
-    $jsrespond = 'respond-1.3.0.js';
+    $cssmain        = 'main.css';
+    $csscustom      = 'custom.css';
+    $jsmodernizr    = 'vendor/modernizr-2.7.0.js';
+    $jsjquery       = 'vendor/jquery-1.10.2.js';
+    $jsroots        = 'scripts.js';
   }
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/' . $cssmain, false, null);
+  wp_enqueue_style('roots_main', $csbase . $cssmain, false, null);
   // AEA - Custom CSS
-  // AEA - Already included in wp-visual-icon-fonts
-  // wp_enqueue_style('font_awesome', get_template_directory_uri() . '/assets/css/' . $cssfa, false, null);
-  wp_enqueue_style('roots_custom', get_template_directory_uri() . '/assets/css/' . $csscustom, false, null);
+  wp_enqueue_style('roots_custom', $csbase . $csscustom, false, null);
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -52,16 +48,13 @@ function roots_scripts() {
 
   // AEA - Use our jQuery version
   wp_deregister_script('jquery');
-  wp_register_script('jquery', get_template_directory_uri() . '/assets/js/vendor/' . $jsjquery, false, null, false);
-  wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/' . $jsmodernizr, false, null, false);
-  wp_register_script('respond', get_template_directory_uri() . '/assets/js/vendor/' . $jsrespond, false, null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/' . $jsroots, false, null, false);
+
+  wp_register_script('modernizr', $jsbase . $jsmodernizr, false, null, false);
+  wp_register_script('jquery', $jsbase . $jsjquery, false, null, false);
+  wp_register_script('roots_scripts', $jsbase . $jsroots, false, null, false);
   wp_enqueue_script('modernizr');
-  wp_enqueue_script('respond');
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_scripts');
-  // AEA - Custom JS
-  wp_enqueue_script('roots_custom');
 }
 
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
