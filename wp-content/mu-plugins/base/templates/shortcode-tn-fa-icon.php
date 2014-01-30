@@ -6,7 +6,17 @@
     if (strtolower($inverse) == 'yes')      $css_class .= ' fa-inverse';
     if (!empty($rotate))                    $css_class .= ' fa-' . $rotate;
     if (!empty($stack))                     $css_class .= ' fa-stack-' . $stack;
+    $style = '';
+    if (!empty($color)) $style = 'style="color: ' . $color . ';"';
     $param_id = '';
     if (!empty($css_id)) $param_id = 'id="' . $css_id . '"';
+    $param_href = '';
+    if (!empty($href)) {
+        $param_href = 'href="' . $href . '"';
+        if ($tag != 'a') $tag = 'a';
+    }
 ?>
-<i class="fa fa-<?php echo $name; ?> <?php echo $css_class; ?>" <?php echo $param_id; ?>></i>
+<<?php echo $tag; ?> <?php echo $param_href; ?>
+ class="fa fa-<?php echo $name; ?> <?php echo $css_class; ?>"
+ <?php echo $param_id; ?>
+ <?php echo $style; ?>></<?php echo $tag; ?>>

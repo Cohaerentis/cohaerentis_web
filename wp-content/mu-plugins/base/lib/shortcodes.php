@@ -106,7 +106,7 @@ function tn_shortcode_glyphicon($atts) {
    extract(shortcode_atts(array(
       'type'         => 'regular',
       'name'         => 'info',
-      'tag'          => 'span',
+      'tag'          => 'i',
       'href'         => '',
       'color'        => '',
       'spin'         => 'no', // yes, no
@@ -131,6 +131,9 @@ add_shortcode($prefix . 'glyphicon', 'tn_shortcode_glyphicon');
 function tn_shortcode_fa_icon($atts) {
    extract(shortcode_atts(array(
       'name'         => 'info',
+      'tag'          => 'i',
+      'href'         => '',
+      'color'        => '',
       'size'         => '',   // lg, x2, x3, x4, x5
       'border'       => 'no', // yes, no
       'fixed_width'  => 'no', // yes, no
