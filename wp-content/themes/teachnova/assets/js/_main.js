@@ -47,24 +47,28 @@ $(document).ready(UTIL.loadEvents);
 
 // AEA
 $(document).ready(function($) {
-   $('#yt-video-mosaic .modal-header button.close').click(function() {
-      var $this = $(this);
-      var $parent = $this.closest('.modal');
-      $parent.find('iframe').each(function() {
-         this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-      });
-   });
+  $('#yt-video-mosaic .modal-header button.close').click(function() {
+    var $this = $(this);
+    var $parent = $this.closest('.modal');
+    $parent.find('iframe').each(function() {
+      this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+  });
 
-   $('.mosaic-item').mouseover(function(e){
-      var $this = $(this);
-      $this.find('.hide').stop().fadeTo(300, 1.0);
-      e.preventDefault();
-   });
+  $('.mosaic-item').mouseover(function(e){
+    var $this = $(this);
+    $this.find('.hide').stop().fadeTo(300, 1.0);
+    e.preventDefault();
+  });
 
-   $('.mosaic-item').mouseout(function(e){
-      var $this = $(this);
-      $this.find('.hide').stop().fadeTo(300, 0);
-      e.preventDefault();
-   });
+  $('.mosaic-item').mouseout(function(e){
+    var $this = $(this);
+    $this.find('.hide').stop().fadeTo(300, 0);
+    e.preventDefault();
+  });
+
+  // Sample to make text fit to div width
+  // $('.article_title').lettering('words').fitText(0.66);});
+  // $('.article_title').fitText(0.66);});
 });
 
