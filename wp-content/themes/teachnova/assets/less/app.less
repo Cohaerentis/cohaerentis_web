@@ -597,6 +597,8 @@ article {
    /*border-radius: 180px;*/
    margin-top: 30px;
    margin: auto;
+   width: 250px;
+   height: 250px;
    display: block;
    @media (min-width: @screen-hs-min) {
       display: initial;
@@ -624,7 +626,7 @@ article {
    /*margin-top: -10px;*/
    /*margin-left: 60px;*/
    position: relative;
-   left: 15%;
+   left: 21%;
    top: -10px;
    @media (min-width: @screen-hs-min) {
       left: 0;
@@ -669,8 +671,8 @@ article {
 }
 .content-team .fa:hover{ /*Use for changing the color of the socila media icon*/
    color: #fff;
+   text-decoration: none;
    @media (min-width: @screen-hs-min) {
-      color:@icon-box-bg;
       text-decoration: none;
    }
    @media (min-width: @screen-sm-min) {
@@ -680,6 +682,12 @@ article {
    @media (min-width: @screen-lg-min) {
    }
 }
+.content-team .fa-linkedin:hover{ color: #1B85BD; }
+.content-team .fa-twitter:hover{ color: #55ACEE; }
+.content-team .fa-rss:hover{ color: #FA8502; }
+.content-team .fa-facebook:hover{ color: #3B5998; }
+.content-team .fa-google-plus:hover{ color: #F23F27; }
+
 .person-img{
    @media (min-width: @screen-hs-min) {
    }
@@ -691,7 +699,7 @@ article {
    }
 }
 .person-info{
-   width: 200px;
+   width: 250px;
    float: none;   //
    margin: 0 auto;// used to center the div.
    @media (min-width: @screen-hs-min) {
@@ -809,8 +817,8 @@ article {
     width:0;
     height:0;
     position:absolute;
-    bottom:125px;
-    left:152px;
+    top:220;
+    left:185px;
     @media (min-width: @screen-hs-min) {
       display: none;
    }
