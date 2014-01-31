@@ -77,19 +77,19 @@ body {
    background-position: -700px;
    height: 665px;
    margin-top: 48px!important;
-   background: url(/media/background_size.jpeg);
+   background: url(/media/background_transparency.png) #04080E no-repeat right;
 
    @media (min-width: @screen-hs-min) {
 
    }
    @media (min-width: @screen-sm-min) {
-      background-position: -390px;
+      /*background-position: -390px;*/
       margin-top: 80px;
    }
    @media (min-width: @screen-md-min) {
    }
    @media (min-width: @screen-lg-min) {
-      background-position: 0px;
+      /*background-position: 0px;*/
    }
 
 }
@@ -484,7 +484,7 @@ article {
    /*min-width: 250px;*/
    max-height: 450px;
    /*min-height: 200px;*/
-   background: linear-gradient(to bottom, rgba(21, 25, 40, 0.8),  rgba(0, 0, 0, 0));
+   background: rgba(21, 25, 40, 0.8);
 }
 .home-content h1 {
    color: #7AAB7E;
@@ -569,8 +569,12 @@ article {
    background-color: @icon-box-bg;
    text-align: center;
    color: snow;
+   display: block;
 }
-.icon-box.somos-img a{
+.icon-box.somos-img:hover {
+   text-decoration: none;
+}
+.icon-box.somos-img .icon-box-label{
    font-family: Lato-Hairline;
    font-size: 3em;
    display: block;
@@ -628,7 +632,7 @@ article {
    /*margin-top: -10px;*/
    /*margin-left: 60px;*/
    position: relative;
-   left: 21%;
+   left: 15%;
    top: -10px;
    @media (min-width: @screen-hs-min) {
       left: 0;
@@ -658,7 +662,7 @@ article {
    }
 }
 
-.content-team .fa{ /*Use for changing the color of the socila media icon*/
+.content-team .fa { /*Use for changing the color of the socila media icon*/
    color: #fff;
 
    @media (min-width: @screen-hs-min) {
@@ -684,11 +688,18 @@ article {
    @media (min-width: @screen-lg-min) {
    }
 }
-.content-team .fa-linkedin:hover{ color: #1B85BD; }
-.content-team .fa-twitter:hover{ color: #55ACEE; }
-.content-team .fa-rss:hover{ color: #FA8502; }
-.content-team .fa-facebook:hover{ color: #3B5998; }
-.content-team .fa-google-plus:hover{ color: #F23F27; }
+.glyphicons-social{
+   color: #fff;
+
+   @media (min-width: @screen-hs-min) {
+      color: @base-color;
+   }
+}
+.glyphicons-social.linked_in:hover{ color: #1B85BD; }
+.glyphicons-social.twitter:hover{ color: #55ACEE; }
+.glyphicons-social.rss:hover{ color: #FA8502; }
+.glyphicons-social.facebook:hover{ color: #3B5998; }
+.glyphicons-social.google_plus:hover{ color: #F23F27; }
 
 .person-img{
    @media (min-width: @screen-hs-min) {
@@ -819,7 +830,7 @@ article {
     width:0;
     height:0;
     position:absolute;
-    top:220;
+    top:220px;
     left:185px;
     @media (min-width: @screen-hs-min) {
       display: none;

@@ -39,11 +39,11 @@
                 <hr>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 social-media">
                     <ul class="social-icons">
-                        <li class="social"><a href="#" class="fa fa-linkedin"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
-                        <li class="social"><a href="#" class="fa fa-twitter"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
-                        <li class="social"><a href="#" class="fa fa-rss"><span style="color: transparent; display: none;">icon-rss</span></a></span></li>
-                        <li class="social"><a href="#" class="fa fa-facebook"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
-                        <li class="social"><a href="#" class="fa fa-google-plus"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
+                        <li class="social"><a href="#"><i class="glyphicons-social linked_in"></i></a></li>
+                        <li class="social"><a href="#"><i class="glyphicons-social twitter"></i></a></li>
+                        <li class="social"><a href="#"><i class="glyphicons-social rss"></i></a></li>
+                        <li class="social"><a href="#"><i class="glyphicons-social facebook"></i></a></li>
+                        <li class="social"><a href="#"><i class="glyphicons-social google_plus"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -97,7 +97,7 @@ ini_set( 'display_errors', 'On' );
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
-                    <?php the_content(); ?>
+                    <?php the_content();?>
                 </div>
             </div>
         </div>
