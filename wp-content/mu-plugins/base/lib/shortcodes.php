@@ -181,6 +181,7 @@ add_shortcode($prefix . 'fa_stack', 'tn_shortcode_fa_stack');
 function tn_shortcode_tn_icon_box($atts, $content) {
    extract(shortcode_atts(array(
       'label'        => '',
+      'href'         => '',
       'css_id'       => '',
       'css_class'    => '',
    ), $atts));
