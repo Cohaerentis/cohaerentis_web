@@ -3,7 +3,12 @@
     if ($type == 'halflings') {
         $baseclass = 'glyphicon';
         $name = 'glyphicon-' . $name;
+    } else if ($type == 'social') {
+        $baseclass = 'glyphicons-social';
+    } else if ($type == 'filetypes') {
+        $baseclass = 'glyphicons-filetypes';
     }
+
     if (strtolower($spin) == 'yes')         $css_class .= ' glyphicons-spin';
     if (!empty($rotate))                    $css_class .= ' glyphicons-' . $rotate;
     $style = '';

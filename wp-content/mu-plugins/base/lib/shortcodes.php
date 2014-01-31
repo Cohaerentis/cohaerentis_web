@@ -104,7 +104,7 @@ add_shortcode($prefix . 'modal', 'tn_shortcode_modal');
  */
 function tn_shortcode_glyphicon($atts) {
    extract(shortcode_atts(array(
-      'type'         => 'regular',
+      'type'         => 'regular', // regular, halflings, social, filetypes
       'name'         => 'info',
       'tag'          => 'i',
       'href'         => '',
