@@ -380,6 +380,7 @@ article {
 .news img {
    border-right: 5px solid #CCCCCC;
    float: right;
+   margin-top: 4px;
 }
 .news h3 {
    margin-top: 0px;
@@ -575,7 +576,8 @@ article {
    text-decoration: none;
 }
 .icon-box.somos-img .icon-box-label{
-   font-family: Lato-Hairline;
+   // AEA font-family: Lato-Hairline;
+   font-family: Lato;
    font-size: 3em;
    display: block;
    color: snow;
@@ -599,7 +601,59 @@ article {
 .margin{
    margin: auto;
 }
-.content-team img {
+.content-team .social-icons {
+   list-style: none;
+   // AEA float: left;
+   padding-left: 0px;
+   /*margin-top: -10px;*/
+   /*margin-left: 60px;*/
+   position: relative;
+   // AEA left: 15%;
+   // AEA top: -10px;
+   text-align: center;
+   @media (min-width: @screen-hs-min) {
+      // AEA left: 0;
+      text-align: left;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.content-team ul .social {
+   // AEA float: left;
+   display: inline;
+   padding-right: 10px;
+   padding-top: 10px;
+   font-size: 25px;
+   @media (min-width: @screen-hs-min) {
+      font-size: 30px;
+   }
+   @media (min-width: @screen-sm-min) {
+      font-size: 25px;
+   }
+   @media (min-width: @screen-md-min) {
+      font-size: 30px;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.glyphicons-social{
+   color: #fff;
+
+   @media (min-width: @screen-hs-min) {
+      color: @base-color;
+   }
+}
+.glyphicons-social.linked_in:hover{ color: #1B85BD; }
+.glyphicons-social.twitter:hover{ color: #55ACEE; }
+.glyphicons-social.rss:hover{ color: #FA8502; }
+.glyphicons-social.facebook:hover{ color: #3B5998; }
+.glyphicons-social.google_plus:hover{ color: #F23F27; }
+
+.person-img img {
    /*border-radius: 180px;*/
    margin-top: 30px;
    margin: auto;
@@ -621,92 +675,6 @@ article {
    @media (min-width: @screen-md-min) {
       height: 140px;
       width: 140px;
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.content-team ul {
-   list-style: none;
-   float: left;
-   padding-left: 0px;
-   /*margin-top: -10px;*/
-   /*margin-left: 60px;*/
-   position: relative;
-   left: 15%;
-   top: -10px;
-   @media (min-width: @screen-hs-min) {
-      left: 0;
-   }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.content-team ul .social {
-   float: left;
-   padding-right: 10px;
-   padding-top: 10px;
-   font-size: 25px;
-   @media (min-width: @screen-hs-min) {
-      font-size: 30px;
-   }
-   @media (min-width: @screen-sm-min) {
-      font-size: 25px;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 30px;
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-
-.content-team .fa { /*Use for changing the color of the socila media icon*/
-   color: #fff;
-
-   @media (min-width: @screen-hs-min) {
-      color: @base-color;
-   }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.content-team .fa:hover{ /*Use for changing the color of the socila media icon*/
-   color: #fff;
-   text-decoration: none;
-   @media (min-width: @screen-hs-min) {
-      text-decoration: none;
-   }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.glyphicons-social{
-   color: #fff;
-
-   @media (min-width: @screen-hs-min) {
-      color: @base-color;
-   }
-}
-.glyphicons-social.linked_in:hover{ color: #1B85BD; }
-.glyphicons-social.twitter:hover{ color: #55ACEE; }
-.glyphicons-social.rss:hover{ color: #FA8502; }
-.glyphicons-social.facebook:hover{ color: #3B5998; }
-.glyphicons-social.google_plus:hover{ color: #F23F27; }
-
-.person-img{
-   @media (min-width: @screen-hs-min) {
-   }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
    }
    @media (min-width: @screen-lg-min) {
    }
@@ -823,15 +791,17 @@ article {
    }
 }
 .info-marker:after {/*code for generation de triangle marker*/
-    content:"";
+    content: "";
     border-color: transparent transparent @base-color transparent;
-    border-style:solid;
-    border-width:15px;
-    width:0;
-    height:0;
-    position:absolute;
-    top:220px;
-    left:185px;
+    border-style: solid;
+    // AEA border-width:15px;
+    border-width: 18px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    // AEA top:220px;
+    top: 218px;
+    left: 185px;
     @media (min-width: @screen-hs-min) {
       display: none;
    }
