@@ -6,12 +6,29 @@
 
 function osc_theme_row($params, $content = null) {
     extract(shortcode_atts(array(
+        'mdhide' => '',
+        'smhide' => '',
+        'hshide' => '', // AEA - Horizontal Small Devices
+        'xshide' => '',
+        'lghide' => '',
         'class' => '',
         'tag' => 'div' // AEA - Allow user to set custom HTML tag
     ), $params));
+
+    $classes = array($class);
+    // AEA - Horizontal Small Devices
+    // $arr2 = array('mdhide', 'smhide', 'xshide', 'lghide');
+    $arr2 = array('mdhide', 'smhide', 'hshide', 'xshide', 'lghide');
+    foreach ($arr2 as $k => $aa) {
+        $nn = str_replace('hide', '', $aa);
+        if (${$aa} == 'yes') {
+            $classes[] = 'hidden-' . $nn;
+        }
+    }
+
     // AEA - Allow user to set custom HTML tag
     // $result = '<div class="row ' . $class . '">';
-    $result = '<' . $tag . ' class="row ' . $class . '">';
+    $result = '<' . $tag . ' class="row ' . implode(' ', $classes) . '">';
     //echo '<textarea>'.$content.'</textarea>';
     $content = str_replace("]<br />", ']', $content);
     $content = str_replace("<br />\n[", '[', $content);
@@ -64,11 +81,12 @@ function osc_theme_column($params, $content = null) {
 
     // AEA - Horizontal Small Devices
     // $arr = array('md', 'xs', 'sm');
-    $arr = array('md', 'xs', 'sm', 'hs');
+    $arr = array('lg', 'md', 'sm', 'hs', 'xs');
     // AEA - Allow user to add custom class
     // $classes = array();
     $classes = array($class);
     foreach ($arr as $k => $aa) {
+        ${$aa} = trim(${$aa});
         if (${$aa} == 12 || ${$aa} == '') {
             $classes[] = 'col-' . $aa . '-12';
         } else {
@@ -115,7 +133,7 @@ function osc_theme_column($params, $content = null) {
     }
     // AEA - Allow user to set custom HTML tag
     // $result = '<div class="col-lg-' . $lg . ' ' . implode(' ', $classes) . '">';
-    $result = '<' . $tag . ' class="col-lg-' . $lg . ' ' . implode(' ', $classes) . '">';
+    $result = '<' . $tag . ' class="' . implode(' ', $classes) . '">';
     $result .= do_shortcode($content);
     // AEA - Allow user to set custom HTML tag
     // $result .= '</div>';
