@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'assets/js/*.js',
+        'assets/js/_*.js',
         '!assets/js/scripts.min.js'
       ]
     },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
           optimization: 2
         }
       },
-      devel: {
+      dev: {
         files: {
           'assets/css/main.css': 'assets/less/app.less'
         }
