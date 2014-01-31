@@ -9,6 +9,7 @@
 
 @grid-float-breakpoint:     @screen-md-min;
 @base-color:                #00B975;
+@icon-box-bg:               #42669E;
 
 //
 // Mobile first desing, so declare mobile rules and then the other sizes by media queries
@@ -37,6 +38,10 @@
 @font-face {
    font-family: Lato;
    src: url('../fonts/Lato/Lato-Light.ttf');
+}
+@font-face {
+   font-family: Lato-Hairline;
+   src: url('../fonts/Lato/Lato-Hairline.ttf');
 }
 @font-face {
    font-family: Lato-LightItalic;
@@ -75,11 +80,11 @@ body {
    @media (min-width: @screen-hs-min) {
 
    }
-   @media (min-width: @screen-md-min) {
-   }
    @media (min-width: @screen-sm-min) {
       background-position: -390px;
       margin-top: 80px;
+   }
+   @media (min-width: @screen-md-min) {
    }
    @media (min-width: @screen-lg-min) {
       background-position: 0px;
@@ -518,17 +523,17 @@ article {
    font-size: 1.4em;
 }
 .entry-content {
-   margin-top: 50px;
+   margin-top: 30px;
 }
 .entry-content img {
    margin-right: 0px;
 
    @media (min-width: @screen-lg-min) {
    }
-   @media (min-width: @screen-md-min) {
-   }
    @media (min-width: @screen-sm-min) {
       margin: auto;
+   }
+   @media (min-width: @screen-md-min) {
    }
    @media (min-width: @screen-xs-min) {
       margin: auto;
@@ -543,166 +548,277 @@ article {
    Quienes Somos: AAA
    ========================================================================== */
 
-.more {
-   margin-left: 100px;
+// .more {
+//    margin-left: 100px;
+// }
+// .who {
+//    display: none!important;
+// }
+// .entry-content {
+//    margin-bottom: 30px;
+// }
+
+.icon-box.somos-img {
+   // min-width: 150px;
+   // min-height: 150px;
+   height: auto;
+   width: 100%
+   position: relative;
+   background-color: @icon-box-bg;
+   text-align: center;
+   color: snow;
 }
-.who {
-   /*display: none!important;*/
+.icon-box.somos-img a{
+   font-family: Lato-Hairline;
+   font-size: 3em;
+   display: block;
+   color: snow;
 }
-.entry-content {
+.icon-box.somos-img a:hover{
+   text-decoration: none;
+}
+
+.icon-img{
+   font-size: 100px;
+}
+
+.separate{
    margin-bottom: 30px;
-}
-.who-text {
-   float: right;
-}
-.who-ul {
-   list-style: none;
-   float: left;
-   margin-top: 50px;
-}
-.who-li {
-   float: left;
-   width: 260px;
 }
 
 /* ==========================================================================
    Equipo: AAA
    ========================================================================== */
-.content-team {
-   margin-top: 50px;
+
+.margin{
+   margin: auto;
+}
+.content-team img {
+   /*border-radius: 180px;*/
+   margin-top: 30px;
+   margin: auto;
+   display: block;
+   @media (min-width: @screen-hs-min) {
+      display: initial;
+      float: right;
+      height: 140px;
+      width: 140px;
+      //float: left;
+      border-radius: 180px;
+   }
+   @media (min-width: @screen-sm-min) {
+      width: 100px;
+      height: 100px;
+   }
+   @media (min-width: @screen-md-min) {
+      height: 140px;
+      width: 140px;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
 }
 .content-team ul {
    list-style: none;
    float: left;
-}
-.content-team li {
-  /* margin-top: 10px;*/
-}
-
-.content-team img {
-   border-radius: 180px;
-   width: 100%;
-   height: 100%;
-   /*margin-top: 5px;*/
+   padding-left: 0px;
+   /*margin-top: -10px;*/
+   /*margin-left: 60px;*/
+   position: relative;
+   left: 15%;
+   top: -10px;
+   @media (min-width: @screen-hs-min) {
+      left: 0;
+   }
    @media (min-width: @screen-sm-min) {
-      /*width: 125px;
-      height: 125px;*/
-      /*margin-left: 30px;*/
-      width: 80%;
-      height: 80%;
-      margin-top: 5px;
-      float: right!important;
    }
    @media (min-width: @screen-md-min) {
-      /*width: 110px;
-      height: 110px;*/
    }
    @media (min-width: @screen-lg-min) {
    }
-}
-.content-team ul {
-   padding-left: 0px;
 }
 .content-team ul .social {
    float: left;
-   padding-right: 5px;
+   padding-right: 10px;
    padding-top: 10px;
-}
-
-.social span {
-
-   @media (min-width: @screen-lg-min) {
-      font-size: 2em!important;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 1.8em!important;
+   font-size: 25px;
+   @media (min-width: @screen-hs-min) {
+      font-size: 30px;
    }
    @media (min-width: @screen-sm-min) {
-      font-size: 2.5em!important;
-   }
-   @media (min-width: @screen-xs-min) {
-
-   }
-}
-.content-team hr {
-   position: relative;
-   margin-top: 0;
-   margin-left: -30px;
-   margin-bottom: 0;
-   border: 0;
-   border-top: 1px solid #777;
-   max-width: 300px;
-
-   @media (min-width: @screen-lg-min) {
-      margin-left: -31px;
-      max-width: 260px;
+      font-size: 25px;
    }
    @media (min-width: @screen-md-min) {
-      max-width: 210px;
-      margin-left: -31px;
+      font-size: 30px;
    }
-   @media (min-width: @screen-sm-min) {
-      max-width: 390px;
-      margin-left: -31px;;
-   }
-   @media (min-width: @screen-xs-min) {
+   @media (min-width: @screen-lg-min) {
    }
 }
-.person-info {
-   float: left;
+
+.content-team .fa{ /*Use for changing the color of the socila media icon*/
+   color: #fff;
+
+   @media (min-width: @screen-hs-min) {
+      color: @base-color;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.content-team .fa:hover{ /*Use for changing the color of the socila media icon*/
+   color: #fff;
+   @media (min-width: @screen-hs-min) {
+      color:@icon-box-bg;
+      text-decoration: none;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.person-img{
+   @media (min-width: @screen-hs-min) {
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.person-info{
+   width: 200px;
+   float: none;   //
+   margin: 0 auto;// used to center the div.
+   @media (min-width: @screen-hs-min) {
+      float: left;
+      width: 66.66666666666666%;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+      margin-top: 10px;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+
+.person-info-name {
+   text-align: center;
+   background-color: @base-color;
+   @media (min-width: @screen-hs-min) {
+      text-align: left;
+      background-color: transparent;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
 }
 .person-info .name a {
-   font-family: Lato;
-   font-size: 2.5em;
-   color:   #777;
-
-   @media (min-width: @screen-lg-min) {
-      font-size: 2.2em
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 1.5em;
+   font-family: Lato-Hairline;
+   font-size: 2em;
+   color: #fff;
+   font-weight: bold;
+   @media (min-width: @screen-hs-min) {
+      font-size: 2.5em;
+      color: #777;
    }
    @media (min-width: @screen-sm-min) {
-      font-size: 2.6em;
+      font-size: 1.8em;
    }
-   @media (min-width: @screen-xs-min) {
-      font-size: 1.6em!important;
+   @media (min-width: @screen-md-min) {
+      font-size: 2.2em;
+   }
+   @media (min-width: @screen-lg-min) {
    }
 }
 .person-info .name a:hover {
-   font-size: 2.5em;
-   color:   #4F8C68;
+   color: #fff;
    text-decoration: none;
-
-   @media (min-width: @screen-lg-min) {
-      font-size: 2.2em!important;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 1.5em!important;
+   @media (min-width: @screen-hs-min) {
+      color: #777;
    }
    @media (min-width: @screen-sm-min) {
-      font-size: 2.6em!important;
    }
-   @media (min-width: @screen-xs-min) {
-      font-size: 1.6em!important;
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
    }
 }
 .person-info p {
-   font-family: Lato-Regular;
-   font-size: 1.3em;
-   color:   #333;
-
-   @media (min-width: @screen-lg-min) {
-      font-size: 1.2em!important;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 0.6em!important;
+   font-family: Lato;
+   font-size: 1em;
+   color: #fff;
+   @media (min-width: @screen-hs-min) {
+      font-size: 1.5em;
+      color: #777;
    }
    @media (min-width: @screen-sm-min) {
-      font-size: 1.8em!important;
+      font-size: 1.2em;
    }
-   @media (min-width: @screen-xs-min) {
-      font-size: 1em!important;
+   @media (min-width: @screen-md-min) {
+      font-size: 1.4em;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.content-team hr {
+   @media (min-width: @screen-hs-min) {
+      position: relative;
+      margin-top: 0;
+      margin-left: -15px;
+      margin-bottom: 0;
+      border: 0;
+      border-top: 1px solid #777;
+      max-width: 280px;
+      z-index: -9999;
+   }
+   @media (min-width: @screen-sm-min) {
+      max-width: 250px;
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.social-media {
+   background-color: @base-color;
+   @media (min-width: @screen-hs-min) {
+      padding-bottom: 1px;
+      background-color: transparent;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+.info-marker:after {/*code for generation de triangle marker*/
+    content:"";
+    border-color: transparent transparent @base-color transparent;
+    border-style:solid;
+    border-width:15px;
+    width:0;
+    height:0;
+    position:absolute;
+    bottom:125px;
+    left:152px;
+    @media (min-width: @screen-hs-min) {
+      display: none;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
    }
 }
 

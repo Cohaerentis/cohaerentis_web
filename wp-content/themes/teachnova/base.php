@@ -18,7 +18,7 @@
   ?>
 <div class="wrap">
   <div class="container" role="document">
-    <?php /* AAA: <div class="content row">*/ ?>
+    <div class="content row">
       <?php /* AEA - For debugging propuses * /
       wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
       wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
@@ -32,7 +32,7 @@
             <?php include roots_sidebar_path('side'); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
-    <!--</div> /.content -->
+    </div><!-- /.content -->
   </div><!-- /.container -->
 </div><!--  /.wrap -->
 
@@ -41,7 +41,7 @@
   <div class="container">
     <div class="row">
       <aside class="wp-sidebar homebar <?php echo roots_sidebar_class('home'); ?>" role="complementary">
-        <?php include //roots_sidebar_path('home'); ?>
+        <?php include roots_sidebar_path('home'); ?>
       </aside>
     </div>
   </div>
