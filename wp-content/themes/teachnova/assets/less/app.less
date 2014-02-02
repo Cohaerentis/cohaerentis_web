@@ -818,39 +818,108 @@ article {
    Persona: AAA
    ========================================================================== */
 
-.single-person-photo {
+.single-person-photo img {
+   float: none;
+   margin: 0 auto;
+   min-width: 250px;
+   min-height: 250px;
 }
 .single-person-info {
 
 }
 .single-person-contact {
-}
-.single-person-contact h2 {
-   font-family: Lato-Regular;
-   font-size: 3em;
-}
-.single-person-contact p {
-   font-size: 2em;
-   margin-top: -5px!important;
+   width: 270px;
+   float: none;
+   margin: 0 auto;
 }
 .single-person-contact .name {
-   margin-top: 0px;
+   font-family: Lato-Regular;
+   font-size: 2em;
+   display: inline-block;
+   text-align: center;
+   background-color: @base-color;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+   margin: 0;
+   width: 100%;
+}
+
+.single-person-contact .position {
+   font-family: Lato-Regular;
+   background-color: #fff;
+   font-size: 1.2em;
+   text-align: center;
+   margin-top: 30px;
+}
+
+.info-marker-person:after {/*code for generation de triangle marker*/
+    content: "";
+    border-color: @base-color transparent transparent transparent;
+    border-style: solid;
+    // AEA border-width:15px;
+    border-width: 18px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    // AEA top:220px;
+    top: 330px;
+    left: 117px;
+    z-index: 9999;
+    @media (min-width: @screen-hs-min) {
+      display: none;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+
+.single-person-social{
+   margin-left: 15px;
+}
+.single-person-social ul .social {
+   // AEA float: left;
+   display: inline;
+   /*padding-right: 10px;*/
+   padding-top: 10px;
+   font-size: 30px;
+   @media (min-width: @screen-hs-min) {
+      font-size: 30px;
+   }
+   @media (min-width: @screen-sm-min) {
+      font-size: 25px;
+   }
+   @media (min-width: @screen-md-min) {
+      font-size: 30px;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}
+
+.person-social .glyphicons-social{
+   color: @base-color;
+
+   @media (min-width: @screen-hs-min) {
+
+   }
 }
 
 .single-person-qr {
+   background-color: #fff;
 }
 
 .single-person-qr img {
-   width: 200px;
-   /*margin-top: 15px;*/
 }
 .single-person-social {
-   margin-top: 5px;
+   /*margin-top: 5px;*/
 }
 
 .single-person-social ul {
    list-style: none;
-   margin-left: -53px;
+   margin-left: -55px;
 }
 .single-person-social ul li {
 
@@ -886,7 +955,37 @@ article {
    margin-top: 10px;
 }
 
-.acord-person {
+.panel-group .panel{
+   border-radius: 0px;
+}
+.caret{
+   display: none;
+}
+.panel-heading {
+   padding: 20px 15px;
+}
+.panel-default > .panel-heading {
+   background-color: #E5E9EA;
+   color: #777;
+}
+
+.panel-default > .panel-heading:hover{
+  background-color: #B5D4CE
+}
+
+.panel-default > .panel-heading a {
+   font-family: Lato-Regular;
+   color: #333;
+}
+
+.panel-default > .panel-heading a:hover {
+   text-decoration: none;
+
+}
+.panel-group .panel + .panel {
+   margin-top: 0px;
+}
+/*.acord-person {
    margin-top: 30px;
 }
 .acord-person .su-spoiler {
@@ -913,7 +1012,7 @@ article {
 }
 .acord-person .su-spoiler-content p {
    margin: 0 10px 10px!important;
-}
+}*/
 
 /* ==========================================================================
    Partners: AAA
@@ -1184,6 +1283,7 @@ article {
 .social-share ul {
    list-style: none;
    float: left;
+   margin-left: -20px;
 }
 .social-share ul li {
    float:left;
