@@ -70,6 +70,7 @@ $(document).ready(function($) {
   // Sample to make text fit to div width
   // $('.article_title').lettering('words').fitText(0.66);});
   // $('.article_title').fitText(0.66);});
-  $('.name').fitText(0.66);
+  $('#name').fitText(0.66);
 });
+
 

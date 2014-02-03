@@ -1,4 +1,4 @@
-<div class="social-share">
+<div class=" col-lg-12 col-md-12 col-sm-12 col-hs-7 col-xs-12 social-share">
 	<ul>
 		<li id="share">Compartir en: </li>
 		<li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>

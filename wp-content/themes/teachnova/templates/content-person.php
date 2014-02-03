@@ -36,19 +36,64 @@ ini_set( 'display_errors', 'On' );
 ?>
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
     <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-person">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-person-info">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
+                            <?php echo $photo; ?>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-hs-8 col-xs-12 single-person-contact">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-contact-info">
+                                <p id="name" class="name"><?php the_title(); ?></p>
+                                <div class="info-marker-person"></div>
+                                <p class="position"><?php echo $position; ?></p>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-8 col-hs-8 col-xs-12 person-social ">
+                                <ul>
+                                    <li><a href="<?php echo $vcard_url; ?>" title="vcard"><i class="glyphicons nameplate_alt"></i><span class="descr"> Vcard</span></a></li>
+                                    <li><a href="#" title="linkedin"><i class="glyphicons-social linked_in"></i><span class="descr"> LinkedIn</span></a></li>
+                                    <li><a href="#" title="twitter"><i class="glyphicons-social twitter"></i><span class="descr"> Twiter</span></a></li>
+                                    <li><a href="#" title="rss"><i class="glyphicons-social rss"></i><span class="descr"> RSS</span></a></li>
+                                    <li><a href="#" title="facebook"><i class="glyphicons-social facebook"></i><span class="descr"> Facebook</span></a></li>
+                                    <li><a href="#" title="google plus"><i class="glyphicons-social google_plus"></i> <span class="descr"> Google plus</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
+                    <?php the_content();?>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 share-qr">
+                    <div class="row">
+                        <?php get_template_part('templates/element-social-share'); ?>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-5 hidden-xs person-qr">
+                            <img src="<?php echo $qr; ?>"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<?/*
+  <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 page-header single-person">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-person-info ">
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
-                        <?php echo $photo; ?>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-8 col-hs-8 col-xs-12 single-person-contact ">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
+                    <?php echo $photo; ?>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-8 col-hs-8 col-xs-12 single-person-contact ">
+                    <div class="row">
                         <p class="name"><?php the_title(); ?></p>
                         <div class="info-marker-person"></div>
                         <div class="col-lg-4 col-md-4 col-sm-12 col-hs-12 col-xs-12 single-person-qr ">
                             <p class="position"><?php echo $position; ?></p>
-                            <img src="<?php echo $qr; ?>"/>
-                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 single-person-social ">
+                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 single-person-social ">
                                 <ul class="person-social">
                                     <li class="social"><a href="#"><i class="glyphicons-social linked_in"></i></a></li>
                                     <li class="social"><a href="#"><i class="glyphicons-social twitter"></i></a></li>
@@ -58,26 +103,25 @@ ini_set( 'display_errors', 'On' );
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-hs-12 col-xs-12 single-person-qr ">
+                            <img src="<?php echo $qr; ?>"/>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
-                    <?php the_content();?>
-                </div>
-            </div><!--Contenido-->
+                <?php the_content();?>
+            </div>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
             <div class="row">
                 <?php get_template_part('templates/element-social-share'); ?>
-                <?php /*<div class="entry-content">
-                    <?php// the_content(); ?>
-                </div> */?>
             </div>
         </div>
-    </div>
-    </article>
+    </div> */?>
+</article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
 <?php endif; ?>
