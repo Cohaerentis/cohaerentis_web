@@ -43,7 +43,7 @@ ini_set( 'display_errors', 'On' );
                         <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
                             <?php echo $photo; ?>
                         </div>
-                        <div class="col-lg-5 col-md-5 col-sm-8 col-hs-8 col-xs-12 single-person-contact">
+                        <div class="col-lg-6 col-md-6 col-sm-8 col-hs-8 col-xs-12 single-person-contact">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-contact-info">
                                 <p id="name" class="name"><?php the_title(); ?></p>
                                 <div class="info-marker-person"></div>
@@ -52,13 +52,16 @@ ini_set( 'display_errors', 'On' );
                             <div class="col-lg-4 col-md-6 col-sm-8 col-hs-8 col-xs-12 person-social ">
                                 <ul>
                                     <li><a href="<?php echo $vcard_url; ?>" title="vcard"><i class="glyphicons nameplate_alt"></i><span class="descr"> Vcard</span></a></li>
-                                    <li><a href="#" title="linkedin"><i class="glyphicons-social linked_in"></i><span class="descr"> LinkedIn</span></a></li>
-                                    <li><a href="#" title="twitter"><i class="glyphicons-social twitter"></i><span class="descr"> Twiter</span></a></li>
-                                    <li><a href="#" title="rss"><i class="glyphicons-social rss"></i><span class="descr"> RSS</span></a></li>
-                                    <li><a href="#" title="facebook"><i class="glyphicons-social facebook"></i><span class="descr"> Facebook</span></a></li>
-                                    <li><a href="#" title="google plus"><i class="glyphicons-social google_plus"></i> <span class="descr"> Google plus</span></a></li>
+                                    <li><a href="<?php echo $linkedin; ?>" title="linkedin"><i class="glyphicons-social linked_in"></i><span class="descr"> LinkedIn</span></a></li>
+                                    <li><a href="<?php echo $twitter; ?>" title="twitter"><i class="glyphicons-social twitter"></i><span class="descr"> Twiter</span></a></li>
+                                    <li><a href="<?php echo $blog; ?>" title="rss"><i class="glyphicons-social rss"></i><span class="descr"> RSS</span></a></li>
+                                    <li><a href="<?php echo $facebook; ?>" title="facebook"><i class="glyphicons-social facebook"></i><span class="descr"> Facebook</span></a></li>
+                                    <li><a href="<?php echo $google_plus; ?>" title="google plus"><i class="glyphicons-social google_plus"></i> <span class="descr"> Google plus</span></a></li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 hidden-sm hidden-hs hidden-xs person-qr">
+                            <img src="<?php echo $qr; ?>"/>
                         </div>
                     </div>
                 </div>
@@ -68,10 +71,6 @@ ini_set( 'display_errors', 'On' );
                 <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 share-qr">
                     <div class="row">
                         <?php get_template_part('templates/element-social-share'); ?>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-5 hidden-xs person-qr">
-                            <img src="<?php echo $qr; ?>"/>
-                        </div>
                     </div>
                 </div>
             </div>
