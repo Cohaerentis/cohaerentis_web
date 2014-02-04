@@ -28,7 +28,7 @@ $attr = array(
 );
 
 $vcard = TN_vCard::person($name, $attr);
-$filename = $person->post_name . '.vcard';
+$filename = $person->post_name . '.vcf';
 
 if (empty($vcard)) { if ($debug) echo 'vCard is empty'; die; }
 
@@ -38,7 +38,7 @@ if ($debug) {
     echo $vcard;
     echo '</pre>';
 } else {
-    header('Content-Type: text/vcard; charset=' . get_option('blog_charset'), true);
+    header('Content-Type: text/x-vcard; charset=' . get_option('blog_charset'), true);
     header('Content-Disposition: attachment; filename='.$filename);
     echo $vcard;
 }
