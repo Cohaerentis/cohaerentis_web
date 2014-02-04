@@ -25,7 +25,8 @@ module.exports = function(grunt) {
       },
       dev: {
         files: {
-          'assets/css/main.css': 'assets/less/app.less'
+          'assets/css/main.css': 'assets/less/app.less',
+          'assets/css/test.css': 'assets/less/test.less'
         }
       }
     },
