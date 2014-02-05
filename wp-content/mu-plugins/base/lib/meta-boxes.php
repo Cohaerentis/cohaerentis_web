@@ -341,6 +341,12 @@ function base_register_taxonomy_meta_boxes()
       'id' => $prefix . 'section',              // ID of each section, will be the option name
 
       'fields' => array(                        // list of meta fields
+         array( // AAA
+            'name' => __('Glyphicon'),               // field name
+            'desc' => __('Glyphicon that best suit to this experience. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
+            'type' => 'text'                   // image upload
+         ),
          array(
             'name' => __('Infographic'),               // field name
             'desc' => __('Image that describe this experience'),       // field description, optional
@@ -351,6 +357,13 @@ function base_register_taxonomy_meta_boxes()
             'name' => __('Content'),
             'desc' => __('Short content of this experience'),
             'id' => $prefix . 'content',
+            'type' => 'wysiwyg',                // WYSIWYG editor
+            'std' => ''                         // default value, optional
+         ),
+         array(
+            'name' => __('Subtitle'),
+            'desc' => __('Subtitle of this service. Header purposes'),
+            'id' => $prefix . 'subtitle',
             'type' => 'wysiwyg',                // WYSIWYG editor
             'std' => ''                         // default value, optional
          ),

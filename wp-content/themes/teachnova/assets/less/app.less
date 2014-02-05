@@ -12,6 +12,9 @@
 @grid-float-breakpoint:     @screen-md-min;
 @base-color:                #00B975;
 @icon-box-bg:               #42669E;
+@icon-box-label:            3em;
+@icon-box-h:                250px;
+@icon-box-w:                250px;
 
 //
 // Mobile first desing, so declare mobile rules and then the other sizes by media queries
@@ -77,7 +80,7 @@ body {
    background-position: -700px;
    height: 665px;
    margin-top: 48px!important;
-   background: url(/media/background_transparency.png) #04080E no-repeat right;
+   background: url(/media/background_transparency.jpg) #04080E no-repeat right;
 
    @media (min-width: @screen-hs-min) {
 
@@ -100,13 +103,13 @@ pre {
    display: none;
 }
 article {
-   margin-top: 70px;
+   margin-top: 48px;
    margin-bottom: 50px;
    @media (min-width: @screen-hs-min) {
-      margin-top: 90px;
+      margin-top: 68px;
    }
    @media (min-width: @screen-sm-min) {
-      margin-top: 100px;
+      margin-top: 80px;
    }
 }
 
@@ -513,11 +516,12 @@ article {
    background-color: @base-color;
    color: #eee;
    display: inline-block;
-}
-.header .title h2 {
-   font-family: Lato;
-   font-size: 2.5em;
-   margin: 20px;
+   text-align: center;
+   .title h2 {
+      font-family: Lato;
+      font-size: 2.5em;
+      margin: 20px;
+   }
 }
 
 .subtitle {
@@ -544,50 +548,41 @@ article {
 
 }
 .entry-content a {
-   position: relative;
+   /*position: relative;*/
 }
 
 /* ==========================================================================
    Quienes Somos: AAA
    ========================================================================== */
 
-// .more {
-//    margin-left: 100px;
-// }
-// .who {
-//    display: none!important;
-// }
-// .entry-content {
-//    margin-bottom: 30px;
-// }
-
 .icon-box.somos-img {
-   // min-width: 150px;
-   // min-height: 150px;
+   @icon-box-label : 3em;
    height: auto;
-   width: 100%
+   width: 100%;
    position: relative;
    background-color: @icon-box-bg;
    text-align: center;
    color: snow;
    display: block;
-}
-.icon-box.somos-img:hover {
-   text-decoration: none;
-}
-.icon-box.somos-img .icon-box-label{
-   // AEA font-family: Lato-Hairline;
-   font-family: Lato;
-   font-size: 3em;
-   display: block;
-   color: snow;
-}
-.icon-box.somos-img a:hover{
-   text-decoration: none;
+
+   &:hover {
+      text-decoration: none;
+   }
+   .icon-box-label{
+      // AEA font-family: Lato-Hairline;
+      font-family: Lato;
+      font-size: @icon-box-label;
+      display: block;
+      color: snow;
+   }
+   a:hover{
+      text-decoration: none;
+   }
 }
 
 .icon-img{
    font-size: 100px;
+   vertical-align: -webkit-baseline-middle;
 }
 
 .separate{
@@ -601,43 +596,45 @@ article {
 .margin{
    margin: auto;
 }
-.content-team .social-icons {
-   list-style: none;
-   // AEA float: left;
-   padding-left: 0px;
-   /*margin-top: -10px;*/
-   /*margin-left: 60px;*/
-   position: relative;
-   // AEA left: 15%;
-   // AEA top: -10px;
-   text-align: center;
-   @media (min-width: @screen-hs-min) {
-      // AEA left: 0;
-      text-align: left;
+.content-team {
+   .social-icons {
+      list-style: none;
+      // AEA float: left;
+      padding-left: 0px;
+      /*margin-top: -10px;*/
+      /*margin-left: 60px;*/
+      position: relative;
+      // AEA left: 15%;
+      // AEA top: -10px;
+      text-align: center;
+      @media (min-width: @screen-hs-min) {
+         // AEA left: 0;
+         text-align: left;
+      }
+      @media (min-width: @screen-sm-min) {
+      }
+      @media (min-width: @screen-md-min) {
+      }
+      @media (min-width: @screen-lg-min) {
+      }
    }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.content-team ul .social {
-   // AEA float: left;
-   display: inline;
-   padding-right: 10px;
-   padding-top: 10px;
-   font-size: 25px;
-   @media (min-width: @screen-hs-min) {
-      font-size: 30px;
-   }
-   @media (min-width: @screen-sm-min) {
+   ul .social {
+      // AEA float: left;
+      display: inline;
+      padding-right: 10px;
+      padding-top: 10px;
       font-size: 25px;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 30px;
-   }
-   @media (min-width: @screen-lg-min) {
+      @media (min-width: @screen-hs-min) {
+         font-size: 30px;
+      }
+      @media (min-width: @screen-sm-min) {
+         font-size: 25px;
+      }
+      @media (min-width: @screen-md-min) {
+         font-size: 30px;
+      }
+      @media (min-width: @screen-lg-min) {
+      }
    }
 }
 .glyphicons-social{
@@ -647,12 +644,16 @@ article {
       color: @base-color;
    }
 }
-.glyphicons-social.linked_in:hover{ color: #1B85BD; }
-.glyphicons-social.twitter:hover{ color: #55ACEE; }
-.glyphicons-social.rss:hover{ color: #FA8502; }
-.glyphicons-social.facebook:hover{ color: #3B5998; }
-.glyphicons-social.google_plus:hover{ color: #F23F27; }
-
+.glyphicons-social{
+   &.linked_in:hover{ color: #1B85BD; }
+   &.twitter:hover{ color: #55ACEE; }
+   &.rss:hover{ color: #FA8502; }
+   &.facebook:hover{ color: #3B5998; }
+   &.google_plus:hover{ color: #F23F27; }
+}
+.person-img{
+   display: block;
+}
 .person-img img {
    /*border-radius: 180px;*/
    margin-top: 30px;
@@ -694,6 +695,55 @@ article {
    }
    @media (min-width: @screen-lg-min) {
    }
+   .name a {
+      font-family: Lato-Hairline;
+      font-size: 2em;
+      color: #fff;
+      font-weight: bold;
+      @media (min-width: @screen-hs-min) {
+         font-size: 2.5em;
+         color: #777;
+      }
+      @media (min-width: @screen-sm-min) {
+         font-size: 1.8em;
+      }
+      @media (min-width: @screen-md-min) {
+         font-size: 2.2em;
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+      &:hover {
+         color: #fff;
+         text-decoration: none;
+         @media (min-width: @screen-hs-min) {
+            color: #777;
+         }
+         @media (min-width: @screen-sm-min) {
+         }
+         @media (min-width: @screen-md-min) {
+         }
+         @media (min-width: @screen-lg-min) {
+         }
+      }
+   }
+
+   p {
+      font-family: Lato;
+      font-size: 1em;
+      color: #fff;
+      @media (min-width: @screen-hs-min) {
+         font-size: 1.5em;
+         color: #777;
+      }
+      @media (min-width: @screen-sm-min) {
+         font-size: 1.2em;
+      }
+      @media (min-width: @screen-md-min) {
+         font-size: 1.4em;
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+   }
 }
 
 .person-info-name {
@@ -710,54 +760,7 @@ article {
    @media (min-width: @screen-lg-min) {
    }
 }
-.person-info .name a {
-   font-family: Lato-Hairline;
-   font-size: 2em;
-   color: #fff;
-   font-weight: bold;
-   @media (min-width: @screen-hs-min) {
-      font-size: 2.5em;
-      color: #777;
-   }
-   @media (min-width: @screen-sm-min) {
-      font-size: 1.8em;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 2.2em;
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.person-info .name a:hover {
-   color: #fff;
-   text-decoration: none;
-   @media (min-width: @screen-hs-min) {
-      color: #777;
-   }
-   @media (min-width: @screen-sm-min) {
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
-.person-info p {
-   font-family: Lato;
-   font-size: 1em;
-   color: #fff;
-   @media (min-width: @screen-hs-min) {
-      font-size: 1.5em;
-      color: #777;
-   }
-   @media (min-width: @screen-sm-min) {
-      font-size: 1.2em;
-   }
-   @media (min-width: @screen-md-min) {
-      font-size: 1.4em;
-   }
-   @media (min-width: @screen-lg-min) {
-   }
-}
+
 .content-team hr {
    @media (min-width: @screen-hs-min) {
       position: relative;
@@ -817,6 +820,9 @@ article {
 /* ==========================================================================
    Persona: AAA
    ========================================================================== */
+.single-person-info{
+   margin-top: 30px;
+}
 .single-person-photo{
    @media (min-width: @screen-hs-min) {
       margin-right: -10px;
@@ -932,7 +938,7 @@ article {
    height: 0;
    position: absolute;
    left: 102px;
-   z-index: 9999;
+   z-index: 1;
    @media (min-width: @screen-hs-min) {
    display: none;
    }
@@ -1192,24 +1198,6 @@ article {
    padding-left: 10px;
 }
 
-
-/* ==========================================================================
-   Taxonomy Mosaic: AAA
-   ========================================================================== */
-
-.tn-taxonomy-term {
-   margin-top: 50px;
-   margin-left: 50px;
-}
-.tn-taxonomy-term img {
-   border-radius: 180px;
-   border: 1px solid;
-}
-
-.tn-taxonomy-description {
-   margin-top: 30px;
-}
-
 /* ==========================================================================
    Service: AAA
    ========================================================================== */
@@ -1294,19 +1282,100 @@ article {
 }
 
 /* ==========================================================================
+   List of experience: AAA
+   ========================================================================== */
+
+.experience-box{
+   font-size: 100px;
+   border-radius: 180px;
+   margin: auto;
+   @icon-box-bg: @base-color;
+   @icon-box-h: 200px;
+   @icon-box-w: 200px;
+   &:hover{
+      background-color: snow;
+      .glyphicons{
+         color: @base-color;
+      }
+   }
+   .icon-box;
+   .glyphicons{
+      padding-top: 20px;
+   }
+
+}
+.tn-taxonomy-label{
+   font-family: Lato-Regular;
+   font-size: 20px;
+   text-align: center;
+   margin-top: 5px;
+   color: #444;
+}
+
+ /*** Taxonomy Mosaic: AAA **/
+
+.tn-taxonomy-term {
+   margin-top: 50px;
+   a:hover{
+      text-decoration: none;
+   }
+
+}
+.tn-taxonomy-term img {
+   border-radius: 180px;
+   border: 1px solid;
+}
+
+.tn-taxonomy-description {
+   margin-top: 30px;
+}
+
+
+
+/* ==========================================================================
    Single experience: AAA
    ========================================================================== */
+.experience{
+   margin-top: 30px;
+}
+.common-box{
+   img {
+      border-radius: 180px;
+      margin:auto;
+   }
+}
+
 .experience-slider {
    margin-top: 50px;
+   .carousel{
+      width: 100%;
+      margin-top: 0px;
+      @media (min-width: @screen-hs-min) {
+      }
+      @media (min-width: @screen-sm-min) {
+         margin-top: 30px;
+      }
+      @media (min-width: @screen-md-min) {
+         margin-top: 50px;
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+      .carousel-inner ul {
+         padding-left: 30px;
+         padding-right: 30px;
+      }
+   }
+
+   .img-responsive{
+      display: inline;
+   }
 }
 
 .experience-slider li {
-   padding-left: 30px;
+   /*padding-left: 30px;*/
 }
 
-.experience-image img {
-   border-radius: 180px;
-}
+
 
 /* ==========================================================================
    Espacio y redes: AAA
@@ -1339,33 +1408,7 @@ article {
    margin-left: 30px;
 }
 
-.carousel {
-   margin-top: 50px;
-   /*border-radius: 5px;*/
-   border-top:1px solid #ccc;
-   border-bottom:1px solid #ccc;
 
-}
-.carousel-inner ul {
-   list-style: none;
-}
-
-.carousel-inner img {
-   width: 100px;
-   margin-top: 10px;
-}
-.carousel-inner .item img {
-   display: inline-block;
-}
-
-.carousel-control {
-   background-image: none!important;
-   width: 50px;
-   margin-top: -20px;
-}
-.carousel-control .glyphicon {
-   color: grey;
-}
 /* ==========================================================================
    Espacios: AAA
    ========================================================================== */
@@ -1528,3 +1571,112 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 
+/* ==========================================================================
+   Mixings
+   ========================================================================== */
+
+/***Box****/
+
+.icon-box {
+   height: @icon-box-h;
+   width: @icon-box-w;
+   background-color: @icon-box-bg;
+   text-align: center;
+   color: snow;
+   display: block;
+
+   &:hover {
+      text-decoration: none;
+   }
+   .icon-box-label{
+      // AEA font-family: Lato-Hairline;
+      font-family: Lato;
+      font-size: @icon-box-label;
+      display: block;
+      color: snow;
+   }
+   a:hover{
+      text-decoration: none;
+   }
+}
+
+/****Carousel***/
+
+.carousel {
+   margin: auto;
+   margin-top: 50px;
+   border:1px solid #ccc;
+   background-color: snow;
+   width: 100%;
+   height: 75px;
+   @media (min-width: @screen-hs-min) {
+      width: 400px;
+   }
+   @media (min-width: @screen-sm-min) {
+      width: 600px;
+      height: 100px;
+   }
+   @media (min-width: @screen-md-min) {
+      width: 750px;
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+   .glyphicons {
+      color: @base-color;
+   }
+   figure {
+      margin: 0px;
+   }
+}
+.carousel-inner ul {
+   list-style: none;
+   padding-left: 30px;
+   padding-right: 30px;
+   @media (min-width: @screen-hs-min) {
+      padding: 0px;
+   }
+   @media (min-width: @screen-sm-min) {
+      padding: 0px;
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+   li{
+      padding-right: 10px;
+   }
+   img {
+      width: 50px;
+      margin-top: 15px;
+      @media (min-width: @screen-hs-min) {
+      }
+      @media (min-width: @screen-sm-min) {
+         width: 75px;
+         margin-top: 10px;
+      }
+      @media (min-width: @screen-md-min) {
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+
+   }
+   .item img {
+      /*display: inline-block;*/
+   }
+}
+
+.carousel-control {
+   background-image: none!important;
+   width: 28px;
+   margin-top: 20px;
+   @media (min-width: @screen-hs-min) {
+   }
+   @media (min-width: @screen-sm-min) {
+      width: 50px;
+      margin-top: 35px;
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+}

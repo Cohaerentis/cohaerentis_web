@@ -2,7 +2,7 @@
     $title = $post->post_title;
     $field  = $post->post_type.'_subtitle';
     $subtitle  = get_post_meta( $post->ID, $field, true );
-     //wrout_json('debug:', $field);
+    //wrout_json('debug:', $field);
 ?>
 <?php //AAA: Two columns header if subtitle exist ?>
 <?php if(!empty($subtitle)): ?>

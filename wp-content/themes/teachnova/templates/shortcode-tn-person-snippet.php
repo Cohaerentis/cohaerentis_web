@@ -27,7 +27,7 @@
 <?php if (!empty($person)) : ?>
     <div class="row content-team">
         <div class="col-lg-4 col-md-4 col-sm-4 col-hs-4 col-xs-12 person-img">
-            <?php echo $photo; ?>
+            <a href="<?php echo $url;?>"><?php echo $photo; ?></a>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-hs-8 col-xs-12 person-info">
             <div class="row">

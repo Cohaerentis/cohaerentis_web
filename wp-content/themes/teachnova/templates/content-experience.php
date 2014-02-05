@@ -22,6 +22,7 @@
         if (!empty($image[0])) $term->src = $image[0];
 
         $term->content = do_shortcode($metaterm['experience_content']);
+        $term->icon = do_shortcode($metaterm['experience_glyphicon']);
 
         $args = array(
             'experience'  => $term->slug,
@@ -44,22 +45,28 @@
 ?>
 <?php if (!empty($term)) : ?>
     <article <?php post_class() ?> id="experience-<?php echo $term->term_id; ?>">
-        <div class="page-header">
-            <h1 class="entry-title"><?php echo $term->name; ?></h1>
-        </div>
-        <div class="entry-content">
-            <?php echo $term->content; ?>
-        </div>
-        <div class="entry-meta">
-            <div class="row">
-                <div class="experience-slider col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <?php get_template_part('templates/element-customers-slider'); ?>
-                </div>
-                <div class="experience-image col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <img src="<?php echo $term->src; ?>" class="img-responsive">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 header">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-hs-12 col-xs-12 title">
+                        <h2 class="entry-title"><?php echo $term->name; ?></h2>
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-hs-12 col-xs-12 subtitle">
+                        <p><?php echo $term->content; ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="entry-meta col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 experience">
+                <div class="col-lg-push-8 col-md-push-8 col-sm-4 col-hs-12 col-xs-12 experience-image">
+                    <div class="common-box">
+                        <img src="<?php echo $term->src; ?>" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="col-lg-pull-4 col-md-pull-4 col-sm-8 col-hs-12 col-xs-12 experience-slider">
+                    <?php get_template_part('templates/element-customers-slider'); ?>
+                </div>
+            </div>
+        <div>
     </article>
 <?php else : ?>
     <?php get_template_part('templates/element-noresults'); ?>
