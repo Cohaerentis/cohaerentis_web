@@ -45,3 +45,7 @@ require WPMU_PLUGIN_DIR . '/page-list/page-list.php';
 
 // AEA - Disable because is not working on WP 3.8
 // require WPMU_PLUGIN_DIR . '/wp-visual-icon-fonts/wp-visual-icon-fonts.php';
+
+// Roots rewrites
+require WPMU_PLUGIN_DIR . '/roots-rewrites/roots-rewrites.php';
+

@@ -74,27 +74,26 @@ body {
    background-image: linear-gradient(to right, #E0E4E7 0%, #C2D4D5 100%);
 }
 .main {
-
+}
+.wrap {
+   margin: 0;
+   padding: 0;
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {
+      margin-top: 80px;
+   }
+   @media (min-width: @screen-lg-min) {}
 }
 .home .wrap {
    background-position: -700px;
    height: 665px;
-   margin-top: 48px!important;
    background: url(/assets/img/background_transparency.png) #04080E no-repeat right;
 
-   @media (min-width: @screen-hs-min) {
-
-   }
-   @media (min-width: @screen-sm-min) {
-      /*background-position: -390px;*/
-      margin-top: 80px;
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-      /*background-position: 0px;*/
-   }
-
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {}
+   @media (min-width: @screen-lg-min) {}
 }
 
 
@@ -168,30 +167,31 @@ article {
 .navbar {
    background-color: #181818;
    background-size: 800px;
-   margin-top: -22px;
-   height: 70px;
+   // margin-top: -22px;
+   height: auto;
+   margin-bottom: 0;
    @media (min-width: @screen-hs-min) {
-      height: 90px;
    }
    @media (min-width: @screen-sm-min) {
-      margin-top: -10px;
+      // margin-top: -10px;
    }
    @media (min-width: @screen-md-min) {
+      height: 80px;
    }
    @media (min-width: @screen-lg-min) {
-      margin-top: -10px;
-      margin-bottom: 0px;
+      // margin-top: -10px;
+      // margin-bottom: 0px;
    }
 }
 .navbar-header {
-   height: 70px;
+   height: 48px;
 
    @media (min-width: @screen-hs-min) {
       /* rules for mobile horizontal (480 > 768)  */
-      height: 90px;
    }
    @media (min-width: @screen-sm-min) {
       /* rules for tablet (768 > 992) */
+      height: 80px;
    }
    @media (min-width: @screen-md-min) {
       /* rules for desktop (992 > 1200) */
@@ -201,20 +201,19 @@ article {
    }
 }
 .navbar-header a {
-   background: url(/assets/img/logo-coharentis-104.png)no-repeat;
-   width: 190px;
-   margin-top: 20px;
-   background-size: 200px;
+   background: url(/assets/img/logo-cohaerentis-104.png)no-repeat;
+   width: 180px;
+   margin-top: 0;
+   background-size: 190px;
    margin-left: -10px;
-   height: 50px;
+   height: 48px;
    display: blocK;
    @media (min-width: @screen-hs-min) {
-      width: 300px;
-      height: 90px;
-      background-size: 273px;
    }
    @media (min-width: @screen-sm-min) {
-      margin-top: 11px;
+      width: 300px;
+      height: 80px;
+      background-size: 273px;
       margin-left: -15px;
       background-size: 308px;
    }
@@ -236,12 +235,11 @@ article {
    }
 }
 .navbar-toggle {
-   margin-top: 30px;
+   margin-top: 8px;
    @media (min-width: @screen-hs-min) {
-      margin-top: 38px;
    }
    @media (min-width: @screen-sm-min) {
-      margin-top: 35px;
+      margin-top: 24px;
    }
    @media (min-width: @screen-md-min) {
    }
@@ -252,7 +250,7 @@ article {
 
 .navbar > .container .navbar-brand {
    margin-left: -15px;
-   margin-top: -10px;
+   // margin-top: -10px;
 }
 
 .navbar-default {
@@ -275,13 +273,14 @@ article {
    float:left;
    @media (min-width: @screen-md-min) {
       float: right;
-      margin: 35px 50px 0 0;
+      margin: 25px 50px 0 0;
    }
 }
 
 .navbar-collapse {
    box-shadow: none;
    background-color: rgba(213, 214, 214, 1);
+   border: 0;
    @media (min-width: @screen-md-min) {
       background-color: transparent;
    }
@@ -299,6 +298,17 @@ article {
       background-color: transparent;
    }
 }
+
+.navbar-fixed-top {
+   position: inherit;
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {
+      position: fixed;
+   }
+   @media (min-width: @screen-lg-min) {}
+}
+
 
 /* ==========================================================================
    Footer
