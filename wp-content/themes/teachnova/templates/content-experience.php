@@ -34,7 +34,7 @@
         if (!empty($customers)) {
             foreach($customers as $customer) {
                 $title = trim(strip_tags($customer->post_title));
-                $attr = array('class' => 'img-responsive',
+                $attr = array('class' => '',
                               'alt'   => $title,
                               'title' => $title);
                 $customer->img = get_the_post_thumbnail($customer->ID, 'thumbnail', $attr);
@@ -57,13 +57,15 @@
                 </div>
             </div>
             <div class="entry-meta col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 experience">
-                <div class="col-lg-push-8 col-md-push-8 col-sm-4 col-hs-12 col-xs-12 experience-image">
-                    <div class="common-box">
-                        <img src="<?php echo $term->src; ?>" class="img-responsive" />
+                <div class="row">
+                    <div class="col-lg-push-8 col-md-push-8 col-sm-4 col-hs-12 col-xs-12 experience-image">
+                        <div class="common-box">
+                            <img src="<?php echo $term->src; ?>" class="img-responsive" />
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-pull-4 col-md-pull-4 col-sm-8 col-hs-12 col-xs-12 experience-slider">
-                    <?php get_template_part('templates/element-customers-slider'); ?>
+                    <div class="col-lg-pull-4 col-md-pull-4 col-sm-8 col-hs-12 col-xs-12 experience-slider">
+                        <?php get_template_part('templates/element-customers-slider'); ?>
+                    </div>
                 </div>
             </div>
         <div>

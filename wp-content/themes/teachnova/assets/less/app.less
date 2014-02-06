@@ -1219,8 +1219,36 @@ article {
    Subservice: AAA
    ========================================================================== */
 
-.subservice-title {
-   margin-bottom: 50px;
+.subservice-content{
+   .table-responsive{
+      overflow: hidden;
+      table{
+         font-size: 10px;
+      }
+      thead{
+         background-color: snow;
+         &> tr > th{
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+      }
+      tbody{
+         tr:nth-child(odd) {
+            background-color: transparent;
+            color:#333
+         }
+         tr:nth-child(even) {
+            background-color: #D3D8DB;
+            color:#333;
+         }
+         tr:hover{
+            background-color: #C4D1DA;
+         }
+      }
+   }
+   h2{
+      /*aqui nos quedamos. hay que poner fondo verde con la flechita hacia abajo*/
+   }
 }
 
 
@@ -1346,7 +1374,8 @@ article {
 }
 
 .experience-slider {
-   margin-top: 50px;
+   margin-top: 30px;
+   padding: 0px;
    .carousel{
       width: 100%;
       margin-top: 0px;
@@ -1367,7 +1396,7 @@ article {
    }
 
    .img-responsive{
-      display: inline;
+
    }
 }
 
@@ -1572,7 +1601,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 /* ==========================================================================
-   Mixings
+   Mixins
    ========================================================================== */
 
 /***Box****/
@@ -1608,30 +1637,56 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    border:1px solid #ccc;
    background-color: snow;
    width: 100%;
-   height: 75px;
+   height: 100%;
    @media (min-width: @screen-hs-min) {
-      width: 400px;
    }
    @media (min-width: @screen-sm-min) {
-      width: 600px;
-      height: 100px;
    }
    @media (min-width: @screen-md-min) {
-      width: 750px;
    }
    @media (min-width: @screen-lg-min) {
    }
    .glyphicons {
       color: @base-color;
+      @media (min-width: @screen-hs-min) {
+      }
+      @media (min-width: @screen-sm-min) {
+      }
+      @media (min-width: @screen-md-min) {
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+
    }
    figure {
-      margin: 0px;
+      margin: 25px;
    }
+   .carousel-control {
+      background-image: none!important;
+      width: 25px;
+      display: block;
+      @media (min-width: @screen-hs-min) {
+      }
+      @media (min-width: @screen-sm-min) {
+      }
+      @media (min-width: @screen-md-min) {
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+      i {
+         display: inline-block;
+         vertical-align: middle;
+      }
+   }
+   .carousel-control:before {
+        content: '';
+        display: inline-block;
+        height: 50%;
+      }
 }
 .carousel-inner ul {
    list-style: none;
-   padding-left: 30px;
-   padding-right: 30px;
+   padding-left: 0px;
    @media (min-width: @screen-hs-min) {
       padding: 0px;
    }
@@ -1644,14 +1699,26 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
    li{
       padding-right: 10px;
-   }
-   img {
-      width: 50px;
-      margin-top: 15px;
       @media (min-width: @screen-hs-min) {
       }
       @media (min-width: @screen-sm-min) {
-         width: 75px;
+         margin-left: -10px;
+      }
+      @media (min-width: @screen-md-min) {
+         margin-left: 0px;
+      }
+      @media (min-width: @screen-lg-min) {
+      }
+   }
+   img {
+      width: 75px;
+      height: 75px;
+      margin: auto;
+      @media (min-width: @screen-hs-min) {
+         width: 100px;
+         height: 100px;
+      }
+      @media (min-width: @screen-sm-min) {
          margin-top: 10px;
       }
       @media (min-width: @screen-md-min) {

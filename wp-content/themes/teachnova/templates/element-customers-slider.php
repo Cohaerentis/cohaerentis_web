@@ -3,22 +3,22 @@
 <div class="carousel slide media-carousel" id="leading-<?php echo $type; ?>s">
 <div class="carousel-inner center-block">
   <?php $i = 0; foreach($customers as $customer) : ?>
-    <?php if (($i % 3) == 0) : ?>
+    <?php if (($i % 4) == 0) : ?>
       <div class="item <?php if ($i == 0) echo 'active'; ?>">
         <ul class="row text-center">
     <?php endif; ?>
-          <li class="col-lg-4 col-md-4 col-sm-4 col-hs-4 col-xs-4">
+          <li class="col-lg-3 col-md-3 col-sm-3 col-hs-6 col-xs-6">
             <figure>
               <?php echo $customer->img; ?>
               <figcaption><?php echo $customer->caption; ?></figcaption>
             </figure>
           </li>
-    <?php $i++; if (($i % 3) == 0) : ?>
+    <?php $i++; if (($i % 4) == 0) : ?>
         </ul>
       </div>
     <?php endif; ?>
   <?php endforeach; ?>
-  <?php if (($i % 3) != 0) : ?>
+  <?php if (($i % 4) != 0) : ?>
         </ul>
       </div>
   <?php endif; ?>
