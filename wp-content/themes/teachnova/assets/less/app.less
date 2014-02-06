@@ -7,7 +7,7 @@
 @import "glyphicons/social.less";
 @import "glyphicons/filetypes.less";
 @import "glyphicons/extras.less";
-// @import "font-awesome/font-awesome.less";
+@import "font-awesome/font-awesome.less";
 
 @grid-float-breakpoint:     @screen-md-min;
 @base-color:                #00B975;
@@ -449,9 +449,6 @@ article {
 .footer-third .links ul {
    list-style: none;
    margin-left: -35px;
-}
-.footer-third .social-share {
-   margin-left: -30px!important;
 }
 .footer-third #share, .alter #share {
    display: none;
@@ -1220,10 +1217,28 @@ article {
    ========================================================================== */
 
 .subservice-content{
+   @media (min-width: @screen-hs-min) {
+   }
+   @media (min-width: @screen-sm-min) {
+      margin-top: 20px;
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
    .table-responsive{
       overflow: hidden;
       table{
          font-size: 10px;
+         @media (min-width: @screen-hs-min) {
+            font-size: 14px;
+         }
+         @media (min-width: @screen-sm-min) {
+         }
+         @media (min-width: @screen-md-min) {
+         }
+         @media (min-width: @screen-lg-min) {
+         }
       }
       thead{
          background-color: snow;
@@ -1247,8 +1262,74 @@ article {
       }
    }
    h2{
-      /*aqui nos quedamos. hay que poner fondo verde con la flechita hacia abajo*/
+      color: #333;
+      background-color: #C4D1DA;
+      border-bottom: 3px solid rgba(255,255,255,0.5);
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin-top: -10px;
    }
+}
+.download{
+   .cloud-upload{
+      .special-icons;
+   }
+}
+.download-content{
+   .qr{
+      position: relative;
+      left: 70px;
+      img{
+      }
+   }
+}
+.documents{
+   .paperclip{
+      padding-top: 3px;
+      padding-left: 8px;
+      .special-icons(8px;31px);
+   }
+   ul{
+      list-style: none;
+      .glyphicons{
+         top: 3px;
+         padding-right: 5px;
+         color: snow;
+      }
+      a{
+         font-family: Lato-Regular;
+         color: #777;
+         font-size: 1.1em;
+         &:hover{
+            text-decoration: none;
+            color: @base-color;
+         }
+      }
+   }
+}
+.link-to{
+   font-size: 14px;
+   margin-left: 5px;
+   font-family: Lato-Regular;
+   @media (min-width: @screen-hs-min) {
+      font-size: 20px;
+      margin-left: 20px;
+   }
+   @media (min-width: @screen-sm-min) {
+   }
+   @media (min-width: @screen-md-min) {
+   }
+   @media (min-width: @screen-lg-min) {
+   }
+   a{
+      color: #777;
+      &:hover{
+         text-decoration: none;
+         color: @base-color;
+      }
+   }
+
 }
 
 
@@ -1451,11 +1532,6 @@ article {
    margin-bottom: -10px;
 }
 
-.space-content .social-share {
-   position: relative;
-   left: -40px;
-}
-
 .slider-gallery .carousel-inner img {
    width: 100%;
    margin-top: 10px;
@@ -1474,7 +1550,7 @@ article {
    ul {
       list-style: none;
       float: left;
-      margin-left: -20px;
+      padding-left: 0;
    }
    li {
       float:left;
@@ -1731,19 +1807,14 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       /*display: inline-block;*/
    }
 }
-
-.carousel-control {
-   background-image: none!important;
-   width: 28px;
-   margin-top: 20px;
-   @media (min-width: @screen-hs-min) {
-   }
-   @media (min-width: @screen-sm-min) {
-      width: 50px;
-      margin-top: 35px;
-   }
-   @media (min-width: @screen-md-min) {
-   }
-   @media (min-width: @screen-lg-min) {
-   }
+/*******special icons*******/
+.special-icons(@padding:7px; @font-size-special:34px){
+   background-color: @icon-box-bg;
+   padding-left: @padding;
+   border-radius: 180px;
+   border: 1px solid @icon-box-bg;
+   color: snow;
+   width: 50px;
+   height: 50px;
+   font-size: @font-size-special;
 }
