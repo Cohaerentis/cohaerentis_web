@@ -1505,17 +1505,23 @@ article {
 /* ==========================================================================
    Espacio: AAA
    ========================================================================== */
-
-.space-title {
-   border: none;
-   margin-top: -20px;
+.space-header{
+   margin-top: 50px;
 }
-.space-title h1 {
-   font-size: 30px;
+.slider-gallery .carousel{
+   margin-top: 0;
 }
-
-.spaces-mosaic {
-   margin-left: 30px;
+.visit{
+   font-size: Lato-LightItalic;
+   font-size: 1.1em;
+   float: right;
+   a{
+      color: #777;
+      &:hover{
+         color: @base-color;
+         text-decoration: none;
+      }
+   }
 }
 
 
@@ -1523,23 +1529,7 @@ article {
    Espacios: AAA
    ========================================================================== */
 
-.space-content {
-   margin-bottom: 50px;
-}
-.space-content .page-header {
-   border-bottom: none;
-    margin-top: -20px;
-   margin-bottom: -10px;
-}
 
-.slider-gallery .carousel-inner img {
-   width: 100%;
-   margin-top: 10px;
-}
-.slider-gallery .carousel {
-   border: none;
-   margin-top: -20px;
-}
 
 /* ==========================================================================
    Social-share: AAA
@@ -1812,9 +1802,27 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    background-color: @icon-box-bg;
    padding-left: @padding;
    border-radius: 180px;
-   border: 1px solid @icon-box-bg;
+   border: 1px solidub @icon-box-bg;
    color: snow;
    width: 50px;
    height: 50px;
    font-size: @font-size-special;
+}
+
+.h2{
+   color: snow;
+   background-color: @base-color;
+   /*border-bottom: 3px solid rgba(255,255,255,0.5);*/
+   text-align: center;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   margin: 0;
+}
+.font-p{
+   font-family: Lato;
+   font-size: 1.2em;
+}
+
+.base-color{
+   color: @base-color;
 }

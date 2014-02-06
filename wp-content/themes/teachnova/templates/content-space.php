@@ -21,24 +21,36 @@ ini_set( 'display_errors', 'On' );
       if (!empty($gallery->gid)) $images = $nggdb->get_gallery($gallery->gid);
     }
 ?>
-    <article <?php post_class() ?> id="space-<?php echo $post->ID; ?>">
-        <div class="row space-content col-lg-12">
-          <?php if(!empty($gallery)):?>
-          <div class="slider-gallery col-lg-7">
-            <div id="space-slider-<?php echo $post->ID; ?>" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <?php $i = 0; foreach ($images as $image) : ?>
-                <li data-target="#space-slider-<?php echo $post->ID; ?>"
-                  data-slide-to="<?php echo $i; ?>"
-                  <?php if ($i == 0) : ?>
-                  class="active"
-                <?php endif; ?>
-                >
+<article <?php post_class() ?> id="space-<?php echo $post->ID; ?>">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 space-header">
+      <div class="row">
+        <?php if(!empty($gallery)):?>
+        <div class="col-lg-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12">
+          <h2 class="entry-title h2"><?php the_title(); ?></h2>
+          <div class="entry-description col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 font-p">
+              <?php echo the_excerpt(); ?>
+          </div>
+          <span class="visit">
+            <i class="glyphicons new_window_alt base-color"></i>
+            <a href="<?php echo $url;?>" target="_blank"><strong>Visitar sitio</strong></a>
+          </span>
+        </div>
+        <div class="col-lg-pull-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 slider-gallery ">
+          <div id="space-slider-<?php echo $post->ID; ?>" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+
+            <ol class="carousel-indicators">
+              <?php $i = 0; foreach ($images as $image) : ?>
+              <li data-target="#space-slider-<?php echo $post->ID; ?>" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0) : ?>
+                class="active" <?php endif; ?>>
               </li>
-              <?php $i++; endforeach; ?>
+            <?php $i++; endforeach; ?>
             </ol>
+
             <!-- Wrapper for slides -->
+
             <div class="carousel-inner">
               <?php $i = 0; foreach ($images as $image) : ?>
               <?php
@@ -53,30 +65,24 @@ ini_set( 'display_errors', 'On' );
             </div>
 
             <!-- Controls -->
+
             <a class="left carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
+              <i class="glyphicons chevron-left"></i>
             </a>
             <a class="right carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
+              <i class="glyphicons chevron-right"></i>
             </a>
           </div>
-          </div>
+        </div>
         <?php endif; ?>
-          <div class="page-header col-lg-5>">
-              <h1 class="entry-title"><?php the_title(); ?></h1>
-          </div>
-          <div class="entry-description">
-              <?php echo the_excerpt(); ?>
-          </div>
-          <div>
-            <span><a href="<?php echo $url;?>" target="_blank"><strong>Visitar sitio</strong></a></span>
-          </div>
-            <?php get_template_part('templates/element-social-share'); ?>
-        </div>
-        <div class="entry-content">
-            <?php the_content(); ?>
-        </div>
-    </article>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 entry-content font-p">
+      <?php the_content(); ?>
+    </div>
+  </div>
+  <?php get_template_part('templates/element-social-share'); ?>
+</article>
 
 <pre>
     url = <?php var_export($url); ?><br>
