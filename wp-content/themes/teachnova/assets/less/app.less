@@ -1553,11 +1553,11 @@ article {
    margin-bottom: 20px;
    margin-top: 20px;
    header{
-      border-bottom: 1px solid @base-color;
+      border-bottom: 1px solid snow;
       h2{
          a{
          font-family: Lato-Regular;
-         color: #777;
+         color: #3a3a3a;
             &:hover{
                text-decoration: none;
             }
@@ -1588,6 +1588,16 @@ article {
          }
       }
    }
+   .header-post-list {
+      color: #3a3a3a;
+      a {
+         color:#3a3a3a;
+         &:hover {
+            color: @base-color;
+            text-decoration: none;
+         }
+      }
+   }
 }
 
 /* ==========================================================================
@@ -1610,6 +1620,14 @@ article {
    }
    .post-date{
       padding-bottom: 20px;
+      color: #3a3a3a;
+      a {
+         color:#3a3a3a;
+         &:hover {
+            color: @base-color;
+            text-decoration: none;
+         }
+      }
    }
 
 
@@ -1879,5 +1897,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 .italic{
    font-family: Lato-LightItalic;
+}
+
+a{
+   color: #3a3a3a;
+   &:hover{
+      text-decoration: none;
+      color: @base-color;
+   }
 }
 
