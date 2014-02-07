@@ -10,8 +10,10 @@
 @import "font-awesome/font-awesome.less";
 
 @grid-float-breakpoint:     @screen-md-min;
-@base-color:                #00B975;
-@icon-box-bg:               #42669E;
+@ch-green:                  #00B975;
+@ch-blue:                   #42669E;
+@base-color:                @ch-green;
+@icon-box-bg:               @ch-blue;
 @icon-box-label:            3em;
 @icon-box-h:                250px;
 @icon-box-w:                250px;
@@ -1646,6 +1648,10 @@ article {
 
 .contact-content {
    margin-top: 50px;
+}
+
+.tn-gmap iframe {
+   border: 3px solid @ch-blue;
 }
 
 /* ==========================================================================
