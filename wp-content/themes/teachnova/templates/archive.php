@@ -6,25 +6,30 @@
 <?php get_template_part('templates/element-if-noresults'); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <div class="container">
-    <div class="row">
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 news-archive">
+      <div class="row">
+        <header class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </header>
-        <div class="row header-post-list">
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 header-post-list">
             <?php echo the_date('d F Y - ');?><?php echo the_tags('#',', #','.');?>
         </div>
-        <div class="row entry-summary post-list-content">
-          <div class="post-list-thumb col-lg-3">
-            <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(100,100)); ?></a>
-          </div>
-          <div class="post-list-excerpt col-lg-6">
-            <?php the_excerpt(); ?>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-hs-3 col-xs-12 post-list-thumb">
+          <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(100,100)); ?></a>
         </div>
-      </article>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-hs-9 col-xs-12 post-list-excerpt font-p">
+          <?php the_excerpt(); ?>
+        </div>
+      </div>
     </div>
   </div>
+</article>
+
 <?php endwhile; ?>
 <?php get_template_part('templates/element-posts-pagination'); ?>
