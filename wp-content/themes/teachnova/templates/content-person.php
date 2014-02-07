@@ -68,10 +68,8 @@ ini_set( 'display_errors', 'On' );
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
                     <?php the_content();?>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 share-qr">
-                    <div class="row">
-                        <?php get_template_part('templates/element-social-share'); ?>
-                    </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
+                    <?php get_template_part('templates/element-social-share'); ?>
                 </div>
             </div>
         </div>
