@@ -17,18 +17,21 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-img">
                     <?php echo the_post_thumbnail('large'); ?>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-date">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-date italic">
                     <?php echo the_date('d F Y');?> - <?php echo the_tags('#',', #','.');?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-content">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-content font-p">
                     <?php the_content(); ?>
                 </div>
             </div>
             <?php get_template_part('templates/element-social-share');?>
-            <div class="row single-post-comments">
-                <?php comments_template('comments.php'); ?>
+
+            <div class="row">
+                <div class="single-post-comments">
+                    <?php comments_template('comments.php'); ?>
+                </div>
             </div>
         </div>
     </div>
