@@ -32,25 +32,26 @@ function osc_theme_toggle($params, $content = null) {
                 'title' => 'title',
                 'class' => '',
                 // AEA - User can add a caret, at left of title
-                'caret' => 'yes'
+                'caret' => 'yes',
+                // AEA - User can open this toggle in initial page load
+                'in' => 'no',
                     ), $params));
     $con = do_shortcode($content);
     $index = count($_oscitas_accordion) - 1;
     $id = isset($_oscitas_accordion[$index]['details'])?'details-' . $index . '-' . count($_oscitas_accordion[$index]['details']):'details-' . $index . '-0';
     // AEA - User can add a caret, at left of title
     if (strtolower($caret) == 'yes') $caret = '<span class="caret"></span>';
+    if (strtolower($in) == 'yes') $class .= ' in';
     $_oscitas_accordion[$index]['details'][] = <<<EOS
         <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                {$caret}
-                <a class="accordion-toggle" data-toggle="collapse"
+            <a class="panel-heading accordion-toggle" data-toggle="collapse"
                 data-parent="#oscitas-accordion-{$index}"
                 href="#{$id}">
+              <h4 class="panel-title">
+                {$caret}
                 {$title}
-                </a>
               </h4>
-            </div>
+            </a>
             <div id="{$id}" class="panel-collapse collapse {$class}">
               <div class="panel-body">{$con}</div>
             </div>
