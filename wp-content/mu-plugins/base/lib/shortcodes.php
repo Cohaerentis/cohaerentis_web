@@ -192,3 +192,69 @@ function tn_shortcode_tn_icon_box($atts, $content) {
    return preg_replace('(\n|\r)', ' ', $html);
 }
 add_shortcode($prefix . 'icon_box', 'tn_shortcode_tn_icon_box');
+
+/**
+ * [tn_p] shortcode
+ *
+ * Example:
+ * [tn_p css_class="featured"]
+ */
+function base_shortcode_tn_p($atts, $content) {
+   extract(shortcode_atts(array(
+      'css_id'       => '',
+      'css_class'    => '',
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-p.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'p', 'base_shortcode_tn_p');
+
+/**
+ * [tn_br] shortcode
+ *
+ * Example:
+ * [tn_br]
+ */
+function base_shortcode_tn_br($atts, $content) {
+   extract(shortcode_atts(array(
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-br.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'br', 'base_shortcode_tn_br');
+
+function base_shortcode_tn_gmap( $atts = null, $content = null ) {
+   extract(shortcode_atts(array(
+      'width'        => 600,
+      'height'       => 400,
+      'responsive'   => 'yes',
+      'address'      => 'New York',
+      'display'      => 'l',  // q (standard layout), d (for directions) or l (for local)
+      'zoom'         => '12', // Zoom from 0 to 23, samples:
+                        // 12 for big city
+                        // 15 for street
+      'type'         => 'm', // m – normal  map, k – satellite, h – hybrid, p – terrain
+      'layer'        => '', // t for traffic or c for street view, or tc for both at the same time.
+      'view'         => 'map', // Controls the view type. Set to text for text, or map for map.
+      'info'         => 'near', // A-J – opens the info window over a business marker
+                        // near – puts it over the green arrow (when shown)
+                        // addr – places it over a set address (the default value)
+                        // start, end and pausex – for use in driving directions, where x is the number of the point in question
+      'expinfo'      => '1', // Sets the info window to expanded view when set to 1.
+      'lang'         => 'es', // Language
+      'print'        => '', // Print mode
+      'css_class'    => '',
+      'css_id'       => '',
+   ), $atts));
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-gmap.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'gmap', 'base_shortcode_tn_gmap');
