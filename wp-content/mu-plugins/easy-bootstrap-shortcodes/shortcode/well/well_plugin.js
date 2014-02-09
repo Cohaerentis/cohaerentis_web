@@ -61,18 +61,18 @@ function create_oscitas_well(){
 			<input type="button" id="oscitas-well-submit" class="button-primary" value="Insert Well" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-   
 
-        
-		
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-well-submit').click(function(){
         var cusclass='';
         if(table.find('#oscitas-well-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-well-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-well-class').val()+'"';
         }
         var shortcode = '[well type="'+jQuery('#oscitas-well-type').val()+'"'+cusclass+']<br class="osc"/>';
         shortcode += jQuery('#oscitas-well-content').val()+'<br class="osc"/>';
@@ -80,7 +80,7 @@ function create_oscitas_well(){
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gWell.id);
     });

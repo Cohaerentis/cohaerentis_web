@@ -264,7 +264,7 @@ function create_oscitas_icon(){
 			<input type="button" id="oscitas-icon-submit" class="button-primary" value="Insert icon" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
     form.appendTo('body').hide();
@@ -289,11 +289,11 @@ function create_oscitas_icon(){
         table.find('#osc_icon_class_val_icon').val(val);
     })
 
-   
-        
 
-        
-		
+
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-icon-submit').click(function(){
         var cusclass='';
@@ -303,15 +303,15 @@ function create_oscitas_icon(){
             cusclass+= ' fontsize="'+table.find('#oscitas-icon-fontsize').val()+'"';
         }
         if(table.find('#oscitas-icon-class').val()!=''){
-            cusclass+= ' class="'+table.find('#oscitas-icon-class').val()+'"';
+            cusclass+= ' css_class="'+table.find('#oscitas-icon-class').val()+'"';
         }
         var icon = table.find('#osc_icon_class_val_icon').val();
         var  shortcode='';
         shortcode='[icon type="'+icon+'"'+cusclass+']'
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gIcon.id);
     });

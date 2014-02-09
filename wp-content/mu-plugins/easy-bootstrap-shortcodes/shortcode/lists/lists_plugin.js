@@ -63,21 +63,21 @@ function create_oscitas_lists(){
 			<input type="button" id="oscitas-submit" class="button-primary" value="Insert List" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-		
+
     // handles the click event of the submit button
     form.find('#oscitas-submit').click(function(){
         // defines the options and their default values
         // again, this is not the most elegant way to do this
         // but well, this gets the job done nonetheless
-        var options = { 
+        var options = {
             'type'       : 'arrow'
         },list=0,list_type;
         var cusclass='';
         if(table.find('#oscitas-list-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-list-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-list-class').val()+'"';
         }
         var shortcode = '[list'+cusclass;
         var list_item=jQuery('#oscitas-list-item').val();
@@ -85,8 +85,8 @@ function create_oscitas_lists(){
             list=list_item;
         } else{
             list=3;
-        }	
-     
+        }
+
 
         shortcode += ']<br/>';
         if(table.find('#oscitas-type').val()!=''){
@@ -96,10 +96,10 @@ function create_oscitas_lists(){
             list_type='';
         }
         for(var i=1;i<=list;i++){
-            shortcode +='[li'+list_type+']your list content[/li]<br/>' 
+            shortcode +='[li'+list_type+']your list content[/li]<br/>'
         }
         shortcode +='[/list]';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 

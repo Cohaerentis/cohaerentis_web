@@ -88,7 +88,7 @@ function create_oscitas_table(){
 			<input type="button" id="oscitas-submit" class="button-primary" value="Insert Table" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
 
@@ -99,7 +99,7 @@ function create_oscitas_table(){
         // but well, this gets the job done nonetheless
         var cusclass='';
         if(table.find('#oscitas-table-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-table-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-table-class').val()+'"';
         }
         var columns = table.find('#oscitas-table-columns').val();
         var rows = table.find('#oscitas-table-rows').val();
@@ -120,7 +120,7 @@ function create_oscitas_table(){
             shortcode += '[th_column]Heading-'+i+'[/th_column]<br/>';
         }
         shortcode += '[/table_head]<br/>[table_body]<br/>';
-        
+
         for (var j=1;j<=rows;j++)
         {
             shortcode += '[table_row]<br/>';
@@ -128,15 +128,15 @@ function create_oscitas_table(){
             {
                 shortcode += '[row_column]value-'+i+'[/row_column]<br/>';
             }
-            
+
             shortcode += '[/table_row]<br/>';
         }
         shortcode += '[/table_body]<br/>[/table]';
-                        
-			
+
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gTables.id);
     });

@@ -140,11 +140,11 @@ function create_oscitas_wpcolumns(){
 
                 hidecol='<input type="checkbox"  name="'+index+'hide['+i+']" id="'+index+'hide'+i+'" value="yes">';
 
-                
+
                 ele+='<td><div class="head_division head_division_check">'+clearleft+'</div><div class="head_division">'+sm+'</div><div class="head_division">'+smoff+'</div><div class="head_division head_division_check right">'+hidecol+'</div></td>';
 
 
-                
+
             }
             ele+='</tr>';
         });
@@ -256,7 +256,7 @@ function create_oscitas_wpcolumns(){
         var shortcode = '';
         var cusclass='';
         if(table.find('#oscitas-column-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-column-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-column-class').val()+'"';
         }
         shortcode ='[row'+cusclass+']';
         for(var i=1;i<=parseInt(noOfColumns);i++){
@@ -334,7 +334,7 @@ function create_oscitas_wpcolumns(){
             else{
                 lghide='';
             }
-            
+
             if(jQuery('#mdclear'+i).is(':checked')){
                 mdclear=' mdclear="yes"';
             }

@@ -57,11 +57,11 @@ function create_oscitas_thumbnail(){
 			<input type="button" id="oscitas-thumbnail-submit" class="button-primary" value="Insert Thumbnail" name="submit" />\
 		</p>\
 		</div>');
-    
+
     var table = form.find('table');
     form.appendTo('body').hide();
 
-    
+
     form.find('.upload_image_button').click(function() {
         jQuery('.ui-widget-overlay, .ui-dialog').css('z-index',100);
         jQuery('html').addClass('Image');
@@ -90,14 +90,14 @@ function create_oscitas_thumbnail(){
         }
 
     };
-        
-		
+
+
     // handles the click event of the submit button
     form.find('#oscitas-thumbnail-submit').click(function(){
         var shortcode='';
         var cusclass='',link='', border='';
         if(table.find('#oscitas-thumbnail-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-thumbnail-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-thumbnail-class').val()+'"';
         }
         if(table.find('#oscitas-thumbnail-class').val()!=''){
             link= ' link="'+form.find('#oscitas-thumbnail-link').val()+'"';

@@ -93,7 +93,7 @@ function create_oscitas_tooltip(){
         } else{
             table.find('#oscitas-tooltip-link-tr').hide();
             table.find('#oscitas-tooltip-link').val('');
-           
+
         }
         jQuery('#oscitas-table tr:visible:even').css('background', '#F0F0F0');
         jQuery('#oscitas-table tr:visible:odd').css('background', '#DADADD');
@@ -106,13 +106,13 @@ function create_oscitas_tooltip(){
         // but well, this gets the job done nonetheless
         var cusclass='';
         if(table.find('#oscitas-tooltip-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-tooltip-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-tooltip-class').val()+'"';
         }
         var shortcode = '[tooltip';
         shortcode += ' type="' + table.find('#oscitas-tooltip-type').val();
 
         shortcode += '" ';
-        
+
         shortcode += ' link="' + table.find('#oscitas-tooltip-link').val();
 
         shortcode += '" ';
@@ -120,11 +120,11 @@ function create_oscitas_tooltip(){
 
         shortcode += '" ';
         shortcode += ' style="' + table.find('#oscitas-tooltip-style').val();
-        
+
         shortcode += '" ';
 
         shortcode += cusclass;
-      
+
         shortcode += ']';
         shortcode+= table.find('#oscitas-tooltip-link-text').val();
         shortcode+='[/tooltip]';

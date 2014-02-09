@@ -60,21 +60,21 @@ function create_oscitas_deslists(){
 			<input type="button" id="oscitas-deslist-submit" class="button-primary" value="Insert List" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-		
+
     // handles the click event of the submit button
     form.find('#oscitas-deslist-submit').click(function(){
         // defines the options and their default values
         // again, this is not the most elegant way to do this
         // but well, this gets the job done nonetheless
-        var options = { 
+        var options = {
             'type'       : 'arrow'
         },deslist=0,deslist_type;
         var cusclass='',style='';
         if(table.find('#oscitas-deslist-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-deslist-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-deslist-class').val()+'"';
         }
         if(table.find('#oscitas-deslist-style').val()!=''){
             style= ' style="'+table.find('#oscitas-deslist-style').val()+'"';
@@ -85,15 +85,15 @@ function create_oscitas_deslists(){
             deslist=deslist_item;
         } else{
             deslist=3;
-        }	
-     
+        }
+
 
         shortcode += ']<br/>';
         for(var i=1;i<=deslist;i++){
             shortcode +='[dlitem heading="Heading '+i+'"]Description '+i+'[/dlitem]<br/>'
         }
         shortcode +='[/dl]';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 

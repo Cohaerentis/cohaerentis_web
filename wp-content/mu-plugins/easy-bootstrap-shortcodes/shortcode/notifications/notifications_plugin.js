@@ -62,35 +62,35 @@ function create_oscitas_notification(){
 			<input type="button" id="oscitas-submit" class="button-primary" value="Insert Notification" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-		
+
     // handles the click event of the submit button
     form.find('#oscitas-submit').click(function(){
         // defines the options and their default values
         // again, this is not the most elegant way to do this
         // but well, this gets the job done nonetheless
-        var options = { 
+        var options = {
             'type'       : 'error'
         };
         var cusclass='';
         if(table.find('#oscitas-note-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-note-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-note-class').val()+'"';
         }
         var shortcode = '[notification';
-			
+
         for( var index in options) {
             var value = table.find('#oscitas-' + index).val();
-				
+
             // attaches the attribute to the shortcode only if it's different from the default value
             //if ( value !== options[index] )
             shortcode += ' ' + index + '="' + value + '"';
         }
         shortcode += ' close="'+(table.find('#oscitas-close').prop('checked')? 'true': 'false')+ '" ';
-			
+
         shortcode += cusclass+']Title: Lorem ipsum dolor sit amet...[/notification]';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 

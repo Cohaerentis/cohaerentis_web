@@ -64,10 +64,10 @@ function create_oscitas_panel(){
 			<input type="button" id="oscitas-submit" class="button-primary" value="Insert Panel" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-		
+
     // handles the click event of the submit button
     form.find('#oscitas-submit').click(function(){
         // defines the options and their default values
@@ -75,7 +75,7 @@ function create_oscitas_panel(){
         // but well, this gets the job done nonetheless
         var cusclass='';
         if(table.find('#oscitas-panel-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-panel-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-panel-class').val()+'"';
         }
         var shortcode = '[panel style="'+table.find('#oscitas-panel-type').val()+ '"'+cusclass+']';
         shortcode += '<br/>[panel-header]<br/>Heading goes here<br/>[/panel-header]';
@@ -83,10 +83,10 @@ function create_oscitas_panel(){
         shortcode += '<br/>[panel-content]<br/>Content goes here<br/>[/panel-content]';
         shortcode += (table.find('#oscitas-panel-footer').prop('checked')? '<br/>[panel-footer]<br/>Footer goes here<br/>[/panel-footer]': '');
         shortcode += '<br/>[/panel]';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         close_dialogue(gPanel.id);
     });
 }

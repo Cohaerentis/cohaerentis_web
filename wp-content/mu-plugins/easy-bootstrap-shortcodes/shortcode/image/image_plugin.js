@@ -97,7 +97,7 @@ function create_oscitas_image(){
         var shape=form.find('#oscitas-image-shape').val();
         var cusclass='';
         if(table.find('#oscitas-image-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-image-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-image-class').val()+'"';
         }
         if(form.find('#oscitas-image-src').val()!=''){
             shortcode = '[image'+cusclass+' src="'+form.find('#oscitas-image-src').val()+'" shape="'+shape+'"]';

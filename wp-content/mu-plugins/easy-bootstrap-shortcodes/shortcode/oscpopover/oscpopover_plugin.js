@@ -111,7 +111,7 @@ function create_oscitas_popover(){
     var colors = ['color', 'bgcolor'];
     jQuery('#oscitas-table tr:visible:even').css('background', '#F0F0F0');
     jQuery('#oscitas-table tr:visible:odd').css('background', '#DADADD');
-    
+
 
     // handles the click event of the submit button
     form.find('#oscitas-popover-submit').click(function() {
@@ -120,13 +120,13 @@ function create_oscitas_popover(){
         // but well, this gets the job done nonetheless
         var cusclass='';
         if(table.find('#oscitas-popover-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-popover-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-popover-class').val()+'"';
         }
         var shortcode = '[popover'+cusclass;
         shortcode += ' title="' + table.find('#oscitas-popover-title').val();
 
         shortcode += '" ';
-        
+
         shortcode += ' pop_content="' + table.find('#oscitas-popover-content').val();
 
         shortcode += '" ';

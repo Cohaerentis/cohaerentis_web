@@ -64,18 +64,18 @@ function create_oscitas_label(){
 			<input type="button" id="oscitas-label-submit" class="button-primary" value="Insert Label" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
-   
 
-        
-		
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-label-submit').click(function(){
         var cusclass='';
         if(table.find('#oscitas-label-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-label-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-label-class').val()+'"';
         }
         var shortcode = '[label type="'+jQuery('#oscitas-label-type').val()+'"'+cusclass+']<br/>';
         shortcode += jQuery('#oscitas-label-content').val()+'<br/>';
@@ -83,7 +83,7 @@ function create_oscitas_label(){
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gLabels.id);
     });

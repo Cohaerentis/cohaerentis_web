@@ -312,12 +312,12 @@ function create_oscitas_iconhead(){
             cusclass+= ' color="'+table.find('#oscitas-iconhead-iconcolor').val()+'"';
         }
         if(table.find('#oscitas-iconhead-class').val()!=''){
-            cusclass+= ' class="'+table.find('#oscitas-iconhead-class').val()+'"';
+            cusclass+= ' css_class="'+table.find('#oscitas-iconhead-class').val()+'"';
         }
         var shortcode = '[iconheading type="'+type+'"';
-        
+
         shortcode += style+cusclass ;
-        
+
         shortcode += ']'+table.find('#oscitas-iconhead-heading').val()+'[/iconheading]' ;
 
         // inserts the shortcode into the active editor

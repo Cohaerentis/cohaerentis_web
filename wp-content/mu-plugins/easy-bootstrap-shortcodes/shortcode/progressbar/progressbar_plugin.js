@@ -83,7 +83,7 @@ function create_oscitas_progressbar(){
 			<input type="button" id="oscitas-progressbar-submit" class="button-primary" value="Insert Button" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     form.appendTo('body').hide();
     jQuery('#oscitas-form-progressbar table tr:visible:even').css('background', '#F0F0F0');
@@ -98,23 +98,23 @@ function create_oscitas_progressbar(){
         jQuery('#oscitas-form-progressbar table tr:visible:odd').css('background', '#DADADD');
     })
 
-   
 
-        
-		
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-progressbar-submit').click(function(){
-       
+
         var cusclass='',type='',value='',stripped='',label='';
         if(jQuery('#oscitas-progressbar-stripped').prop('checked')){
-            stripped=' barstyle="progress-striped'; 
+            stripped=' barstyle="progress-striped';
             if(jQuery('#oscitas-progressbar-animated').prop('checked')){
                 stripped +=' active';
             }
             stripped +='"';
         }
         if(table.find('#oscitas-progressbar-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-progressbar-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-progressbar-class').val()+'"';
         }
         if(table.find('#oscitas-progressbar-style').val()!=''){
             type= ' bartype="'+table.find('#oscitas-progressbar-style').val()+'"';
@@ -126,12 +126,12 @@ function create_oscitas_progressbar(){
             label= ' label="'+table.find('#oscitas-progressbar-label').val()+'"';
         }
         var shortcode = '[progressbar'+value+cusclass+type+stripped+label;
-       
+
         shortcode += ']';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gProgressbar.id);
     });

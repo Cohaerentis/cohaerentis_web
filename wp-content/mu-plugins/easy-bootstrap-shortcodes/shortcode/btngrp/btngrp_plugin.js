@@ -182,7 +182,7 @@ function create_oscitas_btngrp(){
 
         var cusclass='',style='';
         if(table.find('#oscitas-btngrp-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-btngrp-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-btngrp-class').val()+'"';
         }
         if(table.find('#oscitas-btngrp-style').val()!=''){
             style= ' style="'+table.find('#oscitas-btngrp-style').val()+'"';

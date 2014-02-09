@@ -321,7 +321,7 @@ function create_oscitas_button(){
 			<input type="button" id="oscitas-button-submit" class="button-primary" value="Insert Button" name="submit" />\
 		</p>\
 		</div>');
-		
+
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
     form.appendTo('body').hide();
@@ -356,10 +356,10 @@ function create_oscitas_button(){
         jQuery('#oscitas-form-button table tr:visible:even').css('background', '#F0F0F0');
         jQuery('#oscitas-form-button table tr:visible:odd').css('background', '#DADADD');
     });
-        
 
-        
-		
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-button-submit').click(function(){
         // defines the options and their default values
@@ -368,19 +368,19 @@ function create_oscitas_button(){
         var options;
         var type = table.find('#oscitas-button-type').val();
         if(type=='button'){
-            options = { 
+            options = {
                 'title'       : 'osCitas'
             };
         }
         else{
-            options = { 
+            options = {
                 'title'       : 'osCitas',
                 'link'        : ''
             };
         }
         var cusclass='',icon='';
         if(table.find('#oscitas-button-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-button-class').val()+'"';
+            cusclass= ' css_class="'+table.find('#oscitas-button-class').val()+'"';
         }
         if(table.find('#osc_icon_class_val_button').val()!=''){
             icon= ' icon="'+table.find('#osc_icon_class_val_button').val()+'" ';
@@ -389,9 +389,9 @@ function create_oscitas_button(){
                 icon+= ' iconcolor="'+table.find('#oscitas-button-iconcolor').val()+'" ';
             }
         }
-       
+
         var shortcode = '[button'+cusclass;
-        
+
         shortcode += ' style="'+table.find('#oscitas-button-style').val();
         shortcode += ' '+table.find('#oscitas-button-size').val();
         shortcode += table.find('#oscitas-button-block').prop('checked')? ' btn-block': '';
@@ -406,12 +406,12 @@ function create_oscitas_button(){
             //            var value = table.find('#oscitas-button-' + index).val();
             shortcode += ' ' + index + '="' + value + '"';
         }
-			
+
         shortcode += ']';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(gButton.id);
     });
