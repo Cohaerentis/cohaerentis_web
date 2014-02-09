@@ -3,12 +3,12 @@
 function osc_theme_panel($atts, $content = null) {
     extract(shortcode_atts(array(
                 'style' => '',
-                'class' => ''
+                'css_class' => ''
                     ), $atts));
     $content = str_replace("]<br />", ']', $content);
 
     $content = str_replace("<br />\n[", '[', $content);
-    $result = '<div class="panel ' . $style . ' ' . $class . '">';
+    $result = '<div class="panel ' . $style . ' ' . $css_class . '">';
     $result .= do_shortcode($content);
     $result .= '</div>';
 

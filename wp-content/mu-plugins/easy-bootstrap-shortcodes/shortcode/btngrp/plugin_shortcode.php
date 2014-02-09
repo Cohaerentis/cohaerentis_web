@@ -3,17 +3,17 @@
 function osc_theme_btngrp($params, $content = null) {
     extract(shortcode_atts(array(
                 'style' => '',
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $content = str_replace("]<br />", ']', $content);
     $content = str_replace("]<br />\n", ']', $content);
     $content = str_replace("<br />\n[", '[', $content);
     if ($style =='vertical') {
-	    $out = '<div class="btn-group-vertical '  . $class . '">' . do_shortcode($content) . '</div>';
+	    $out = '<div class="btn-group-vertical '  . $css_class . '">' . do_shortcode($content) . '</div>';
     } elseif ($style =='justified') {
-	    $out = '<div class="btn-group btn-group-justified '  . $class . '">' . do_shortcode($content) . '</div>';
+	    $out = '<div class="btn-group btn-group-justified '  . $css_class . '">' . do_shortcode($content) . '</div>';
     }else{
-	    $out = '<div class="btn-group '  . $class . '">' . do_shortcode($content) . '</div>';
+	    $out = '<div class="btn-group '  . $css_class . '">' . do_shortcode($content) . '</div>';
     }
 
 

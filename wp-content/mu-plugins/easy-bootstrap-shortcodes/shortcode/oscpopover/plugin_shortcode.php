@@ -8,10 +8,10 @@ function osc_theme_popover($params, $content = 'Popover') {
                 'style' => '',
                 'size' => '',
                 'type' => '',
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $out = '';
-    $out = '<button class="osc_popover btn ' . $size . ' ' . $type . ' ' . $class . '" data-content="' . $pop_content . '" data-placement="' . $style . '" data-toggle="popover" data-trigger="' . $trigger . '" data-container="body" type="button" data-title="' . $title . '"> ' . do_shortcode($content) . ' </button>';
+    $out = '<button class="osc_popover btn ' . $size . ' ' . $type . ' ' . $css_class . '" data-content="' . $pop_content . '" data-placement="' . $style . '" data-toggle="popover" data-trigger="' . $trigger . '" data-container="body" type="button" data-title="' . $title . '"> ' . do_shortcode($content) . ' </button>';
 
 
     $out .= "

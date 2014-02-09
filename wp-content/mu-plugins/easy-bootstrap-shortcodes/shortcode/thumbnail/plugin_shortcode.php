@@ -7,7 +7,7 @@
 function osc_theme_oscitasthumbnail($params, $content = 'Label') {
     extract(shortcode_atts(array(
                 'src' => '',
-                'class' => '',
+                'css_class' => '',
                 'link' => '',
                 'border'=>''
                     ), $params));
@@ -19,7 +19,7 @@ function osc_theme_oscitasthumbnail($params, $content = 'Label') {
 	}
 
 
-	//$out = ' <div class="img-thumbnail ' . $class . '">';
+	//$out = ' <div class="img-thumbnail ' . $css_class . '">';
 	if ($link != '') {
 		$out .='<a href="' . $link . '">';
 	}

@@ -3,7 +3,7 @@
 function osc_theme_dropdown($params, $content = null) {
     extract(shortcode_atts(array(
                 'dropup' => '',
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $content = str_replace("]<br />", ']', $content);
     $content = str_replace("]<br />\n", ']', $content);
@@ -11,7 +11,7 @@ function osc_theme_dropdown($params, $content = null) {
     if ($dropup != 'dropup') {
         $dropup = '';
     }
-    $out = '<div class="btn-group ' . $dropup . ' ' . $class . '">' . do_shortcode($content) . '</div>';
+    $out = '<div class="btn-group ' . $dropup . ' ' . $css_class . '">' . do_shortcode($content) . '</div>';
     $out .= "
     <script>
        jQuery(document).ready(function(){

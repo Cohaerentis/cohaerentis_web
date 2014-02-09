@@ -4,12 +4,12 @@ function osc_theme_notification($atts, $content = null) {
     extract(shortcode_atts(array(
                 'type' => '',
                 'close' => 'false',
-                'class' => ''
+                'css_class' => ''
                     ), $atts));
     $type = ($close == 'true' ? $type . ' alert-dismissable' : $type);
 
 
-    $result = '<div class = "alert ' . $type . ' ' . $class . '">';
+    $result = '<div class = "alert ' . $type . ' ' . $css_class . '">';
     if ($close == 'true') {
         $result .= '<button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true">&times;
     </button>';

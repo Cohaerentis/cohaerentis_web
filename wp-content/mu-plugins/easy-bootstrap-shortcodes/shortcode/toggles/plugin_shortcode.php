@@ -10,7 +10,7 @@ function osc_theme_toggles($params, $content = null) {
     global $_oscitas_accordion;
     extract(shortcode_atts(array(
                 'id' => count($_oscitas_accordion),
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $_oscitas_accordion[$id] = array();
     $scontent = do_shortcode($content);
@@ -18,7 +18,7 @@ function osc_theme_toggles($params, $content = null) {
     $output = '';
     if (trim($scontent) != '' || count($_oscitas_accordion[$id]['details'])) {
         $scontent = isset($_oscitas_accordion[$id]['details']) && is_array($_oscitas_accordion[$id]['details']) ? implode('', $_oscitas_accordion[$id]['details']) : '';
-        $output .= '<div class="panel-group ' . $class . '" id="oscitas-accordion-' . $id . '">' . $scontent;
+        $output .= '<div class="panel-group ' . $css_class . '" id="oscitas-accordion-' . $id . '">' . $scontent;
         $output .= '</div>';
     }
     return $output;
@@ -30,7 +30,7 @@ function osc_theme_toggle($params, $content = null) {
     global $_oscitas_accordion;
     extract(shortcode_atts(array(
                 'title' => 'title',
-                'class' => '',
+                'css_class' => '',
                 // AEA - User can add a caret, at left of title
                 'caret' => 'yes',
                 // AEA - User can open this toggle in initial page load
@@ -41,7 +41,7 @@ function osc_theme_toggle($params, $content = null) {
     $id = isset($_oscitas_accordion[$index]['details'])?'details-' . $index . '-' . count($_oscitas_accordion[$index]['details']):'details-' . $index . '-0';
     // AEA - User can add a caret, at left of title
     if (strtolower($caret) == 'yes') $caret = '<span class="caret"></span>';
-    if (strtolower($in) == 'yes') $class .= ' in';
+    if (strtolower($in) == 'yes') $css_class .= ' in';
     $_oscitas_accordion[$index]['details'][] = <<<EOS
         <div class="panel panel-default">
             <a class="panel-heading accordion-toggle" data-toggle="collapse"
@@ -52,7 +52,7 @@ function osc_theme_toggle($params, $content = null) {
                 {$title}
               </h4>
             </a>
-            <div id="{$id}" class="panel-collapse collapse {$class}">
+            <div id="{$id}" class="panel-collapse collapse {$css_class}">
               <div class="panel-body">{$con}</div>
             </div>
         </div>

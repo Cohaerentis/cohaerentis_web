@@ -11,11 +11,11 @@ function osc_theme_row($params, $content = null) {
         'hshide' => '', // AEA - Horizontal Small Devices
         'xshide' => '',
         'lghide' => '',
-        'class' => '',
+        'css_class' => '',
         'tag' => 'div' // AEA - Allow user to set custom HTML tag
     ), $params));
 
-    $classes = array($class);
+    $classes = array($css_class);
     // AEA - Horizontal Small Devices
     // $arr2 = array('mdhide', 'smhide', 'xshide', 'lghide');
     $arr2 = array('mdhide', 'smhide', 'hshide', 'xshide', 'lghide');
@@ -27,7 +27,7 @@ function osc_theme_row($params, $content = null) {
     }
 
     // AEA - Allow user to set custom HTML tag
-    // $result = '<div class="row ' . $class . '">';
+    // $result = '<div class="row ' . $css_class . '">';
     $result = '<' . $tag . ' class="row ' . implode(' ', $classes) . '">';
     //echo '<textarea>'.$content.'</textarea>';
     $content = str_replace("]<br />", ']', $content);
@@ -84,7 +84,7 @@ function osc_theme_column($params, $content = null) {
     $arr = array('lg', 'md', 'sm', 'hs', 'xs');
     // AEA - Allow user to add custom class
     // $classes = array();
-    $classes = array($class);
+    $classes = array($css_class);
     foreach ($arr as $k => $aa) {
         ${$aa} = trim(${$aa});
         if (${$aa} == 12 || ${$aa} == '') {

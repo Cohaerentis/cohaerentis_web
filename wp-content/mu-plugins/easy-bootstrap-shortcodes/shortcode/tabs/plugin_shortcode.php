@@ -9,14 +9,14 @@ function osc_theme_tabs($params, $content = null) {
     global $_oscitas_tabs;
     extract(shortcode_atts(array(
                 'id' => count($_oscitas_tabs),
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $_oscitas_tabs[$id] = array();
     do_shortcode($content);
     $scontent = '<ul class="nav nav-tabs " id="oscitas-tabs-' . $id . '">' . implode('', $_oscitas_tabs[$id]['tabs']) . '</ul><div
     class="tab-content">' . implode('', $_oscitas_tabs[$id]['panes']) . '</div>';
     if (trim($scontent) != "") {
-        $output = '<div class="' . $class . '">' . $scontent;
+        $output = '<div class="' . $css_class . '">' . $scontent;
         $output .= '</div>';
 
         return $output;

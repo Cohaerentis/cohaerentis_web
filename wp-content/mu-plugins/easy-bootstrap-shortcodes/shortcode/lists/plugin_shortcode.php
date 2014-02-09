@@ -2,12 +2,12 @@
 
 function osc_theme_list($params, $content = null) {
     extract(shortcode_atts(array(
-                'class' => ''
+                'css_class' => ''
                     ), $params));
     $content = str_replace("]<br />", ']', $content);
     $content = str_replace("]<br />\n", ']', $content);
     $content = str_replace("<br />\n[", '[', $content);
-    return '<ul class="list-group ' . $class . '">' . do_shortcode($content) . '</ul>';
+    return '<ul class="list-group ' . $css_class . '">' . do_shortcode($content) . '</ul>';
 }
 
 add_shortcode('list', 'osc_theme_list');
