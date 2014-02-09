@@ -14,3 +14,4 @@ sitemap.xml.gz
 media/
 searchreplacedb2*
 *.aaa_back.php
+*.aaa_back.less
