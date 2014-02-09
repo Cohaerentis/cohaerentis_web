@@ -26,7 +26,7 @@ ini_set( 'display_errors', 'On' );
     <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 space-header">
       <div class="row">
         <?php if(!empty($gallery)):?>
-        <div class="col-lg-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12">
+        <div class="col-lg-push-6 col-lg-6 col-md-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 space-header-description">
           <h2 class="entry-title h2"><?php the_title(); ?></h2>
           <div class="info-marker-down"></div>
           <div class="entry-description col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 font-p">
@@ -37,7 +37,7 @@ ini_set( 'display_errors', 'On' );
             <a href="<?php echo $url;?>" target="_blank"><strong>Visitar sitio</strong></a>
           </span>
         </div>
-        <div class="col-lg-pull-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 slider-gallery ">
+        <div class="col-lg-pull-6 col-lg-6 col-md-pull-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 slider-gallery ">
           <div id="space-slider-<?php echo $post->ID; ?>" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->

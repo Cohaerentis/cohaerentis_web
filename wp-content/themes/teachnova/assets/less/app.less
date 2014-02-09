@@ -831,6 +831,15 @@ article {
       @media (min-width: @screen-md-min) {}
       @media (min-width: @screen-lg-min) {}
    }
+   .info-marker-person{
+      .info-marker-down;
+      @media (min-width: @screen-hs-min) {
+         display: none;
+      }
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
 
    .single-person-photo{
       @media (min-width: @screen-hs-min) {
@@ -1431,13 +1440,23 @@ article {
       font-size: 80px;
    }
 }
+.redes{
+   .linked_in{ color: #1B85BD; }
+   .twitter{ color: #55ACEE; }
+   .rss{ color: #FA8502; }
+   .facebook{ color: #3B5998; }
+   .google_plus{ color: #F23F27; }
+}
+
 
 
 /* ==========================================================================
    Espacio: AAA
    ========================================================================== */
 .space-header{
-   margin-top: 50px;
+   .space-header-description{
+      margin-bottom: 10px;
+   }
 }
 .slider-gallery .carousel{
    margin-top: 0;
