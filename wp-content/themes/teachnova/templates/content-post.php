@@ -30,7 +30,7 @@
 
             <div class="row">
                 <div class="single-post-comments">
-                    <?php comments_template('comments.php'); ?>
+                    <?php comments_template('/templates/comments.php'); ?>
                 </div>
             </div>
         </div>
