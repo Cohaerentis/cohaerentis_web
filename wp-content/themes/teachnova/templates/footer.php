@@ -49,29 +49,29 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 col-hs-6 col-xs-6 blocks">
                         <ul>
                             <li class="up-title">Somos</li>
-                            <li><a herf="#">Equipo</a></li>
-                            <li><a herf="#">Partners</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Partners</a></li>
                         </ul>
                         <ul>
                             <li class="up-title">Espacios</li>
-                            <li><a herf="#">Plataforma</a></li>
-                            <li><a herf="#">Aula</a></li>
-                            <li><a herf="#">Consinergia</a></li>
-                            <li><a herf="#">Viernes Coherentes</a></li>
+                            <li><a href="#">Plataforma</a></li>
+                            <li><a href="#">Aula</a></li>
+                            <li><a href="#">Consinergia</a></li>
+                            <li><a href="#">Viernes Coherentes</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-hs-6 col-xs-6 blocks">
                         <ul>
                             <li class="up-title">Servicios</li>
-                            <li><a herf="#">Legales</a></li>
-                            <li><a herf="#">Recursos Humanos</a></li>
-                            <li><a herf="#">Asesoramiento financiero</a></li>
-                            <li><a herf="#">Formación online</a></li>
-                            <li><a herf="#">Desarrollo de software</a></li>
-                            <li><a herf="#">Internacionalización</a></li>
-                            <li><a herf="#">Marketing digital</a></li>
-                            <li><a herf="#">Dirección de proyectos</a></li>
-                            <li><a herf="#">Inteligencia económica</a></li>
+                            <li><a href="#">Legales</a></li>
+                            <li><a href="#">Recursos Humanos</a></li>
+                            <li><a href="#">Asesoramiento financiero</a></li>
+                            <li><a href="#">Formación online</a></li>
+                            <li><a href="#">Desarrollo de software</a></li>
+                            <li><a href="#">Internacionalización</a></li>
+                            <li><a href="#">Marketing digital</a></li>
+                            <li><a href="#">Dirección de proyectos</a></li>
+                            <li><a href="#">Inteligencia económica</a></li>
                         </ul>
                     </div>
                     <div class="third col-lg-5 col-md-5 col-sm-5 col-hs-12 col-xs-12 blocks" >
@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="end-line col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 end-line ">
                 <p>Calle Julián Camarillo, 47&nbsp;&nbsp;|&nbsp;&nbsp;Bloque A - Oficina 006&nbsp;&nbsp;|&nbsp;&nbsp;Madrid 28037 - España&nbsp;&nbsp;|&nbsp;&nbsp;(+34) 123 456 789</p>
                 <p>Cohaerentis Consultores, S.L &nbsp;&nbsp;|&nbsp;&nbsp; &copy;2014&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Aviso Legal</a></p>
             </div>
