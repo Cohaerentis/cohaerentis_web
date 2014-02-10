@@ -579,6 +579,7 @@ article {
    margin: auto;
 }
 .content-team {
+   margin-bottom: 20px;
    .social-icons {
       list-style: none;
       // AEA float: left;
@@ -743,7 +744,7 @@ article {
 
 .person-info-name {
    text-align: center;
-   background-color: @base-color;
+   background-color: @ch-blue;
    @media (min-width: @screen-hs-min) {
       text-align: left;
       background-color: transparent;
@@ -771,7 +772,7 @@ article {
    @media (min-width: @screen-lg-min) {}
 }
 .social-media {
-   background-color: @base-color;
+   background-color: @ch-blue;
    @media (min-width: @screen-hs-min) {
       padding-bottom: 1px;
       background-color: transparent;
@@ -892,7 +893,7 @@ article {
          font-size: 2em;
          display: inline-block;
          text-align: center;
-         background-color: @base-color;
+         background-color: @ch-green;
          color: #fff;
          padding: 20px;
          text-align: center;
@@ -1465,13 +1466,7 @@ article {
    font-size: Lato-LightItalic;
    font-size: 1.1em;
    float: right;
-   a{
-      color: #777;
-      &:hover{
-         color: @base-color;
-         text-decoration: none;
-      }
-   }
+   .ch-link;
 }
 
 
@@ -1523,6 +1518,14 @@ article {
    .header-post-list {
       margin-bottom: 10px;
       font-family: Lato-LightItalic;
+      color: #3a3a3a;
+      a {
+         color:@ch-green;
+         &:hover {
+            color: @ch-blue;
+            text-decoration: none;
+         }
+      }
    }
    .post-list-thumb {
       img{
@@ -1541,17 +1544,13 @@ article {
          @media (min-width: @screen-lg-min) {}
       }
    }
-   .header-post-list {
-      color: #3a3a3a;
-      a {
-         color:#3a3a3a;
-         &:hover {
-            color: @base-color;
-            text-decoration: none;
-         }
+
+}
+.post-list-excerpt{
+      p{
+         .ch-link;
       }
    }
-}
 
 /* ==========================================================================
    Noticia: AAA
@@ -1575,13 +1574,29 @@ article {
       padding-bottom: 20px;
       color: #3a3a3a;
       a {
-         color:#3a3a3a;
+         color:@ch-green;
          &:hover {
-            color: @base-color;
+            color: @ch-blue;
             text-decoration: none;
          }
       }
    }
+
+   /*********comentarios***********/
+
+  .single-post-comments{
+      form{
+         input[type=text]{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            border: none;
+         }
+         label{
+
+         }
+      }
+  }
 
 
 /* ==========================================================================
@@ -1660,7 +1675,9 @@ article {
    }
 }
 .tn-gmap iframe {
-   border: 3px solid @ch-blue;
+   /*AAA: border: 3px solid @ch-blue;*/
+   border: none;
+   margin-top: none;
 }
 
 
@@ -1911,7 +1928,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 .info-marker-up{
    .info-marker;
-   border-color:  transparent transparent @base-color transparent;
+   border-color:  transparent transparent @ch-blue transparent;
 }
 .italic{
    font-family: Lato-LightItalic;
@@ -1930,4 +1947,13 @@ a{
    color: snow;
    padding-top: 10px;
    padding-bottom: 10px;
+}
+.ch-link{
+   a{
+      color: @ch-green;
+      &:hover{
+         color:@ch-blue;
+         text-decoration: none;
+      }
+   }
 }

@@ -24,6 +24,8 @@ TN_QR::$baseurl = '/media/qr';
 TN_QR::$basepath = ABSPATH . '/media/qr';
 
 require_once locate_template('/lib/vcard.php');           // Teachnova vCard
+remove_filter( 'the_content', 'wpautop' );                //remove extra <p> & <br> added by wordpress
+remove_filter( 'the_excerpt', 'wpautop' );                //remove extra <p> & <br> added by wordpress
 
 /* Produces a dump on the state of WordPress when a not found error occurs */
 /* useful when debugging permalink issues, rewrite rule trouble, place inside functions.php */
