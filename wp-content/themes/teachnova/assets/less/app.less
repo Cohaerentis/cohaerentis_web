@@ -1592,19 +1592,37 @@ a{
 
    /*********comentarios***********/
 
-  .single-post-comments{
-      form{
-         input[type=text]{
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 10px;
-            border: none;
-         }
-         label{
-
-         }
+.comments-form{
+   .form-group{
+      margin-left: 0;
+      margin-right: 0;
+      .h2 label{
+         font-weight: normal;
       }
-  }
+   }
+   .form-control{
+      background: snow;
+      margin-right: 0;
+      padding-top: 15px;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      &:focus{
+         border:none;
+         outline: 0;
+         -webkit-box-shadow: none;
+         box-shadow: none;
+      }
+   }
+   .comment-form-box {
+      height: 50px;
+      background-color: snow;
+      border: 1px solid #999;
+      border-left: none;
+   }
+   .comment-form-label{
+      padding-top: 15px;
+   }
+}
 
 
 /* ==========================================================================
@@ -1637,16 +1655,16 @@ a{
       top: -30px;
       left: -10px;
    }
-   .form .box-text{
-      border: 1px solid #999;
-      border-left: none;
-      background-color: white;
-      height: 40px;
-      font-family: Lato-LightItalic;
-      margin-bottom: 10px;
-   }
 
    .form {
+      .box-text{
+         border: 1px solid #999;
+         border-left: none;
+         background-color: white;
+         height: 40px;
+         font-family: Lato-LightItalic;
+         margin-bottom: 10px;
+      }
       input[type=text]{
          outline: none;
          border: none;
@@ -1734,7 +1752,6 @@ a{
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
-
 
 
 /* ==========================================================================
@@ -1981,10 +1998,24 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 .contact-field{
+   .ch-form-label;
+}
+.ch-form-label{
    background-color: @base-color;
    color: snow;
    padding-top: 10px;
    padding-bottom: 10px;
+}
+.ch-button{
+   float: right;
+   padding: 10px 30px 10px 30px;
+   background-color: @icon-box-bg;
+   border:  none;
+   color: snow;
+   border-radius: 0;
+   &:hover{
+      background-color: @ch-blue;
+   }
 }
 .ch-link{
    a{
@@ -1995,3 +2026,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       }
    }
 }
+.no-border{
+   border: none;
+   outline: none;
+}
+
+.no-padding { padding: 0;}
