@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Jakob Renpening <jakobhans@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.4\n"
 "Language: es_ES\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -120,7 +120,7 @@ msgstr "Agregar todas las páginas publicadas a la Navegación Primaria"
 
 #: lib/cleanup.php:210
 msgid "Continued"
-msgstr "Continuado"
+msgstr "Leer más"
 
 #: lib/init.php:11
 msgid "Primary Navigation"
