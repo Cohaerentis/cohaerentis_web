@@ -239,7 +239,7 @@ msgstr " (obligatorio)"
 
 #: templates/comments.php:59
 msgid "Email (will not be published)"
-msgstr "Correo electrónico (no será publicado)"
+msgstr "Email (no será publicado)"
 
 #: templates/comments.php:61
 msgid "Website"
