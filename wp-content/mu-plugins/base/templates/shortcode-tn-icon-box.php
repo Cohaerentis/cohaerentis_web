@@ -8,12 +8,14 @@
         $param_href = 'href="' . $href . '"';
     }
 ?>
-<<?php echo $tag; ?> class="icon-box <?php echo $css_class; ?>"
+<<?php echo $tag; ?> class="tn-icon-box <?php echo $css_class; ?>"
  <?php echo $param_id; ?>
  <?php echo $param_href; ?> >
-    <?php echo do_shortcode($content); ?>
+    <div class="box-icon">
+        <?php echo do_shortcode($content); ?>
+    </div>
     <?php if (!empty($label)) : ?>
-    <div class="icon-box-label">
+    <div class="box-label">
         <p><?php echo $label; ?></p>
     </div>
     <?php endif; ?>

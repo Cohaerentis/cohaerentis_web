@@ -12,6 +12,7 @@
 @grid-float-breakpoint:     @screen-md-min;
 @ch-green:                  #00B975;
 @ch-blue:                   #42669E;
+@ch-text-color:             #333;
 @base-color:                @ch-green;
 @icon-box-bg:               @ch-blue;
 @icon-box-label:            3em;
@@ -88,12 +89,15 @@ body {
    @media (min-width: @screen-lg-min) {}
 }
 .home .wrap {
+   margin-bottom: 0;
    background-position: -700px;
-   height: 665px;
+   height: 450px;
    background: url(/assets/img/background_transparency.jpg) #04080E no-repeat right;
 
    @media (min-width: @screen-hs-min) {}
-   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-sm-min) {
+         height: 350px;
+   }
    @media (min-width: @screen-md-min) {}
    @media (min-width: @screen-lg-min) {}
 }
@@ -307,7 +311,7 @@ a{
    background-color: #181818;
    padding-top: 0px;
    padding-bottom: 50px;
-   @media (min-width: @screen-sm-min) {
+   @media (min-width: @screen-md-min) {
       padding-top: 50px;
    }
 }
@@ -474,13 +478,20 @@ a{
    margin-left: 15px;
    color: white;
    position: absolute;
-   top: 200px;
+   top: 50px;
    /*left: 60px;*/
    overflow: hidden;
    /*min-width: 250px;*/
    max-height: 450px;
    /*min-height: 200px;*/
    background: rgba(21, 25, 40, 0.8);
+   padding: 10px;
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {
+      padding: 15px;
+   }
+   @media (min-width: @screen-lg-min) {}
 }
 .home-content h1 {
    color: #7AAB7E;
@@ -545,6 +556,9 @@ a{
    Quienes Somos: AAA
    ========================================================================== */
 
+.tn-icon-box {
+   .icon-box();
+}
 .icon-box.somos-img {
    @icon-box-label : 3em;
    height: auto;
@@ -1344,6 +1358,7 @@ a{
    List of experience: AAA
    ========================================================================== */
 
+/* AEA - obsolete
 .experience-box{
    font-size: 100px;
    border-radius: 180px;
@@ -1370,7 +1385,7 @@ a{
    margin-top: 5px;
    color: #444;
 }
-
+*/
  /*** Taxonomy Mosaic: AAA **/
 
 .tn-taxonomy-term {
@@ -1378,16 +1393,18 @@ a{
    a:hover{
       text-decoration: none;
    }
+   img {
+      border-radius: 180px;
+      border: 1px solid;
+   }
+   .tn-taxonomy-box {
+      .icon-box();
+   }
+   .tn-taxonomy-description {
+      margin-top: 30px;
+   }
+}
 
-}
-.tn-taxonomy-term img {
-   border-radius: 180px;
-   border: 1px solid;
-}
-
-.tn-taxonomy-description {
-   margin-top: 30px;
-}
 
 
 
@@ -1823,26 +1840,42 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 /***Box****/
 
-.icon-box {
-   height: @icon-box-h;
-   width: @icon-box-w;
-   background-color: @icon-box-bg;
-   text-align: center;
-   color: snow;
+.icon-box (@height: 200px; @width: 200px; @bgcolor: @ch-blue; @color: snow; @labelsize: 1.6em; @labelcolor: @ch-text-color) {
    display: block;
-
-   &:hover {
+   &:hover,
+   a:hover {
       text-decoration: none;
    }
-   .icon-box-label{
+   .box-icon {
+      &:hover {
+         background-color: @color;
+         .glyphicons{
+            color: @bgcolor;
+         }
+      }
+      .glyphicons,
+      .glyphicons-social,
+      .glyphicons-filetypes {
+         padding-top: (@width * 0.1);
+      }
+      font-size: (@width / 2);
+      border-radius: (@width - 20px);
+      height: @height;
+      width: @width;
+      margin: 0 auto;
+      background-color: @bgcolor;
+      text-align: center;
+      color: snow;
+      display: block;
+   }
+   .box-label{
       // AEA font-family: Lato-Hairline;
       font-family: Lato;
-      font-size: @icon-box-label;
+      font-size: @labelsize;
       display: block;
-      color: snow;
-   }
-   a:hover{
-      text-decoration: none;
+      color: @labelcolor;
+      text-align: center;
+      margin-top: 8px;
    }
 }
 
