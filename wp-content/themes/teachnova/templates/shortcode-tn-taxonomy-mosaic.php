@@ -30,7 +30,7 @@
 <?php if (!empty($terms)) : ?>
 <div class="tn-taxonomy-mosaic <?php echo $css_class; ?>" <?php if (!empty($css_id)) : ?>id="<?php echo $css_id; ?>"<?php endif; ?>>
     <div class="row">
-    <?php foreach ($terms as $term) : if (!empty($term->src)) : ?>
+    <?php foreach ($terms as $term) : if (!empty($term->src) || !empty($term->icon)) : ?>
         <div class="tn-taxonomy-term <?php echo $item_class; ?>">
                 <a class="tn-taxonomy-box" href="<?php echo $term->url; ?>">
                     <?php if(!empty($term->icon)): ?>
