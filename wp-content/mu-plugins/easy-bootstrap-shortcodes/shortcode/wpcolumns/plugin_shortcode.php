@@ -74,7 +74,7 @@ function osc_theme_column($params, $content = null) {
         'xsclear' => '',
         'lgclear' => '',
         'off'=>'',
-        'class' => '', // AEA - Allow user to add custom class
+        'css_class' => '', // AEA - Allow user to add custom class
         'tag' => 'div' // AEA - Allow user to set custom HTML tag
     ), $params));
 
@@ -157,6 +157,7 @@ function osc_theme_layout($params, $content = null) {
         'xs' => '',
         'off' => '',
         'lg' => '',
+        'css_class' => '',
         'extra' => ''
     ), $params));
     $cols = 'col-lg-' . $lg;
@@ -174,7 +175,7 @@ function osc_theme_layout($params, $content = null) {
     }
     // AEA - Horizontal Small Devices
     // $result = '<div class="col-lg-6 ' . $mds . ' ' . $sms . ' ' . $xss . ' col-lg-offset-' . $off . '  one-half">';
-    $result = '<div class="' . $cols . ' col-lg-offset-' . $off . ' ' . $extra . '">';
+    $result = '<div class="' . $cols . ' col-lg-offset-' . $off . ' ' . $extra . ' ' . $css_class . '">';
     $result .= do_shortcode($content);
     $result .= '</div>';
 
