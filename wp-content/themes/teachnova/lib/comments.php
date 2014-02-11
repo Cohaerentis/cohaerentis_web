@@ -28,8 +28,9 @@ class Roots_Walker_Comment extends Walker_Comment {
 
     extract($args, EXTR_SKIP); ?>
 
-  <li id="comment-<?php comment_ID(); ?>" <?php comment_class('media comment-' . get_comment_ID()); ?>>
+  <div id="comment-<?php comment_ID(); ?>" <?php comment_class('row media comment-' . get_comment_ID()); ?>>
     <?php include(locate_template('templates/comment.php')); ?>
+    <?php wrout_json('hijos:', $args);?>
   <?php
   }
 
@@ -38,7 +39,7 @@ class Roots_Walker_Comment extends Walker_Comment {
       call_user_func($args['end-callback'], $comment, $args, $depth);
       return;
     }
-    echo "</div></li>\n";
+    echo "</div></div>\n";
   }
 }
 
