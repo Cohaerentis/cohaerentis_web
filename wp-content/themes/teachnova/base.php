@@ -18,7 +18,7 @@
   ?>
 <div class="wrap">
   <div class="container" role="document">
-    <div class="content row">
+    <div class="content">
       <?php /* AEA - For debugging propuses * /
       wrout("Base template : " . var_export(Roots_Wrapping::$base, true));
       wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
