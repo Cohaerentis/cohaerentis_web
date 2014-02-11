@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/tab.js',
             'assets/js/plugins/bootstrap/affix.js',
             'assets/js/plugins/jquery/jquery.fittext.js',
+            'assets/js/plugins/jquery/jquery.autoellipsis-1.0.10.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]
@@ -77,6 +78,7 @@ module.exports = function(grunt) {
           'assets/js/plugins/bootstrap/tab.js',
           'assets/js/plugins/bootstrap/affix.js',
           'assets/js/plugins/jquery/jquery.fittext.js',
+          'assets/js/plugins/jquery/jquery.autoellipsis-1.0.10.js',
           'assets/js/plugins/*.js',
           'assets/js/_*.js'
         ],
@@ -95,7 +97,7 @@ module.exports = function(grunt) {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'uglify']
+        tasks: ['jshint', 'uglify', 'concat']
       },
       livereload: {
         // Browser live reloading

@@ -46,7 +46,7 @@
                     <div class="box-label"><?php echo $term->label; ?></div>
                 </a>
             <?php if ($term->description) : ?>
-                <div class="tn-taxonomy-description"><?php echo $term->description; ?></div>
+                <div class="tn-taxonomy-description ellipsis"><?php echo $term->description; ?></div>
             <?php endif; ?>
         </div>
     <?php endif; endforeach; ?>
