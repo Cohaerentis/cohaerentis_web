@@ -49,10 +49,15 @@
     <?php else : ?>
       <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
         <?php if (is_user_logged_in()) : ?>
-          <p class="comment-logged-in">
-            <?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity); ?>
-            <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>"><?php _e('Log out &raquo;', 'roots'); ?></a>
-          </p>
+          <div class="row comment-logged-in">
+            <div class="col-lg-1 col-md-1 col-sd-1 col-hs-1 col-xs-2">
+              <?php echo get_avatar($user_ID, $size = '32'); ?>
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-hs-11 col-xs-10">
+              <?php printf(__('<a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity); ?>
+              <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>"><?php _e('Log out &raquo;', 'roots'); ?></a>
+            </div>
+          </div>
         <?php else : ?>
           <div class="row form-group">
             <div class="col-lg-3 col-md-3 col-sm-3 col-hs-3 col-xs-4 comment-form-label ch-form-label">
