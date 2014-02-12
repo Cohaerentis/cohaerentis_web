@@ -383,7 +383,8 @@ a{
    float: right;
    margin-top: 4px;
 }
-.news h3 {
+.news span {
+   font-size: 24px;
    margin-top: 0px;
    font-family: Lato-LightItalic;
    color: #999;
@@ -520,9 +521,9 @@ a{
    color: #eee;
    display: inline-block;
    text-align: center;
-   .title h2 {
+   h1 {
       font-family: Lato;
-      font-size: 2.5em;
+      font-size: 30px;
       margin: 20px;
    }
 }
@@ -1488,6 +1489,9 @@ a{
 .space-header{
    .space-header-description{
       margin-bottom: 10px;
+      h1{
+         font-size: 30px;
+      }
    }
 }
 .slider-gallery .carousel{
@@ -1530,7 +1534,11 @@ a{
 /* ==========================================================================
    Noticias: AAA
    ========================================================================== */
-
+.post-title{
+   h1{
+      font-size: 30px;
+   }
+}
 .news-archive {
    margin-bottom: 20px;
    margin-top: 20px;
@@ -1628,7 +1636,7 @@ a{
    .form-group{
       margin-left: 0;
       margin-right: 0;
-      .h2 label{
+      .ch-title label{
          font-weight: normal;
       }
    }
@@ -1662,7 +1670,6 @@ a{
    padding: 15px;
 }
 .cancel-comment-reply{
-   .comment-logged-in;
 }
 
 
@@ -1674,7 +1681,8 @@ a{
    .contact-title{
       padding: 0;
       margin-bottom: 10px;
-      h2{
+      h1{
+         font-size: 30px;
          margin-left: 10px;
       }
    }
@@ -1744,8 +1752,9 @@ a{
    }
 }
 .contact-info{
-   h2{
-      .h2;
+   h1{
+      .ch-title;
+      font-size: 30px;
       background-color: @ch-blue;
       padding-bottom: 28px;
       padding-left: 10px;
@@ -1782,10 +1791,10 @@ a{
    padding-top: 6px;
 }
 .social-contact-info{
+   padding-top: 4px;
    font-size: 16px;
-   margin: 0px;
+   margin: 0;
    margin-left: 5px;
-   padding-top: 5px;
 }
 
 
@@ -2002,7 +2011,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    font-size: @font-size-special;
 }
 
-.h2{
+.ch-title{
    color: snow;
    background-color: @base-color;
    /*border-bottom: 3px solid rgba(255,255,255,0.5);*/
@@ -2011,7 +2020,24 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    padding-top: 21px;
    margin: 0;
 }
-.h2-contact{
+.ch-title-respond{
+   .ch-title;
+   padding-bottom: 15px;
+   padding-top: 10px;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+.ch-title-comment{
+   .ch-title;
+   font-size: 25px;
+   padding-bottom: 0px;
+   padding-top: 0px;
+   label{
+      font-family: Lato;
+      font-weight: normal;
+   }
+}
+.ch-title-contact{
    color: snow;
    background-color: @base-color;
    display: inline-block;
@@ -2098,8 +2124,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 .child{
    margin-left: 50px;
 }
-.h2-blue{
-   .h2;
+.ch-title-blue{
+   .ch-title;
    background-color: @ch-blue;
    margin-bottom: 20px;
 }

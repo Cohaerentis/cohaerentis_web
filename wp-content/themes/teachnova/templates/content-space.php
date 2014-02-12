@@ -27,7 +27,7 @@ ini_set( 'display_errors', 'On' );
       <div class="row">
         <?php if(!empty($gallery)):?>
         <div class="col-lg-push-6 col-lg-6 col-md-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 space-header-description">
-          <h2 class="entry-title h2"><?php the_title(); ?></h2>
+          <h1 class="entry-title ch-title"><?php the_title(); ?></h1>
           <div class="info-marker-down"></div>
           <div class="entry-description col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 font-p">
               <?php echo the_excerpt(); ?>

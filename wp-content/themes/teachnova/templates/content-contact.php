@@ -14,8 +14,8 @@ Template Name: Contact-Page
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 col-xs-12 contact-form">
             <div class="row">
-                <div class="col-lg-12 co-md-12 col-sm-12 col-hs-12 col-xs-12 contact-title h2-contact">
-                    <h2><?php echo the_title();?></h2>
+                <div class="col-lg-12 co-md-12 col-sm-12 col-hs-12 col-xs-12 contact-title ch-title-contact">
+                    <h1><?php echo the_title();?></h1>
                     <span class="mandatory">*campo obligatorio</span>
                 </div>
                 <div class="col-lg-12 co-md-12 col-sm-12 col-hs-12 col-xs-12">

@@ -5,7 +5,7 @@
 </pre>
 <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-title">
-    <h2 class="h2">Noticias</h2>
+    <h1 class="ch-title">Noticias</h1>
   </div>
   <div class="news-marker"></div>
 </div>

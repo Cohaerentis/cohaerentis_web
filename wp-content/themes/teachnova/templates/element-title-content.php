@@ -9,7 +9,7 @@
     <div class="header">
         <div class="row">
             <div class = "col-lg-3 col-md-3 col-sd-12 col-xs-12 title">
-                <h2><?php echo $title;?></h2>
+                <h1><?php echo $title;?></h1>
             </div>
             <div class = "col-lg-9 col-md-9 col-sd-12 col-xs-12 subtitle">
                 <p><?php echo do_shortcode($subtitle); ?></p>

@@ -24,7 +24,7 @@
                                         <img class="img-responsive" src="/assets/img/derecho_200.jpg"/>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8 col-hs-8 col-xs-8">
-                                        <h3 class="news-title">Noticia Uno</h3>
+                                        <span class="news-title">Noticia Uno</span>
                                         <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae porttitor quam. Fusce pulvinar,</p>
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@
                                         <img class="img-responsive" src="/assets/img/derecho_200.jpg"/>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8 col-hs-8 col-xs-8">
-                                        <h3 class="news-title">Noticia Dos</h3>
+                                        <span class="news-title">Noticia Dos</span>
                                         <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae porttitor quam. Fusce pulvinar,</p>
                                     </div>
                                 </div>
