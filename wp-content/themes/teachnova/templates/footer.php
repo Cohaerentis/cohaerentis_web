@@ -95,7 +95,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 end-line ">
-                <p>Plaza del Conde del Valle Suchil, 7&nbsp;&nbsp;|&nbsp;&nbsp;Planta 1ª - Puerta 8&nbsp;&nbsp;|&nbsp;&nbsp;Madrid 28015 - España&nbsp;&nbsp;|&nbsp;&nbsp;(+34) 123 456 789</p>
+                <p>Plaza del Conde del Valle Suchil, 7&nbsp;&nbsp;|&nbsp;&nbsp;Planta 1ª - Puerta 8&nbsp;&nbsp;|&nbsp;&nbsp;Madrid 28015 - España&nbsp;&nbsp;|&nbsp;&nbsp;(+34) 913 750 391</p>
                 <p>Cohaerentis Consultores, S.L &nbsp;&nbsp;|&nbsp;&nbsp; &copy;2014&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Aviso Legal</a></p>
             </div>
         </div>
