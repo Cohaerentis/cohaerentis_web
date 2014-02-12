@@ -84,9 +84,9 @@
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 social">
                             <ul>
-                                <li><span class="share" style="font-size: 20px;"><a href="#" class="fa fa-facebook"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
-                                <li><span class="share" style="font-size: 20px;"><a href="#" class="fa fa-twitter"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
-                                <li><span class="share" style="font-size: 20px;"><a href="#" class="fa fa-rss"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
+                                <li><span class="share" style="font-size: 20px;"><a href="#" class="glyphicons-social facebook"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
+                                <li><span class="share" style="font-size: 20px;"><a href="#" class="glyphicons-social twitter"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
+                                <li><span class="share" style="font-size: 20px;"><a href="#" class="glyphicons-social rss"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
                             </ul>
                         </div>
                     </div>
