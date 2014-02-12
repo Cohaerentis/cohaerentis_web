@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Subservice
+   ========================================================================== */
+
+.subservice-content{
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {
+      margin-top: 20px;
+   }
+   @media (min-width: @screen-md-min) {}
+   @media (min-width: @screen-lg-min) {}
+   .table-responsive{
+      overflow: hidden;
+      table{
+         font-size: 10px;
+         @media (min-width: @screen-hs-min) {
+            font-size: 14px;
+         }
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+      thead{
+         background-color: snow;
+         &> tr > th{
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+      }
+      tbody{
+         tr:nth-child(odd) {
+            background-color: transparent;
+            color:#333
+         }
+         tr:nth-child(even) {
+            background-color: #D3D8DB;
+            color:#333;
+         }
+         tr:hover{
+            background-color: #C4D1DA;
+         }
+      }
+   }
+   h2{
+      color: #333;
+      background-color: #C4D1DA;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin-top: -10px;
+   }
+}
+.download{
+   .cloud-upload{
+      .special-icons;
+   }
+}
+.download-content{
+   .qr{
+      position: relative;
+      left: 70px;
+      img{
+      }
+   }
+}
+.documents{
+   .paperclip{
+      padding-top: 3px;
+      padding-left: 8px;
+      .special-icons(8px;31px);
+   }
+   ul{
+      list-style: none;
+      .glyphicons{
+         top: 3px;
+         padding-right: 5px;
+         color: snow;
+      }
+      a{
+         font-family: Lato-Regular;
+         color: #777;
+         font-size: 1.1em;
+         &:hover{
+            text-decoration: none;
+            color: @base-color;
+         }
+      }
+   }
+}
+.link-to{
+   font-size: 14px;
+   margin-left: 5px;
+   font-family: Lato-Regular;
+   @media (min-width: @screen-hs-min) {
+      font-size: 20px;
+      margin-left: 20px;
+   }
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {}
+   @media (min-width: @screen-lg-min) {}
+   a{
+      color: #777;
+      &:hover{
+         text-decoration: none;
+         color: @base-color;
+      }
+   }
+
+}

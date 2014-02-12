@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+pre {
+   margin-top: 100px;
+   display: none;
+}
+article {
+   @media (min-width: @screen-hs-min) {}
+   @media (min-width: @screen-sm-min) {}
+   @media (min-width: @screen-md-min) {}
+   @media (min-width: @screen-lg-min) {}
+}
+a {
+   color: @ch-green;
+   &:hover{
+      color:@ch-blue;
+      text-decoration: none;
+   }
+}
+body {
+   font-family: Lato;
+   /*background-color: #CDD8DA;*/
+   /*Gradient for the background*/
+   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #E0E4E7), color-stop(1, #C2D4D5));
+   background-image: -o-linear-gradient(right, #E0E4E7 0%, #C2D4D5 100%);
+   background-image: -moz-linear-gradient(right, #E0E4E7 0%, #C2D4D5 100%);
+   background-image: -webkit-linear-gradient(right, #E0E4E7 0%, #C2D4D5 100%);
+   background-image: -ms-linear-gradient(right, #E0E4E7 0%, #C2D4D5 100%);
+   background-image: linear-gradient(to right, #E0E4E7 0%, #C2D4D5 100%);
+}
+
