@@ -3,6 +3,14 @@
 // --------------------------------------------------
 // Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
 
+// A4 sizes:
+// portrait   =   595 X 842 pixels
+@import "print/print-portrait.less";
+
+// landscape  =   842 X 595 pixels
+@import "print/print-landscape.less";
+
+
 @media print {
 
   * {
@@ -10,6 +18,9 @@
     color: #000 !important; // Black prints faster: h5bp.com/s
     background: transparent !important;
     box-shadow: none !important;
+  }
+  .wrap{
+    margin: 0 0 0 0!important;
   }
 
   a,
@@ -97,5 +108,16 @@
       border: 1px solid #ddd !important;
     }
   }
+  .entry-content {
+    a[href]:after {
+      display: none!important;
+    }
+  }
 
+  // COMMON
+
+  .info-marker-down,
+  .news-marker {
+      display: none;
+  }
 }

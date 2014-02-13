@@ -1,0 +1,177 @@
+/* ====================================================================================
+    PORTRAIT MEDIA QUERY
+   ==================================================================================== */
+
+
+@media print and (max-width: 595px) {
+// GENERAL
+
+  // FOOTER
+  .footer-left {
+    .footer-logos {
+      img {
+        width: 250px;
+      }
+    }
+    .news-item {
+        display: none!important;
+    }
+  }
+  .footer-right{
+    .blocks:nth-child(1) {
+      display: none;
+    }
+    .blocks:nth-child(2) {
+      display: none;
+    }
+    .blocks:nth-child(3) {
+      margin-top: 0px;
+      text-align: center;
+    }
+  }
+  .blocks {
+    input{
+      display: none;
+    }
+    .social {
+      display: none;
+    }
+  }
+  .end-line {
+    margin-top: 10px!important;
+  }
+
+
+  // PERSONA
+
+  .single-person-photo {
+    width: 170px!important;
+    img {
+      width: 150px!important;
+    }
+  }
+  .person-qr {
+    display: block!important;
+    float: left;
+    padding: 0!important;
+    position: absolute!important;
+    left: 18%!important;
+    top: -2%!important;
+    img{
+      width: 150px!important;
+      border: none!important;
+    }
+  }
+  .single-person-contact {
+  position: relative;
+  left: 20%!important;
+  .name {
+    font-size: 1.5em!important;
+  }
+  .position {
+    font-size: 1em!important;
+  }
+  .person-social {
+    float: right;
+    position: absolute;
+    top: -57%!important;
+    left: 35%!important;
+    padding-top: 0;
+    li {
+      float: none!important;
+      display: list-item;
+      width: 280px!important;
+      height: auto;
+    }
+    .glyphicons {
+      font-size: 18px!important;
+    }
+    a {
+      font-size: 18px!important;
+    }
+    span {
+      display: none;
+    }
+    a[href]:after {
+      margin-left: 5px;
+      content: """" attr(href)!important;
+      font-size: 12px!important;
+    }
+  }
+}
+  .collapse {
+    display: block!important;
+    height: auto!important;
+  }
+  .social-share {
+    display: none;
+  }
+
+// SOMOS
+
+  .tn-icon-box {
+    .box-icon {
+      margin-top: -40px!important;
+      font-size: 80px!important;
+    }
+    .box-label {
+      margin-top: -70px!important;
+    }
+  }
+
+  .somos-img {
+    margin-bottom: 40px!important;
+  }
+
+  // EQUIPO
+
+  .content-team {
+    margin-top: 40px!important
+  }
+
+  // EXPERIENCIA
+
+  .carousel {
+    display: none;
+  }
+
+  // SINGLE SERVICE
+
+  .download {
+    margin-bottom: 20px!important;
+  }
+
+  // ARCHIVE
+
+  .news-archive {
+    a[href]:after {
+      display: none;
+    }
+  }
+
+  // SINGLE POST
+
+  .single-post{
+    a[href]:after {
+      display: none;
+    }
+  }
+
+  .ch-form-label{
+    border: 1px solid #999;
+    padding-top: 13px!important;
+  }
+  .comment-reply-link{
+    display: none;
+  }
+
+  // CONTACTO
+
+  .contact-form{
+    display: none;
+  }
+  .tn-gmap {
+    overflow:hidden!important;
+  }
+
+}
