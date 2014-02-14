@@ -30,8 +30,8 @@ ini_set( 'display_errors', 'On' );
 
     $vcard      = TN_vCard::person($name, $attr);
     $vcardurl   = '/vcard.php?id=' . $post->ID;
-    // $qr         = get_post_meta( $post->ID, 'person_qr', true );
-    $qr         = TN_QR::encode($vcard);
+    $qr         = get_post_meta( $post->ID, 'person_qr', true );
+    if (empty($qr)) $qr = TN_QR::encode($vcard);
     $attr = array('class' => 'img-responsive',
                   'alt'   => $name,
                   'title' => $name);
