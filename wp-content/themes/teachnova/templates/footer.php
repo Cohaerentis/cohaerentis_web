@@ -56,9 +56,9 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 footer-address">
-                        <p>Plaza del Conde del Valle Suchil, 7<br />
+                        <p>Plaza del Conde del Valle Súchil, 7<br />
                            Planta 1ª – Puerta 8<br />
-                           Madrid 280315 – España
+                           Madrid 28015 – España
                         </p>
                         <p><a href="mailto:info@cohaerentis.com">info@cohaerentis.com</a><br />
                             +34 913750391
