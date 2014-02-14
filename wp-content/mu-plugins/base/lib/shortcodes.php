@@ -229,6 +229,32 @@ function base_shortcode_tn_br($atts, $content) {
 }
 add_shortcode($prefix . 'br', 'base_shortcode_tn_br');
 
+/**
+ * [tn_featured] shortcode
+ *
+ * Example:
+ * [tn_featured]
+ */
+function base_shortcode_tn_featured($atts, $content) {
+   extract(shortcode_atts(array(
+      'tag'          => 'div',
+      'css_id'       => '',
+      'css_class'    => 'tn-featured',
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-featured.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'featured', 'base_shortcode_tn_featured');
+
+/**
+ * [tn_gmap] shortcode
+ *
+ * Example:
+ * [tn_gmap address="Laredo, Cantabria, Spain"]
+ */
 function base_shortcode_tn_gmap( $atts = null, $content = null ) {
    extract(shortcode_atts(array(
       'width'        => 600,
