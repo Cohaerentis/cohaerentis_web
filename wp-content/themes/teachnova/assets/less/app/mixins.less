@@ -2,6 +2,53 @@
    Mixins
    ========================================================================== */
 
+.ch-img {
+   padding: 1px;
+   border: 1px solid #a4a8ab;
+}
+.background-rgba(@color; @opacity) {
+   background: rgba(red(@color), green(@color), blue(@color), @opacity);
+}
+.glyphicons-social-colors {
+   &.linked_in{ color: #1B85BD; }
+   &.twitter{ color: #55ACEE; }
+   &.rss{ color: #FA8502; }
+   &.facebook{ color: #3B5998; }
+   &.google_plus{ color: #F23F27; }
+   &.nameplate_alt{ color: @ch-text-color-light; }
+}
+
+.social-icons-inline(@align: left; @size: 22px; @margin: 8px) {
+   list-style: none;
+   padding: 0;
+   text-align: @align;
+   li {
+      display: inline;
+      font-size: @size;
+      margin-right: @margin;
+      a {
+         &:hover {
+            .glyphicons-social-colors;
+         }
+      }
+   }
+}
+.social-icons-inline-right(@size: 22px; @margin: 8px) {
+   list-style: none;
+   padding: 0;
+   text-align: right;
+   li {
+      display: inline;
+      font-size: @size;
+      margin-left: @margin;
+      a {
+         &:hover {
+            .glyphicons-social-colors;
+         }
+      }
+   }
+}
+
 .icon-box (@height: 200px; @width: 200px; @bgcolor: @ch-blue; @color: snow; @labelsize: 1.6em; @labelcolor: @ch-text-color) {
    display: block;
    &:hover,
@@ -38,10 +85,11 @@
       color: @labelcolor;
       text-align: center;
       margin-top: 8px;
+      height: 40px;
    }
 }
 
-
+/*
 .carousel {
    margin: auto;
    // AEA margin-top: 50px;
@@ -121,9 +169,11 @@
 
    }
    .item img {
-      /*display: inline-block;*/
+      // display: inline-block;
    }
 }
+*/
+
 /*******special icons*******/
 .special-icons(@padding:7px; @font-size-special:34px){
    background-color: @icon-box-bg;
@@ -188,21 +238,19 @@
 .info-marker{
    content: "";
    border-style: solid;
-   // AEA border-width:15px;
    border-width: 18px;
    width: 0;
    height: 0;
    position: relative;
    margin: auto;
-   // AEA top:220px;
 }
-.info-marker-down{
+.info-marker-down(@color: @ch-green){
    .info-marker;
-   border-color:  @base-color transparent transparent transparent;
+   border-color: @color transparent transparent transparent;
 }
-.info-marker-up{
+.info-marker-up(@color: @ch-green){
    .info-marker;
-   border-color:  transparent transparent @ch-blue transparent;
+   border-color: transparent transparent @color transparent;
 }
 .italic{
    font-family: Lato-LightItalic;

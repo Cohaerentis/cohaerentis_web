@@ -19,6 +19,8 @@ ini_set( 'display_errors', 'On' );
     $blog       = get_post_meta( $post->ID, 'person_blog', true );
     $twitter    = get_post_meta( $post->ID, 'person_twitter', true );
     $linkedin   = get_post_meta( $post->ID, 'person_linkedin', true );
+    $facebook   = get_post_meta( $post->ID, 'person_facebook', true );
+    $googleplus = get_post_meta( $post->ID, 'person_googleplus', true );
     $attr = array(
         'position'      => $position,
         'email'         => $email,
@@ -27,97 +29,56 @@ ini_set( 'display_errors', 'On' );
     );
 
     $vcard      = TN_vCard::person($name, $attr);
-    $vcard_url  = '/vcard.php?id=' . $post->ID;
+    $vcardurl   = '/vcard.php?id=' . $post->ID;
+    // $qr         = get_post_meta( $post->ID, 'person_qr', true );
     $qr         = TN_QR::encode($vcard);
     $attr = array('class' => 'img-responsive',
                   'alt'   => $name,
                   'title' => $name);
     $photo      = get_the_post_thumbnail($post->ID, 'medium', $attr);
 ?>
-<article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-person">
+<article <?php post_class() ?> id="page-<?php echo $post->ID; ?>">
+    <div class="single-person">
+        <div class="single-person-info">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-person-info">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
-                            <?php echo $photo; ?>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-8 col-hs-8 col-xs-12 single-person-contact">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-contact-info">
-                                <p id="name" class="name"><?php the_title(); ?></p>
-                                <div class="info-marker-person"></div>
-                                <p class="position"><?php echo $position; ?></p>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-hs-8 col-xs-12 person-social ">
-                                <ul>
-                                    <li><a href="<?php echo $vcard_url; ?>" title="vcard"><i class="glyphicons nameplate_alt"></i><span class="descr"> Vcard</span></a></li>
-                                    <li><a href="<?php echo $linkedin; ?>" title="linkedin"><i class="glyphicons-social linked_in"></i><span class="descr"> LinkedIn</span></a></li>
-                                    <li><a href="<?php echo $twitter; ?>" title="twitter"><i class="glyphicons-social twitter"></i><span class="descr"> Twiter</span></a></li>
-                                    <li><a href="<?php echo $blog; ?>" title="rss"><i class="glyphicons-social rss"></i><span class="descr"> RSS</span></a></li>
-                                    <li><a href="<?php echo $facebook; ?>" title="facebook"><i class="glyphicons-social facebook"></i><span class="descr"> Facebook</span></a></li>
-                                    <li><a href="<?php echo $google_plus; ?>" title="google plus"><i class="glyphicons-social google_plus"></i> <span class="descr"> Google plus</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 hidden-sm hidden-hs hidden-xs person-qr">
-                            <img src="<?php echo $qr; ?>"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
-                    <?php the_content();?>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
-                    <?php get_template_part('templates/element-social-share'); ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-<?/*
-  <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 page-header single-person">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo ">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-hs-4 col-xs-12 single-person-photo">
                     <?php echo $photo; ?>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-8 col-hs-8 col-xs-12 single-person-contact ">
-                    <div class="row">
-                        <p class="name"><?php the_title(); ?></p>
-                        <div class="info-marker-person"></div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-hs-12 col-xs-12 single-person-qr ">
-                            <p class="position"><?php echo $position; ?></p>
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 single-person-social ">
-                                <ul class="person-social">
-                                    <li class="social"><a href="#"><i class="glyphicons-social linked_in"></i></a></li>
-                                    <li class="social"><a href="#"><i class="glyphicons-social twitter"></i></a></li>
-                                    <li class="social"><a href="#"><i class="glyphicons-social rss"></i></a></li>
-                                    <li class="social"><a href="#"><i class="glyphicons-social facebook"></i></a></li>
-                                    <li class="social"><a href="#"><i class="glyphicons-social google_plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-hs-12 col-xs-12 single-person-qr ">
-                            <img src="<?php echo $qr; ?>"/>
-                        </div>
+                <?php if (!empty($qr)) : ?>
+                <div class="col-lg-6 col-md-6 col-sm-8 col-hs-8 col-xs-12">
+                <?php else : ?>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-hs-8 col-xs-12">
+                <?php endif; ?>
+                    <div class="single-person-contact">
+                        <p class="name" class="name"><?php the_title(); ?></p>
+                        <div class="single-person-info-marker"></div>
+                        <p class="position"><?php echo $position; ?></p>
+                    </div>
+                    <div class="single-person-social">
+                        <ul>
+                            <?php if (!empty($vcardurl)) : ?><li><a href="<?php echo $vcardurl; ?>" class="glyphicons nameplate_alt"><span class="description">vCard</span></a></li><?php endif; ?>
+                            <?php if (!empty($linkedin)) : ?><li><a href="<?php echo $linkedin; ?>" class="glyphicons-social linked_in"><span class="description">LinkedIn</span></a></li><?php endif; ?>
+                            <?php if (!empty($twitter)) : ?><li><a href="<?php echo $twitter; ?>" class="glyphicons-social twitter"><span class="description">Twiter</span></a></li><?php endif; ?>
+                            <?php if (!empty($blog)) : ?><li><a href="<?php echo $blog; ?>" class="glyphicons-social rss"><span class="description">RSS</span></a></li><?php endif; ?>
+                            <?php if (!empty($facebook)) : ?><li><a href="<?php echo $facebook; ?>" class="glyphicons-social facebook"><span class="description">Facebook</span></a></li><?php endif; ?>
+                            <?php if (!empty($googleplus)) : ?><li><a href="<?php echo $googleplus; ?>" class="glyphicons-social google_plus"><span class="description">Google+</span></a></li><?php endif; ?>
+                        </ul>
                     </div>
                 </div>
+                <?php if (!empty($qr)) : ?>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-hs hidden-xs single-person-qr">
+                    <img class="img-responsive" src="<?php echo $qr; ?>"/>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 single-person-content">
-            <div class="row">
-                <?php the_content();?>
-            </div>
+        <div class="single-person-content">
+            <?php the_content();?>
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
-            <div class="row">
-                <?php get_template_part('templates/element-social-share'); ?>
-            </div>
+        <div class="single-person-share">
+            <?php get_template_part('templates/element-social-share'); ?>
         </div>
-    </div> */?>
+    </div>
 </article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>

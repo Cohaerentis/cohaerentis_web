@@ -15,7 +15,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php /*  * / ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php /*  */ ?>
+  <meta name="viewport" content="width=1024">
   <meta name="description" content="Cohaerentis SL">
   <meta name="author" content="Antonio Espinosa, Abraham Aranda, Jose Manuel Alvarez">
   <link rel="shortcut icon" href="/favicon.ico">

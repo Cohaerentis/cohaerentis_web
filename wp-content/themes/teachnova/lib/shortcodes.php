@@ -19,6 +19,7 @@ function tn_shortcode_taxonomy_mosaic($atts) {
       'imgfield'     => '',   // Infographic meta-box field
       'imgsize'      => 'thumbnail', // Size of infographic
       'desc'         => 'no', // yes/no
+      'grig'         => 'yes', // yes/no apply bootstrap col-XX grid
       'lg'           => '2',  // Large devices
       'md'           => '4',  // Medium devices
       'sm'           => '6',  // Small devices // AAA sd -> sm

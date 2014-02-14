@@ -1,31 +1,5 @@
 /* ==========================================================================
-   Base
+   Custom CSS
    ========================================================================== */
 
-#team-text{
-   width: 200px;
-}
-#team-text{
-   width: 200px;
-}
-
-/* ==========================================================================
-   Bugfixes
-   ========================================================================== */
-
-#wpadminbar { top:auto; bottom:0 }
-#wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {margin: 6px 6px 0;}
-@media screen and (max-width: 782px) {
-   #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar>a img { top: 3px; }
-}
-@media screen and (max-width: 600px) {
-   #wpadminbar { position: fixed; }
-}
-
-/* ==========================================================================
-   Debug sidebars
-   ========================================================================== */
-.wp-sidebar {
-   /*border: dashed 2px red;*/
-}
 

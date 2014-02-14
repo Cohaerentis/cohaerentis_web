@@ -1,21 +1,37 @@
 /* ==========================================================================
    Shortcode: tn-taxonomy-mosaic
    ========================================================================== */
-.tn-taxonomy-term {
-   margin-bottom: 50px;
-   a:hover{
-      text-decoration: none;
+.tn-taxonomy-mosaic {
+   position: relative;
+   .tn-taxonomy-mosaic-relative {
+      position: relative;
+      left: 50%;
+      float: left;
+      .tn-taxonomy-mosaic-wrapper {
+         position: relative;
+         left: -50%;
+         float: left;
+      }
    }
-   img {
-      border-radius: 180px;
-      border: 1px solid;
-   }
-   .tn-taxonomy-box {
-      .icon-box();
-   }
-   .tn-taxonomy-description {
-      margin-top: 30px;
-      overflow: hidden;
-      height: 150px;
+   .tn-taxonomy-term {
+      margin-bottom: 30px;
+      width: 160px;
+      padding: 0 10px;
+      float: left;
+      a:hover{
+         text-decoration: none;
+      }
+      img {
+         border-radius: 180px;
+         border: 1px solid;
+      }
+      .tn-taxonomy-box {
+         .icon-box(@width: 140px; @height: 140px; @labelsize: 1em);
+      }
+      .tn-taxonomy-description {
+         margin-top: 30px;
+         overflow: hidden;
+         height: 150px;
+      }
    }
 }

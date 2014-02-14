@@ -21,4 +21,6 @@
         }
     }
 ?>
-<?php get_template_part('templates/element-customers-slider'); ?>
+<div class="tn-customers-slider">
+    <?php get_template_part('templates/element-customers-slider'); ?>
+</div>

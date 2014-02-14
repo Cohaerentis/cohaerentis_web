@@ -22,29 +22,36 @@
         $blog       = get_post_meta( $person->ID, 'person_blog', true );
         $twitter    = get_post_meta( $person->ID, 'person_twitter', true );
         $linkedin   = get_post_meta( $person->ID, 'person_linkedin', true );
+        $facebook   = get_post_meta( $person->ID, 'person_facebook', true );
+        $googleplus = get_post_meta( $person->ID, 'person_googleplus', true );
     }
 ?>
 <?php if (!empty($person)) : ?>
-    <div class="row content-team">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-hs-4 col-xs-12 person-img">
-            <a href="<?php echo $url;?>"><?php echo $photo; ?></a>
+    <div class="row tn-person">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-sm-offset-0 col-hs-3 col-hs-offset-2 col-xs-12">
+            <div class="tn-person-img">
+                <a href="<?php echo $url;?>"><?php echo $photo; ?></a>
+            </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-hs-8 col-xs-12">
-            <div class="row person-info">
-                <div class="info-marker-person"></div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 person-info-name">
-                    <span class="name"><a href="<?php echo $url; ?>"><?php echo $name; ?></a></span>
-                    <p><?php echo $position; ?></p>
-                </div>
-                <hr>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 social-media">
-                    <ul class="social-icons">
-                        <li class="social"><a href="#"><i class="glyphicons-social linked_in"></i></a></li>
-                        <li class="social"><a href="#"><i class="glyphicons-social twitter"></i></a></li>
-                        <li class="social"><a href="#"><i class="glyphicons-social rss"></i></a></li>
-                        <li class="social"><a href="#"><i class="glyphicons-social facebook"></i></a></li>
-                        <li class="social"><a href="#"><i class="glyphicons-social google_plus"></i></a></li>
-                    </ul>
+        <div class="tn-person-clearfix"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-hs-7 col-xs-12">
+            <div class="tn-person-info">
+                <div class="tn-person-info-wrapper">
+                    <div class="tn-person-info-marker"></div>
+                    <div class="tn-person-name">
+                        <span class="name"><a href="<?php echo $url; ?>"><?php echo $name; ?></a></span>
+                        <p class="position"><?php echo $position; ?></p>
+                    </div>
+                    <div class="tn-person-separator"></div>
+                    <div class="tn-person-social">
+                        <ul>
+                            <?php if (!empty($linkedin)) : ?><li><a href="<?php echo $linkedin; ?>" class="glyphicons-social linked_in"></a></li><?php endif; ?>
+                            <?php if (!empty($twitter)) : ?><li><a href="<?php echo $twitter; ?>" class="glyphicons-social twitter"></a></li><?php endif; ?>
+                            <?php if (!empty($blog)) : ?><li><a href="<?php echo $blog; ?>" class="glyphicons-social rss"></a></li><?php endif; ?>
+                            <?php if (!empty($facebook)) : ?><li><a href="<?php echo $facebook; ?>" class="glyphicons-social facebook"></a></li><?php endif; ?>
+                            <?php if (!empty($googleplus)) : ?><li><a href="<?php echo $googleplus; ?>" class="glyphicons-social google_plus"></a></li><?php endif; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <?php global $customers;?>
 <?php if (!empty($customers)) : ?>
-<div class="carousel slide media-carousel" id="leading-<?php echo $type; ?>s">
+<div class="carousel slide media-carousel" id="customers">
 <div class="carousel-inner center-block">
   <?php $i = 0; foreach($customers as $customer) : ?>
     <?php if (($i % 4) == 0) : ?>
@@ -24,11 +24,11 @@
   <?php endif; ?>
 </div>
 
-<a data-slide="prev" href="#leading-<?php echo $type; ?>s" class="left carousel-control btn-circle">
+<a data-slide="prev" href="#customers" class="left carousel-control btn-circle">
   <i class="glyphicons chevron-left"></i>
 </a>
 
-<a data-slide="next" href="#leading-<?php echo $type; ?>s" class="right carousel-control  img-rounded">
+<a data-slide="next" href="#customers" class="right carousel-control  img-rounded">
   <i class="glyphicons chevron-right"></i>
 </a>
 

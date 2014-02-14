@@ -239,6 +239,26 @@ function base_meta_boxes($meta_boxes) {
             'id' => $prefix . 'linkedin',
             'type' => 'text',
          ),
+         array(
+            'name' => __('Facebook'),
+            'desc' => __('Facebook URL'),
+            'id' => $prefix . 'facebook',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('Google+'),
+            'desc' => __('Google+ URL'),
+            'id' => $prefix . 'googleplus',
+            'type' => 'text',
+         ),
+         array(
+            'name' => __('QR'),
+            'desc' => __('QR image'),
+            'id' => $prefix . 'qr',
+            'type' => 'file',
+            'save_id' => false, // save ID using true
+            'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+         ),
       ),
    );
 

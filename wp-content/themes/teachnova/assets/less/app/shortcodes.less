@@ -2,40 +2,31 @@
    Shortcodes
    ========================================================================== */
 .tn-icon-box {
-   .icon-box();
+   .icon-box(100px, 100px);
 }
-.caret {
-   display: none;
-}
-.panel-default {
-   .panel-heading {
-      background-color: #E5E9EA;
-      // color: #777;
-      font-family: Lato-Regular;
-      color: #333;
-      padding: 20px 15px;
-      text-decoration: none;
-      &:hover {
-        background-color: #B5D4CE;
-        text-decoration: none;
+.tn-customers-slider {
+   margin: 0 0 20px 0;
+   .carousel-inner ul {
+      list-style: none;
+   }
+   .carousel-control {
+      background: transparent;
+      width: 25px;
+      display: block;
+      vertical-align: middle;
+      .glyphicons {
+         &.chevron-right{ color: @ch-blue; }
+         &.chevron-left{ color: @ch-blue; }
+      }
+      &:before {
+         content: '';
+         display: inline-block;
+         height: 50%;
       }
    }
 }
-
-.panel-group .panel + .panel {
-   margin-top: 0px;
-}
-.panel-heading {
-   display: block;
-}
-#share{
-   font-family: Lato-LightItalic;
-   color: #777;
-}
 .tn-gmap {
-   /*margin-bottom: 10px;*/
    iframe {
-      /*AAA: border: 3px solid @ch-blue;*/
       border: none;
    }
 }
