@@ -16,66 +16,48 @@ ini_set( 'display_errors', 'On' );
     $description = get_post_meta( $post->ID, 'subservice_description', true );
     $download    = get_post_meta( $post->ID, 'subservice_download', true );
     $related     = get_post_meta( $post->ID, 'subservice_related' );
-//wrout('url = ' . var_export($url, true));
-    $qr          = TN_QR::encode($url);
-//wrout('qr = ' . var_export($qr, true));
-//wrout('sha1(url) = ' . var_export(sha1($url), true));
+    $qr          = get_post_meta( $post->ID, 'subservice_qr' );
+    if (empty($qr)) $qr = TN_QR::encode($url);
 
 ?>
 <article <?php post_class() ?> id="subservice-<?php echo $term->term_id; ?>">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 subservice-title">
-            <?php get_template_part('templates/element-title-content'); ?>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 subservice-content">
-            <?php the_content(); ?>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 col-xs-12 download ">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sd-12 col-hs-12 col-xs-12">
-                            <span style="font-size: 45px;"><i class="glyphicons cloud-upload"></i></span>
-                            <span class="link-to"><a href="<?php echo $download; ?>">Descarga la ficha del servicio</a></span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sd-12 col-hs-12 col-xs-12 download-content">
-                            <?php if(!empty($qr)):?>
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sd-12 col-hs-12 hidden-xs qr">
-                                    <img src="<?php echo $qr; ?>">
-                                </div>
-                            </div>
-                            <?php endif;?>
-                        </div>
-                    </div>
+    <div class="subservice-title">
+        <?php get_template_part('templates/element-title-content'); ?>
+    </div>
+    <div class="subservice-content">
+        <?php the_content(); ?>
+    </div>
+    <div class="subservice-download">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 col-xs-12">
+                <div class="subservice-mindmap">
+                    <i class="glyphicons cloud-upload"></i>
+                    <a href="<?php echo $download; ?>">Descarga la ficha del servicio</a>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 col-xs-12 documents">
-                    <span style="font-size: 45px;"><i class="glyphicons paperclip"></i></span>
-                    <span class="link-to">Otra documentación</span>
-                    <?php foreach ($related[0] as $doc):?>
-                        <ul class="documents-links">
+                <div class="subservice-documents">
+                    <i class="glyphicons paperclip"></i>
+                    <span>Otra documentación</span>
+                    <ul class="documents-links">
+                        <?php foreach ($related[0] as $doc):?>
                             <li>
                                 <i class="glyphicons record"></i>
                                 <a href='<?php echo $doc ?>'>
                                     <?php $doc_name = basename($doc); $aux = explode('.', $doc_name); echo $aux[0]; ?>
                                 </a>
                             </li>
-                        </ul>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             </div>
-            <?php get_template_part('templates/element-social-share'); ?>
+            <?php if(!empty($qr)):?>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 hidden-xs subservice-qr">
+                <img class="img-responsive" src="<?php echo $qr; ?>">
+            </div>
+            <?php endif;?>
         </div>
     </div>
+    <?php get_template_part('templates/element-social-share'); ?>
 </article>
-<pre>
-    download = <?php var_export($download); ?><br>
-    related = <?php var_export($related); ?><br>
-</pre>
-<pre>
-    qr = <img src="<?php echo $qr; ?>">
-</pre>
-
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
 <?php endif; ?>

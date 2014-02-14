@@ -79,7 +79,6 @@
    }
    .box-label{
       // AEA font-family: Lato-Hairline;
-      font-family: Lato;
       font-size: @labelsize;
       display: block;
       color: @labelcolor;
@@ -87,6 +86,18 @@
       margin-top: 8px;
       height: 40px;
    }
+}
+
+.icon-special (@size: 50px; @padding: 7px; @iconsize: 34px; @color: snow; @bgcolor: @icon-inline-bg) {
+   background-color: @bgcolor;
+   padding-left: @padding;
+   border-radius: 180px;
+   border: 1px solidub @bgcolor;
+   color: @color;
+   width: @size;
+   height: @size;
+   font-size: @iconsize;
+   display: inline-block;
 }
 
 /*
@@ -102,7 +113,7 @@
    @media (min-width: @screen-md-min) {}
    @media (min-width: @screen-lg-min) {}
    .glyphicons {
-      color: @base-color;
+      color: @ch-green;
       @media (min-width: @screen-hs-min) {}
       @media (min-width: @screen-sm-min) {}
       @media (min-width: @screen-md-min) {}
@@ -174,21 +185,10 @@
 }
 */
 
-/*******special icons*******/
-.special-icons(@padding:7px; @font-size-special:34px){
-   background-color: @icon-box-bg;
-   padding-left: @padding;
-   border-radius: 180px;
-   border: 1px solidub @icon-box-bg;
-   color: snow;
-   width: 50px;
-   height: 50px;
-   font-size: @font-size-special;
-}
 
 .ch-title{
    color: snow;
-   background-color: @base-color;
+   background-color: @ch-green;
    /*border-bottom: 3px solid rgba(255,255,255,0.5);*/
    text-align: center;
    padding-bottom: 20px;
@@ -208,18 +208,17 @@
    padding-bottom: 5px;
    padding-top: 5px;
    label{
-      font-family: Lato;
       font-weight: normal;
    }
 }
 .ch-title-contact{
    color: snow;
-   background-color: @base-color;
+   background-color: @ch-green;
    display: inline-block;
 }
 .h3{
    color: snow;
-   background-color: @base-color;
+   background-color: @ch-green;
    /*border-bottom: 3px solid rgba(255,255,255,0.5);*/
    text-align: center;
    padding-bottom: 5px;
@@ -227,12 +226,11 @@
    margin: 0;
 }
 .font-p{
-   font-family: Lato;
    font-size: 1.2em;
 }
 
 .base-color{
-   color: @base-color;
+   color: @ch-green;
 }
 
 .info-marker{
@@ -260,7 +258,7 @@
    .ch-form-label;
 }
 .ch-form-label{
-   background-color: @base-color;
+   background-color: @ch-green;
    color: snow;
    padding-top: 10px;
    padding-bottom: 10px;

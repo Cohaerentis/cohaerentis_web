@@ -4,6 +4,7 @@
 
 .wrap {
    #gradient > .horizontal(@bg-gradient-left, @bg-gradient-right);
+   min-height: 520px;
    margin: 0;
    padding: 0;
    @media (min-width: @screen-hs-min) {}
@@ -31,6 +32,35 @@
       display: inline-block;
       .social-icons-inline(@size: 18px; @margin: 6px);
       li a {color: @ch-text-color-light; }
+   }
+}
+
+/* ==========================================================================
+   Bootstrap : table-responsive
+   ========================================================================== */
+.table-responsive {
+   overflow: hidden;
+   table{
+   }
+   thead {
+      font-size: 1em;
+      font-weight: bold;
+      background-color: @bg-table-head-color;
+      &> tr > th {
+         padding: 10px 5px;
+      }
+   }
+   tbody {
+      font-size: 0.9em;
+      tr:nth-child(even) {
+         background-color: @bg-table-even-color;
+      }
+      tr:nth-child(odd) {
+         background-color: @bg-table-odd-color;
+      }
+      tr:hover {
+         background-color: @bg-table-hover-color;
+      }
    }
 }
 
@@ -102,18 +132,34 @@
    }
    @media (min-width: @screen-lg-min) {}
    .title {
-      background-color: @base-color;
+      background-color: @ch-green;
       color: #eee;
-      display: inline-block;
+      display: block;
       text-align: center;
+      padding: 20px 0;
+      margin: 0 0 10px 0;
+      @media (min-width: @screen-hs-min) {}
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {
+         margin: 0 0 20px 0;
+      }
+      @media (min-width: @screen-lg-min) {}
       h1 {
-         font-size: 30px;
-         margin: 20px;
+         font-family: @ch-title-font;
+         font-size: @ch-title-font-size;
+         margin: 0;
       }
    }
    .subtitle {
       p {
-         font-size: 1.2em;
+         // font-size: 1.2em;
+         margin: 0 0 10px 0;
+         @media (min-width: @screen-hs-min) {}
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {
+            margin: 0 0 20px 0;
+         }
+         @media (min-width: @screen-lg-min) {}
       }
    }
 }
@@ -180,7 +226,7 @@ header {
 }
 
 .navbar-nav > .active > a {
-   background-color: @base-color;
+   background-color: @ch-green;
    @media (min-width: @screen-md-min) {
       color: #aaa;
       background-color: transparent;
@@ -190,7 +236,7 @@ header {
 }
 
 .navbar-default .navbar-nav > .active > a {
-   background-color: @base-color;
+   background-color: @ch-green;
    color: #fff;
    @media (min-width: @screen-md-min) {
       color: #aaa;
@@ -321,7 +367,7 @@ header {
    }
 }
 .nav > li:hover {
-   background-color: @base-color;
+   background-color: @ch-green;
    @media (min-width: @screen-md-min) {
       background-color: transparent;
    }

@@ -64,7 +64,7 @@
    }
    .tn-person-separator {
       @media (min-width: @screen-hs-min) {
-         border-top: 1px solid #777;
+         border-top: 1px solid @ch-text-color-light;
          height: 1px;
          width: 130%;
          margin: 0 0 0 -55px;
@@ -90,6 +90,7 @@
       .tn-person-name {
          float:none;
          .name {
+            font-family: @ch-person-name-font;
             font-size: 1.8em;
             a {
                .person-link;
@@ -98,7 +99,7 @@
          .position {
             color: snow;
             @media (min-width: @screen-hs-min) {
-               color: @ch-text-color-light;
+               color: @ch-text-color;
             }
             @media (min-width: @screen-sm-min) {}
             @media (min-width: @screen-md-min) {}

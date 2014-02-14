@@ -45,30 +45,21 @@
 ?>
 <?php if (!empty($term)) : ?>
     <article <?php post_class() ?> id="experience-<?php echo $term->term_id; ?>">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 header">
-                <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12 col-hs-12 col-xs-12 title">
-                        <h2 class="entry-title"><?php echo $term->name; ?></h2>
-                    </div>
-                    <div class="col-lg-9 col-md-12 col-sm-12 col-hs-12 col-xs-12 subtitle">
-                        <p><?php echo $term->content; ?></p>
-                    </div>
+        <div class="header">
+            <div class="title">
+                <h1><?php echo $term->name; ?></h1>
+            </div>
+            <div class="subtitle">
+                <p><?php echo do_shortcode($term->content); ?></p>
+            </div>
+        </div>
+        <div class="entry-content">
+            <div class="row">
+                <div class="tn-customers-slider">
+                    <?php get_template_part('templates/element-customers-slider'); ?>
                 </div>
             </div>
-            <div class="entry-meta col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 experience">
-                <div class="row">
-                    <div class="col-lg-push-8 col-md-push-8 col-sm-4 col-hs-12 col-xs-12 experience-image">
-                        <div class="common-box">
-                            <img src="<?php echo $term->src; ?>" class="img-responsive" />
-                        </div>
-                    </div>
-                    <div class="col-lg-pull-4 col-md-pull-4 col-sm-8 col-hs-12 col-xs-12 experience-slider">
-                        <?php get_template_part('templates/element-customers-slider'); ?>
-                    </div>
-                </div>
-            </div>
-        <div>
+        </div>
     </article>
 <?php else : ?>
     <?php get_template_part('templates/element-noresults'); ?>
