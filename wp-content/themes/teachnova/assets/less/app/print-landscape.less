@@ -1,0 +1,160 @@
+/* ====================================================================================
+    LANDSCAPE MEDIA QUERY
+   ==================================================================================== */
+// A4 size:
+// landscape  =   842 X 595 pixels
+@media print and (min-width: 596px) {
+//general
+  //footer
+  .footer-left {
+    .footer-logos {
+      img {
+        width: 250px;
+      }
+    }
+    .news-item {
+      display: none!important;
+    }
+  }
+// PERSONA
+
+  .single-person-photo {
+    width: 170px!important;
+    img {
+      width: 150px!important;
+    }
+  }
+  .single-person-qr {
+    border: none!important;
+    padding: 0;
+    width: 130px!important;
+    position: absolute!important;
+    left: 80%!important;
+  }
+  .single-person-contact {
+  .name {
+    font-size: 1.5em!important;
+  }
+  .position {
+    font-size: 1em!important;
+  }
+}
+  .single-person-social {
+    padding-top: 0;
+    li {
+      float: none!important;
+      display: list-item;
+      width: 280px!important;
+      height: auto;
+    }
+    .glyphicons {
+      font-size: 18px!important;
+    }
+    a {
+      font-size: 18px!important;
+    }
+    span {
+      display: none;
+    }
+    a[href]:after {
+      margin-left: 5px;
+      content: """" attr(href)!important;
+      font-size: 12px!important;
+    }
+  }
+
+  .collapse {
+    display: block!important;
+    height: auto!important;
+  }
+  .social-share {
+    display: none;
+  }
+
+// SOMOS
+
+  .tn-icon-box {
+    .box-icon {
+      margin-top: -30px!important;
+      font-size: 80px!important;
+    }
+    .box-label {
+      margin-top: 10px!important;
+    }
+  }
+  .somos-img {
+    margin-bottom: 40px!important;
+  }
+
+  // EQUIPO
+
+  .tn-person {
+    margin-bottom: 30px!important;
+  }
+
+  // EXPERIENCIA
+
+  .tn-customers-slider {
+
+    .carousel-control {
+      display: none;
+    }
+
+    .carousel-inner ul{
+      .col-hs-6{
+        width: 25%;
+      }
+      li{
+        display: list-item;
+        img{
+          width: 75px!important;
+          height: auto!important;
+        }
+      }
+    }
+  }
+
+  // SINGLE SERVICE
+
+  .subservice-content{
+    margin-bottom: 100px!important;
+  }
+  .download {
+    margin-bottom: 20px!important;
+  }
+
+  // ARCHIVE
+
+  .news-archive {
+    a[href]:after {
+      display: none;
+    }
+  }
+
+  // SINGLE POST
+
+  .single-post {
+    a[href]:after {
+      display: none;
+    }
+  }
+
+  .ch-form-label {
+    border: 1px solid #999;
+    padding-top: 13px!important;
+  }
+
+  .comment-reply-link {
+    display: none;
+  }
+
+  // CONTACTO
+
+  .contact-form{
+    display: none;
+  }
+  .tn-gmap {
+    padding-bottom: 400px!important;
+    overflow:hidden!important;
+  }
+}

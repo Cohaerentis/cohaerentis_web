@@ -1,46 +1,24 @@
 /* ====================================================================================
     PORTRAIT MEDIA QUERY
    ==================================================================================== */
-
+// A4 size:
+// portrait   =   595 X 842 pixels
 
 @media print and (max-width: 595px) {
 // GENERAL
+.no-links {
+  a[href]:after {
+    display: none;
+  }
+}
 
   // FOOTER
-  .footer-left {
-    .footer-logos {
-      img {
-        width: 250px;
-      }
-    }
-    .news-item {
-        display: none!important;
-    }
+  .footer-social {
+    display: none;
   }
-  .footer-right{
-    .blocks:nth-child(1) {
-      display: none;
-    }
-    .blocks:nth-child(2) {
-      display: none;
-    }
-    .blocks:nth-child(3) {
-      margin-top: 0px;
-      text-align: center;
-    }
+  .footer-address{
+    .no-links;
   }
-  .blocks {
-    input{
-      display: none;
-    }
-    .social {
-      display: none;
-    }
-  }
-  .end-line {
-    margin-top: 10px!important;
-  }
-
 
   // PERSONA
 
@@ -50,31 +28,22 @@
       width: 150px!important;
     }
   }
-  .person-qr {
-    float: left;
-    padding: 0!important;
+  .single-person-qr {
+    border: none!important;
+    padding: 0;
+    width: 130px!important;
     position: absolute!important;
-    left: 18%!important;
-    top: -2%!important;
-    img{
-      width: 150px!important;
-      border: none!important;
-    }
+    left: 80%!important;
   }
   .single-person-contact {
-  position: relative;
-  left: 20%!important;
   .name {
     font-size: 1.5em!important;
   }
   .position {
     font-size: 1em!important;
   }
-  .person-social {
-    float: right;
-    position: absolute;
-    top: -57%!important;
-    left: 35%!important;
+}
+  .single-person-social {
     padding-top: 0;
     li {
       float: none!important;
@@ -97,7 +66,7 @@
       font-size: 12px!important;
     }
   }
-}
+
   .collapse {
     display: block!important;
     height: auto!important;
@@ -110,14 +79,13 @@
 
   .tn-icon-box {
     .box-icon {
-      margin-top: -40px!important;
+      margin-top: 0px!important;
       font-size: 80px!important;
     }
     .box-label {
-      margin-top: -70px!important;
+      margin-top: 10px!important;
     }
   }
-
   .somos-img {
     margin-bottom: 40px!important;
   }
@@ -130,9 +98,34 @@
 
   // EXPERIENCIA
 
-  .carousel {
-    display: none;
+  .tn-customers-slider {
+
+    .carousel-control {
+      display: none;
+    }
+
+    .carousel-inner ul{
+      .col-hs-6{
+        width: 25%;
+      }
+      li{
+        display: list-item;
+        img{
+          width: 75px!important;
+          height: auto!important;
+        }
+      }
+    }
   }
+
+  //PLATAFORMA
+
+  .space-header{
+    .carousel-control{
+      display: none;
+    }
+  }
+
 
   // SINGLE SERVICE
 
