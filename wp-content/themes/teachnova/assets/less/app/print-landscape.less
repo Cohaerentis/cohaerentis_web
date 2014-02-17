@@ -4,17 +4,22 @@
 // A4 size:
 // landscape  =   842 X 595 pixels
 @media print and (min-width: 596px) {
-//general
-  //footer
-  .footer-left {
-    .footer-logos {
-      img {
-        width: 250px;
-      }
-    }
-    .news-item {
-      display: none!important;
-    }
+// GENERAL
+
+.no-links {
+  a[href]:after {
+    display: none;
+  }
+}
+
+  // FOOTER
+  // FOOTER
+
+  .footer-social {
+    display: none;
+  }
+  .footer-address{
+    .no-links;
   }
 // PERSONA
 
@@ -100,13 +105,13 @@
       display: none;
     }
 
-    .carousel-inner ul{
+    .carousel-inner ul {
       .col-hs-6{
         width: 25%;
       }
-      li{
+      li {
         display: list-item;
-        img{
+        img {
           width: 75px!important;
           height: auto!important;
         }
@@ -116,11 +121,17 @@
 
   // SINGLE SERVICE
 
-  .subservice-content{
+  .subservice-content {
     margin-bottom: 100px!important;
   }
   .download {
     margin-bottom: 20px!important;
+  }
+  .subservice-qr {
+    margin-left: 40%!important;
+    img {
+      border: none!important;
+    }
   }
 
   // ARCHIVE
