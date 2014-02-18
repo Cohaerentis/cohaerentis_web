@@ -24,7 +24,7 @@ function base_meta_boxes($meta_boxes) {
       'fields'     => array(
          array( // AAA
             'name' => __('Glyphicon'),               // field name
-            'desc' => __('Glyphicon that best suit to this service. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'desc' => __('Glyphicon that best suit to this subservice. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
             'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
             'type' => 'text'                   // image upload
          ),
@@ -73,7 +73,7 @@ function base_meta_boxes($meta_boxes) {
       'fields'     => array(
          array( // AAA
             'name' => __('Glyphicon'),               // field name
-            'desc' => __('Glyphicon that best suit to this experience. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'desc' => __('Glyphicon that best suit to this knowledge. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
             'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
             'type' => 'text'                   // image upload
          ),
@@ -300,7 +300,7 @@ function base_meta_boxes($meta_boxes) {
          ),
          array( // AAA
             'name' => __('Glyphicon'),               // field name
-            'desc' => __('Glyphicon that best suit to this experience. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'desc' => __('Glyphicon that best suit to this space. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
             'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
             'type' => 'text'                   // image upload
          ),
