@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Post-type: Space
     File: content-space
-</pre>
+</pre> */ ?>
 <?php
 /* AEA - For debugging propuses * /
 ini_set( 'error_reporting', -1 );
@@ -22,77 +21,65 @@ ini_set( 'display_errors', 'On' );
     }
 ?>
 <article <?php post_class() ?> id="space-<?php echo $post->ID; ?>">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 space-header">
-      <div class="row">
-        <?php if(!empty($gallery)):?>
-        <div class="col-lg-push-6 col-lg-6 col-md-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 space-header-description">
-          <h1 class="entry-title ch-title"><?php the_title(); ?></h1>
-          <div class="info-marker-down"></div>
-          <div class="entry-description col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 font-p">
-              <?php echo the_excerpt(); ?>
-          </div>
-          <span class="visit">
-            <i class="glyphicons new_window_alt base-color"></i>
-            <a href="<?php echo $url;?>" target="_blank"><strong>Visitar sitio</strong></a>
-          </span>
-        </div>
-        <div class="col-lg-pull-6 col-lg-6 col-md-pull-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 slider-gallery ">
-          <div id="space-slider-<?php echo $post->ID; ?>" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-
-            <ol class="carousel-indicators">
-              <?php $i = 0; foreach ($images as $image) : ?>
-              <li data-target="#space-slider-<?php echo $post->ID; ?>" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0) : ?>
-                class="active" <?php endif; ?>>
-              </li>
-            <?php $i++; endforeach; ?>
-            </ol>
-
-            <!-- Wrapper for slides -->
-
-            <div class="carousel-inner">
-              <?php $i = 0; foreach ($images as $image) : ?>
-              <?php
-              $src = '/' . $gallery->path . '/' . $image->filename;
-              $class = 'item';
-              if ($i == 0) $class .= ' active';
-              ?>
-              <div class="<?php echo $class; ?>">
-                <img src="<?php echo $src; ?>" alt="<?php echo $image->alttext; ?>" class="img-responsive">
-              </div>
-              <?php $i++; endforeach; ?>
-            </div>
-
-            <!-- Controls -->
-
-            <a class="left carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="prev">
-              <i class="glyphicons chevron-left"></i>
-            </a>
-            <a class="right carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="next">
-              <i class="glyphicons chevron-right"></i>
-            </a>
-          </div>
-        </div>
+    <div class="header">
+        <?php if(!empty($gallery)) : ?>
+            <div class="row">
+                <div class="col-lg-push-6 col-lg-6 col-md-push-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 space-header-description">
         <?php endif; ?>
-      </div>
+                    <div class="title">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                    <div class="info-marker-down"></div>
+                    <div class="subtitle">
+                        <?php echo the_excerpt(); ?>
+                        <div class="space-link">
+                            <a href="<?php echo $url;?>" target="_blank">
+                                <i class="glyphicons new_window_alt"></i> Visitar sitio
+                            </a>
+                        </div>
+                    </div>
+        <?php if(!empty($gallery)) : ?>
+                </div>
+                <div class="col-lg-pull-6 col-lg-6 col-md-pull-6 col-md-6 col-sm-12 col-hs-12 col-xs-12 space-gallery">
+                    <div id="space-slider-<?php echo $post->ID; ?>" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                        <?php $i = 0; foreach ($images as $image) : ?>
+                            <li data-target="#space-slider-<?php echo $post->ID; ?>" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0) : ?>
+                                class="active" <?php endif; ?>>
+                            </li>
+                        <?php $i++; endforeach; ?>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <?php $i = 0; foreach ($images as $image) : ?>
+                            <?php
+                                $src = '/' . $gallery->path . '/' . $image->filename;
+                                $class = 'item';
+                                if ($i == 0) $class .= ' active';
+                            ?>
+                            <div class="<?php echo $class; ?>">
+                                <img src="<?php echo $src; ?>" alt="<?php echo $image->alttext; ?>" class="img-responsive">
+                            </div>
+                            <?php $i++; endforeach; ?>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="prev">
+                            <i class="glyphicons chevron-left"></i>
+                        </a>
+                        <a class="right carousel-control" href="#space-slider-<?php echo $post->ID; ?>" data-slide="next">
+                            <i class="glyphicons chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 entry-content font-p">
-      <?php the_content(); ?>
+    <div class="entry-content">
+        <?php the_content(); ?>
     </div>
-  </div>
-  <?php get_template_part('templates/element-social-share'); ?>
+    <?php get_template_part('templates/element-social-share'); ?>
 </article>
-
-<pre>
-    url = <?php var_export($url); ?><br>
-    gallery path = <?php var_export($gallery->path); ?><br>
-    <?php $n = 0; foreach($images as $image) : ?>
-    image <?php echo $n; ?> = <?php echo $image->filename; ?><br>
-    <img src="<?php echo '/' . $gallery->path . '/' . $image->filename; ?>" class="img-responsive"><br>
-    <?php $n++; endforeach; ?>
-</pre>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
 <?php endif; ?>
