@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Post-type: Subservice
     File: content-subservice
-</pre>
+</pre> */ ?>
 <?php
 /* AEA - For debugging propuses * /
 ini_set( 'error_reporting', -1 );

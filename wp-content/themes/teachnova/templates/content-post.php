@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Post_type: Post
     File: content-post
-</pre>
+</pre> */ ?>
 <?php if (have_posts()) : the_post(); ?>
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
     <div class="row">

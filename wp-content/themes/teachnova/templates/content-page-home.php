@@ -1,8 +1,7 @@
-<!--<pre>
-    TODO
+<?php /* <pre>
     Template: Homepage
     File: content-page-home
-</pre>-->
+</pre> */
 
 <?php if (have_posts()) : the_post(); ?>
         <div class="row">

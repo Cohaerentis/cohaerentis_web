@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Post-type: Partner
     File: content-partner
-</pre>
+</pre> */ ?>
 <?php
 /* AEA - For debugging propuses * /
 ini_set( 'error_reporting', -1 );
@@ -50,7 +49,7 @@ ini_set( 'display_errors', 'On' );
                 <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
             </ul>
         </div>
-<pre>
+<?php /* <pre>
     website = <?php var_export($website); ?><br>
     blog = <?php var_export($blog); ?><br>
     facebook = <?php var_export($facebook); ?><br>
@@ -62,7 +61,7 @@ ini_set( 'display_errors', 'On' );
 </pre>
 <pre>
     infographic = <?php echo $infographic; ?>
-</pre>
+</pre> */ ?>
         <div class="entry-content tabs">
             <?php the_content(); ?>
         </div>

@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Template: Knowledges
     File: content-page-knowledges
-</pre>
+</pre> */ ?>
 <?php
     global $knowledges;
     $knowledges = array();

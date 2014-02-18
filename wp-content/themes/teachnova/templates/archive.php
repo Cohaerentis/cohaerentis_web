@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Archive: Default
     File: archive
-</pre>
+</pre> */ ?>
 <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-title">
     <h1 class="ch-title">Noticias</h1>

@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Taxonomy: Experience
     File: content-experience
-</pre>
+</pre> */ ?>
 <?php
     $experience = get_query_var('experience');
     $term = get_term_by('slug', $experience, 'experience');

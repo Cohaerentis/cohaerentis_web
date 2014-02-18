@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Taxonomy: Service
     File: content-service
-</pre>
+</pre> */ ?>
 <?php
     $service = get_query_var('service');
     $term = get_term_by('slug', $service, 'service');

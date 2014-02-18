@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Taxonomy: Knowledge
     File: content-knowledge
-</pre>
+</pre> */ ?>
 <?php if (have_posts()) : the_post(); ?>
 <?php
     $name        = get_the_title();
@@ -40,10 +39,10 @@
             </div>
         </div>
     </article>
-    <pre>
+<?php /*    <pre>
     download = <?php var_export($download); ?><br>
     related = <?php var_export($related); ?><br>
-</pre>
+</pre> */ ?>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
 <?php endif; ?>

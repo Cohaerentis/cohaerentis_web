@@ -1,8 +1,7 @@
-<pre>
-    TODO
+<?php /* <pre>
     Template: Spaces
     File: content-page-spaces
-</pre>
+</pre> */ ?>
 <?php
     global $spaces;
     $spaces = array();
