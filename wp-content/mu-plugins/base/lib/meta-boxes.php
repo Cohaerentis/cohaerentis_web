@@ -22,6 +22,12 @@ function base_meta_boxes($meta_boxes) {
       'priority'   => 'high',
       'show_names' => true,
       'fields'     => array(
+         array( // AAA
+            'name' => __('Glyphicon'),               // field name
+            'desc' => __('Glyphicon that best suit to this service. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
+            'type' => 'text'                   // image upload
+         ),
          array(
             'name' => __('Description'),
             'desc' => __('Short description of this service'),
@@ -65,6 +71,12 @@ function base_meta_boxes($meta_boxes) {
       'priority'   => 'high',
       'show_names' => true,
       'fields'     => array(
+         array( // AAA
+            'name' => __('Glyphicon'),               // field name
+            'desc' => __('Glyphicon that best suit to this experience. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
+            'type' => 'text'                   // image upload
+         ),
          array(
             'name' => __('Description'),
             'desc' => __('Short description of this knowledge'),
@@ -286,6 +298,12 @@ function base_meta_boxes($meta_boxes) {
             'id' => $prefix . 'gallery',
             'type' => 'text',
          ),
+         array( // AAA
+            'name' => __('Glyphicon'),               // field name
+            'desc' => __('Glyphicon that best suit to this experience. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
+            'type' => 'text'                   // image upload
+         ),
       ),
    );
 
@@ -337,6 +355,12 @@ function base_register_taxonomy_meta_boxes()
       'id' => $prefix . 'section',              // ID of each section, will be the option name
 
       'fields' => array(                        // list of meta fields
+         array( // AAA
+            'name' => __('Glyphicon'),               // field name
+            'desc' => __('Glyphicon that best suit to this service. <a href="http://glyphicons.com/" target="_blank">List of icons</a>'),       // field description, optional
+            'id' => $prefix . 'glyphicon',           // field id, i.e. the meta key
+            'type' => 'text'                   // image upload
+         ),
          array(
             'name' => __('Infographic'),               // field name
             'desc' => __('Image that describe this service'),       // field description, optional
