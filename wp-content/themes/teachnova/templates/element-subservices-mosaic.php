@@ -1,7 +1,5 @@
 <?php
    global $subservices;
-   $meta = get_post_meta( get_the_ID());
-   $icon = get_post_meta( get_the_ID(),'subservice_glyphicon' );
    //wrout_json('debug: ', $meta);
    //wrout_json('debug: ', $subservices);
 ?>
@@ -10,7 +8,12 @@
 <?php //echo $subservice->guid;?>
 
 <?php if (!empty($subservices)) : ?>
-   <?php foreach($subservices as $subservice) : if (!empty($subservice->img)) : ?>
+   <?php foreach($subservices as $subservice) : ?>
+   <?php
+   $meta = get_post_meta( get_the_ID());
+   $icon = get_post_meta( $subservice->ID,'subservice_glyphicon' );
+   //wrout_json('debug: ', $icon);
+   ?>
       <div class="tn-subservice-mosaic <?php echo $css_class; ?>" <?php if (!empty($css_id)) : ?>id="<?php echo $css_id; ?>"<?php endif; ?>>
           <div class="tn-subservice-mosaic-relative">
           <div class="tn-subservice-mosaic-wrapper">
@@ -35,5 +38,5 @@
           </div>
           </div>
       </div>
-   <?php endif; endforeach; ?>
+   <?php endforeach; ?>
 <?php endif; ?>
