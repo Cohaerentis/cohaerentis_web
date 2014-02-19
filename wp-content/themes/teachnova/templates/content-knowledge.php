@@ -16,28 +16,35 @@
         <div class="entry-content knowledge-content">
             <?php the_content(); ?>
         </div>
-        <div class="row knowledge-links">
-            <div class="knowledge-map col-lg-6">
-                <span style="font-size: 45px;"><span class="fa fa-download"></span></span><span class="link-to-map"><a href="<?php echo $download; ?>">Descarga del mapa de conocimiento</a></span>
-                <div class="row single-knowlegde-share">
-            <ul>
-                <li>Compartir en: </li>
-                <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="#" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
-            </ul>
-        </div>
-            </div>
-            <div class="knowledge-docs col-lg-6">
-                <span style="font-size: 45px;"><span class="fa fa-folder"></span></span><span class="link-to-map">Otra documentación</span>
-                <?php foreach ($related[0] as $doc):?>
-                    <ul>
-                        <li><a href='<?php echo $doc ?>'><?php $doc_name = basename($doc); $aux = explode('.', $doc_name); echo $aux[0]; ?></a></li>
+        <div class="knowledge-download">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 col-xs-12">
+                <div class="knowledge-mindmap">
+                    <i class="glyphicons cloud-upload"></i>
+                    <a href="<?php echo $download; ?>">Descarga la ficha del servicio</a>
+                </div>
+                <div class="knowledge-documents">
+                    <i class="glyphicons paperclip"></i>
+                    <span>Otra documentación</span>
+                    <ul class="documents-links">
+                        <?php foreach ($related[0] as $doc):?>
+                            <li>
+                                <i class="glyphicons record"></i>
+                                <a href='<?php echo $doc ?>'>
+                                    <?php $doc_name = basename($doc); $aux = explode('.', $doc_name); echo $aux[0]; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
-                <?php endforeach; ?>
+                </div>
             </div>
+            <?php if(!empty($qr)):?>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 hidden-xs knowledge-qr">
+                <img class="img-responsive" src="<?php echo $qr; ?>">
+            </div>
+            <?php endif;?>
         </div>
+    </div>
     </article>
 <?php /*    <pre>
     download = <?php var_export($download); ?><br>

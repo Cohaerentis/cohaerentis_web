@@ -36,3 +36,52 @@
       }
    }
 }
+
+
+.knowledge {
+   .knowledge-title {
+      @media (min-width: @screen-hs-min) {}
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
+   .knowledge-content {
+      @media (min-width: @screen-hs-min) {}
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
+   .knowledge-download {
+      .knowledge-mindmap,
+      .knowledge-documents {
+         & > i { .icon-special(); }
+         & > a, span {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 16px;
+            padding-left: 8px;
+            color: @ch-text-color;
+         }
+         a {
+            color: @ch-text-color;
+            &:hover {
+               color: @ch-blue;
+            }
+         }
+      }
+      .knowledge-documents {
+         margin: 10px 0 0 0;
+         ul {
+            list-style: none;
+            padding-left: 60px;
+            li i {
+               font-size: 0.7em;
+               color: @ch-text-color-light;
+            }
+         }
+      }
+      .knowledge-qr {
+         img { .ch-img; }
+      }
+   }
+}
