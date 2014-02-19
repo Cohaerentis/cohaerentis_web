@@ -36,19 +36,19 @@
     }
 ?>
 <?php if (!empty($term)) : ?>
-    <article <?php post_class() ?> id="service-<?php echo $term->term_id; ?>">
-        <div class="row page-header service">
-            <div class="row service-title col-lg-3 col-md-12 col-sd-12 col-xs-12">
-                <h1 class="entry-title"><?php echo $term->name; ?></h1>
+    <article id="service-<?php echo $term->term_id; ?>">
+        <div class="header service">
+            <div class="title">
+                <h1><?php echo $term->name; ?></h1>
             </div>
-            <div class="service-description col-lg-9 col-md-12 col-sd-12 col-xs-12">
-                <?php echo $term->description; ?>
+            <div class="subtitle">
+                <p><?php echo do_shortcode($term->description); ?></p>
             </div>
-        <div class="row entry-content col-lg-9 col-md-12 col-sd-12 col-xs-12">
-            <?php echo do_shortcode($content); ?>
         </div>
-        <div class="services-mosaic">
-            <?php get_template_part('templates/element-subservices-mosaic'); ?>
+            <div class="entry-content">
+            <div class="services-mosaic">
+                <?php get_template_part('templates/element-subservices-mosaic'); ?>
+            </div>
         </div>
     </article>
 

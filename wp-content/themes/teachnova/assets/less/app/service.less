@@ -1,16 +1,41 @@
 /* ==========================================================================
    Service
    ========================================================================== */
-.service-title h1 {
-   margin-top: 0px;
+.service .title{
+    margin: 0 0 10px 0!important;
 }
-
-.services-mosaic {
-   margin-left: 50px;
-}
-
-.services-mosaic img {
-   border: 1px solid;
-   border-radius: 180px;
-   margin-bottom: 30px;
+.tn-subservice-mosaic {
+   position: relative;
+   // Cool idea from : http://www.tightcss.com/centering/center_variable_width.htm
+   .tn-subservice-mosaic-relative {
+      position: relative;
+      left: 50%;
+      float: left;
+      .tn-subservice-mosaic-wrapper {
+         position: relative;
+         left: -50%;
+         float: left;
+      }
+   }
+   .tn-subservice-term {
+      margin-bottom: 30px;
+      width: 160px;
+      padding: 0 10px;
+      float: left;
+      a:hover{
+         text-decoration: none;
+      }
+      img {
+         border-radius: 180px;
+         border: 1px solid;
+      }
+      .tn-subservice-box {
+         .icon-box(@width: 140px; @height: 140px; @labelsize: 1em);
+      }
+      .tn-subservice-description {
+         margin-top: 30px;
+         overflow: hidden;
+         height: 150px;
+      }
+   }
 }
