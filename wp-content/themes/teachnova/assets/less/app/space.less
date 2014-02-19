@@ -14,3 +14,39 @@
       width: 100%;
    }
 }
+
+.tn-space-mosaic {
+   position: relative;
+   // Cool idea from : http://www.tightcss.com/centering/center_variable_width.htm
+   .tn-space-mosaic-relative {
+      position: relative;
+      left: 50%;
+      float: left;
+      .tn-space-mosaic-wrapper {
+         position: relative;
+         left: -50%;
+         float: left;
+      }
+   }
+   .tn-space-term {
+      margin-bottom: 30px;
+      width: 160px;
+      padding: 0 10px;
+      float: left;
+      a:hover{
+         text-decoration: none;
+      }
+      img {
+         border-radius: 180px;
+         border: 1px solid;
+      }
+      .tn-space-box {
+         .icon-box(@width: 140px; @height: 140px; @labelsize: 1em);
+      }
+      .tn-space-description {
+         margin-top: 30px;
+         overflow: hidden;
+         height: 150px;
+      }
+   }
+}
