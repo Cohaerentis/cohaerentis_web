@@ -50,7 +50,7 @@ ini_set( 'display_errors', 'On' );
             </div>
             <?php if(!empty($qr)):?>
             <div class="col-lg-6 col-md-6 col-sm-6 col-hs-12 hidden-xs subservice-qr">
-                <img class="img-responsive" src="<?php echo $qr; ?>">
+                <img class="img-responsive pull-right" src="<?php echo $qr; ?>">
             </div>
             <?php endif;?>
         </div>

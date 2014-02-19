@@ -10,10 +10,10 @@
         </div>
         <div class="post-marker"></div>
         <div class="post-image">
-            <?php echo the_post_thumbnail('large'); ?>
+            <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="entry-meta">
-            <?php echo the_date('d F Y');?> - <?php echo the_tags('#',', #','.');?>
+            <?php the_date('d F Y');?> - <?php the_tags('#',', #','.');?>
         </div>
     </div>
     <div class="entry-content">

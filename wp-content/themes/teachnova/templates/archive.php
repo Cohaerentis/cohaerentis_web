@@ -2,7 +2,7 @@
     Archive: Default
     File: archive
 </pre> */ ?>
-<div class="header">
+<div class="news-header">
   <div class="title">
     <h1>Noticias</h1>
   </div>
@@ -16,7 +16,7 @@
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   </header>
   <div class="entry-meta">
-    <?php echo the_date('d F Y - ');?><?php echo the_tags('#',', #','.');?>
+    <?php the_date('d F Y'); ?> - <?php the_tags('#',', #','.');?>
   </div>
   <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-3 col-hs-3 col-xs-12 entry-thumb">
