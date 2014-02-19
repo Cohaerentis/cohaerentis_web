@@ -1,38 +1,38 @@
 /* ==========================================================================
    Knowledge
    ========================================================================== */
-
-.knowledge-title {
-   border: none;
-   margin-top: -20px;
-}
-   .knowledge-title h1 {
-      font-size: 30px;
+.tn-knowledge-mosaic {
+   position: relative;
+   // Cool idea from : http://www.tightcss.com/centering/center_variable_width.htm
+   .tn-knowledge-mosaic-relative {
+      position: relative;
+      left: 50%;
+      float: left;
+      .tn-knowledge-mosaic-wrapper {
+         position: relative;
+         left: -50%;
+         float: left;
+      }
    }
-
-.knowledge-description {
-
-}
-
-.knowledge-content {
-   margin-top: 50px;
-}
-
-.link-to-map {
-   font-size: 20px;
-   margin-left: 20px;
-}
-.link-to-map a {
-   color: #555;
-}
-
-.single-knowlegde-share {
-   margin-top: 25px;
-}
-.single-knowlegde-share ul {
-   list-style: none;
-   float: left;
-}
-.single-knowlegde-share ul li {
-   float:left;
+   .tn-knowledge-term {
+      margin-bottom: 30px;
+      width: 160px;
+      padding: 0 10px;
+      float: left;
+      a:hover{
+         text-decoration: none;
+      }
+      img {
+         border-radius: 180px;
+         border: 1px solid;
+      }
+      .tn-knowledge-box {
+         .icon-box(@width: 140px; @height: 140px; @labelsize: 1em);
+      }
+      .tn-knowledge-description {
+         margin-top: 30px;
+         overflow: hidden;
+         height: 150px;
+      }
+   }
 }

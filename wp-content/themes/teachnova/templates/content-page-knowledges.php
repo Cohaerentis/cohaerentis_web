@@ -30,10 +30,9 @@
         <?php /*AAA*/ ?>
         <?php get_template_part('templates/element-title-content'); ?>
         <div class="entry-content">
-            <?php the_content(); ?>
-        </div>
         <div class="knowledges-mosaic">
-            <?php get_template_part('templates/element-knowledges-mosaic'); ?>
+                <?php get_template_part('templates/element-knowledges-mosaic'); ?>
+            </div>
         </div>
     </article>
 <?php else : ?>

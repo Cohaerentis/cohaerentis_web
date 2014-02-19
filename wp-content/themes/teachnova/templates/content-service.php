@@ -45,7 +45,7 @@
                 <p><?php echo do_shortcode($term->description); ?></p>
             </div>
         </div>
-            <div class="entry-content">
+        <div class="entry-content">
             <div class="services-mosaic">
                 <?php get_template_part('templates/element-subservices-mosaic'); ?>
             </div>
