@@ -52,6 +52,71 @@
 /* ==========================================================================
    Contacto: AAA
    ========================================================================== */
+.contact-form-title {
+   display: block;
+   background: @ch-green;
+   color: snow;
+   padding: 20px 6px;
+   text-align: center;
+   h1 {
+      font-family: @ch-title-font;
+      font-size: @ch-title-font-size;
+      margin: 0;
+      text-align: left;
+   }
+   .mandatory {
+      float: right;
+      position: relative;
+      top: -20px;
+      left: -10px;
+      font-size: 0.8em;
+   }
+}
+.contact-form {
+   .form-group {
+      margin-bottom: 8px;
+   }
+   .form-control{
+      background: snow;
+      margin-right: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      border:none;
+      &:focus{
+         border:none;
+         outline: 0;
+         -webkit-box-shadow: none;
+         box-shadow: none;
+      }
+   }
+   label.contact-form-label,
+   label.contact-form-label-wide {
+      display: inline-block;
+      background: @ch-green;
+      color: snow;
+      padding: 6px;
+      font-weight: normal;
+      width: 100%;
+      margin: 0;
+   }
+   label.contact-form-label-wide {
+      text-align: center;
+   }
+   div.contact-form-label {
+      padding-right: 0;
+   }
+   input.contact-form-input {}
+   div.contact-form-input {
+      padding-left: 0;
+   }
+   .contact-form-submit {
+      background: @ch-blue;
+      color: snow;
+      border: 0;
+      border-radius: 0;
+   }
+}
+/*
 .contact-form{
    margin-bottom: 20px;
    .contact-title{
@@ -120,6 +185,7 @@
       }
    }
 }
+*/
 .contact-info{
    h1{
       .ch-title;

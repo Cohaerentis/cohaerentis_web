@@ -91,7 +91,7 @@
             <label class="comment-label-wide" for="comment"><?php _e('Comment', 'roots'); ?></label>
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
-            <textarea name="comment" id="comment" class="form-control" rows="5" aria-required="true" class="comment-textarea"></textarea>
+            <textarea name="comment" id="comment" class="form-control" rows="5" aria-required="true"></textarea>
           </div>
         </div>
         <div class="row form-group">
