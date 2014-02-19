@@ -17,6 +17,9 @@
    &.google_plus{ color: #F23F27; }
    &.nameplate_alt{ color: @ch-text-color-light; }
 }
+.glyphicons-colors {
+   &.global{ color: #333; }
+}
 
 .social-icons-inline(@align: left; @size: 22px; @margin: 8px) {
    list-style: none;
@@ -29,6 +32,7 @@
       a {
          &:hover {
             .glyphicons-social-colors;
+            .glyphicons-colors;
          }
       }
    }
