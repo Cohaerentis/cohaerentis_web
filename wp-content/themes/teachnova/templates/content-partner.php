@@ -23,49 +23,41 @@ ini_set( 'display_errors', 'On' );
     $infographic = get_post_meta( $post->ID, 'partner_infographic', true );
 ?>
 <?php if (have_posts()) : the_post(); ?>
-    <article <?php post_class() ?> id="partner-<?php echo $term->term_id; ?>">
-        <div class="row page-header single-partner">
-            <div class="single-partner-social col-lg-6">
-                <h2 class="entry-title"><?php the_title(); ?></h2>
-                <?php echo $description;?>
-                <ul>
-                    <li><span style="font-size: 25px;"><a href="<?php echo $website; ?>" class="fa fa-globe"><span style="color: transparent; display: none;">icon-globe</span></a></span><span class="link"><?php echo $website; ?></span></li>
-                    <li><span style="font-size: 25px;"><a href="<?php echo $blog; ?>" class="fa fa-rss-square"><span style="color: transparent; display: none;">icon-rss</span></a></span><span class="link"><?php echo $blog; ?></span></li>
-                </ul>
+<article <?php post_class() ?> id="page-<?php echo $post->ID; ?>">
+    <div class="single-partner">
+        <div class="single-partner-info">
+            <div class="row">
+                <?php if (!empty($infographic)) : ?>
+                <div class="col-lg-6 col-md-6 col-sm-7 col-hs-7 col-xs-12">
+                <?php else : ?>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-hs-8 col-xs-12">
+                <?php endif; ?>
+                    <div class="single-partner-contact">
+                        <p class="name" class="name"><?php the_title(); ?></p>
+                        <div class="single-partner-info-marker"></div>
+                        <p class="description"><?php echo $description; ?></p>
+                    </div>
+                    <div class="single-partner-social">
+                        <ul>
+                            <?php if (!empty($website)) : ?><li><a href="<?php echo $websites; ?>" class="glyphicons global"><span class="description">vCard</span></a></li><?php endif; ?>
+                            <?php if (!empty($blog)) : ?><li><a href="<?php echo $blog; ?>" class="glyphicons-social rss"><span class="description">RSS</span></a></li><?php endif; ?>
+                </div>
+                </div>
+                <?php if (!empty($infographic)) : ?>
+                <div class="col-lg-6 col-md-6 col-sm-5 col-hs-5 hidden-xs single-partner-infographic">
+                    <img class="img-responsive" src="<?php echo $infographic; ?>"/>
+                </div>
+                <?php endif; ?>
             </div>
-            <div class="single-partner-infographic col-lg-6">
-               <img src="<?php echo $infographic; ?>"/>
-            </div>
         </div>
-        <div class="row entry-content">
-            <?php the_content(); ?>
+        <div class="single-partner-content">
+            <?php the_content();?>
         </div>
-        <div class="row single-partner-share">
-            <ul>
-                <li>Compartir en: </li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-facebook-square"><span style="color: transparent; display: none;">icon-facebook</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-linkedin-square"><span style="color: transparent; display: none;">icon-linkedin</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-twitter-square"><span style="color: transparent; display: none;">icon-twitter</span></a></span></li>
-                <li><span class="share" style="font-size: 25px;"><a href="<?php echo $linkedin; ?>" class="fa fa-google-plus-square"><span style="color: transparent; display: none;">icon-google-plus</span></a></span></li>
-            </ul>
+        <div class="single-partner-share">
+            <?php get_template_part('templates/element-social-share'); ?>
         </div>
-<?php /* <pre>
-    website = <?php var_export($website); ?><br>
-    blog = <?php var_export($blog); ?><br>
-    facebook = <?php var_export($facebook); ?><br>
-    twitter = <?php var_export($twitter); ?><br>
-    linkedin = <?php var_export($linkedin); ?><br>
-</pre>
-<pre>
-    logo = <?php echo $logo; ?>
-</pre>
-<pre>
-    infographic = <?php echo $infographic; ?>
-</pre> */ ?>
-        <div class="entry-content tabs">
-            <?php the_content(); ?>
-        </div>
-    </article>
+    </div>
+</article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
 <?php endif; ?>

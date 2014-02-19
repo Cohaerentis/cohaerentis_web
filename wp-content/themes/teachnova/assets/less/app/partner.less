@@ -1,25 +1,156 @@
 /* ==========================================================================
    Partner
    ========================================================================== */
-/* TODO
-.single-partner-social ul {
-   list-style: none;
-   margin-left: -40px;
-   padding-top: 10px;
+.single-partner {
+   .panel-group .panel,
+   .single-partner-photo img,
+   .single-partner-contact,
+   .single-partner-contact .name,
+   .single-partner-social,
+   .single-partner-share, {
+      width: 240px;
+      margin: auto;
+      @media (min-width: @screen-hs-min) {
+         width: auto;
+      }
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
+   .single-partner-photo{
+      @media (min-width: @screen-hs-min) {}
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+
+      img {
+         float: none;
+         @media (min-width: @screen-hs-min) {
+            float: left;
+            border-radius: 180px;
+         }
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+      .img-responsive {
+         @media (min-width: @screen-hs-min) {
+            width: 200px;
+            height: 100%;
+         }
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+   }
+   .single-partner-info-marker{
+      .info-marker-down(@ch-green);
+      @media (min-width: @screen-hs-min) {
+         display: none;
+      }
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
+   .single-partner-info {
+      margin-top: 30px;
+   }
+   .single-partner-contact {
+      text-align: center;
+      float: none;
+      padding: 0;
+      background-color: snow;
+      @media (min-width: @screen-hs-min) {
+         margin: 0;
+         background-color: transparent;
+         text-align: left;
+      }
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+
+      .name {
+         font-size: 1.8em;
+         text-align: center;
+         background-color: @ch-green;
+         color: snow;
+         padding: 15px 4px;
+         margin: 0;
+         @media (min-width: @screen-hs-min) {
+            padding: 0;
+            background-color: transparent;
+            text-align: left;
+            font-size: 2.3em;
+            color: @ch-text-color;
+         }
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+      .description {
+         color: @ch-text-color;
+         font-size: 1em;
+         padding: 0 0 10px 0;
+         margin: 0;
+         @media (min-width: @screen-hs-min) {
+            font-size: 1.3em;
+            padding: 0;
+            margin-bottom: 20px;
+         }
+         @media (min-width: @screen-sm-min) {}
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+   }
+   .single-partner-content {
+      margin-top: 20px;
+   }
+   .single-partner-social {
+      background-color: snow;
+      padding-bottom: 10px;
+      ul {
+         .social-icons-inline(center; 20px; 6px);
+         li a { .glyphicons-social-colors; .glyphicons-colors; }
+      }
+      @media (min-width: @screen-hs-min) {
+         background-color: transparent;
+         ul {
+            .social-icons-inline(left; 24px; 10px);
+         }
+      }
+      @media (min-width: @screen-sm-min) {
+         ul {
+            li {
+               display: block;
+               float: left;
+               width: 200px;
+            }
+         }
+      }
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+      .description {
+         display: none;
+         @media (min-width: @screen-hs-min) {}
+         @media (min-width: @screen-sm-min) {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 0.6em;
+            vertical-align: top;
+            padding-top: 8px;
+         }
+         @media (min-width: @screen-md-min) {}
+         @media (min-width: @screen-lg-min) {}
+      }
+   }
+   .single-partner-infographic {
+      /*width: 200px;*/
+      padding-right: 40px!important;
+      .ch-img;
+      border: none;
+      img{
+         padding: 1px;
+         border: 1px solid #a4a8ab;
+      }
+   }
 }
-.single-partner-social ul li {
-   padding-top: 10px;
-}
-.single-partner-share ul {
-   list-style: none;
-}
-.single-partner-share ul li {
-   float:left;
-}
-.share {
-   position: relative;
-   left: 10px;
-   top: -7px;
-   padding-left: 10px;
-}
-*/
