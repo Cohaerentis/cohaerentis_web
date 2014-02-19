@@ -2,9 +2,9 @@
     Archive: Default
     File: archive
 </pre> */ ?>
-<div class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-title">
-    <h1 class="ch-title">Noticias</h1>
+<div class="header">
+  <div class="title">
+    <h1>Noticias</h1>
   </div>
   <div class="news-marker"></div>
 </div>
@@ -12,26 +12,18 @@
 
 <?php while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <header>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  </header>
+  <div class="entry-meta">
+    <?php echo the_date('d F Y - ');?><?php echo the_tags('#',', #','.');?>
+  </div>
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 news-archive">
-      <div class="row">
-        <header class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        </header>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 header-post-list">
-            <?php echo the_date('d F Y - ');?><?php echo the_tags('#',', #','.');?>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-hs-3 col-xs-12 post-list-thumb">
-          <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(100,100)); ?></a>
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-9 col-hs-9 col-xs-12 post-list-excerpt font-p">
-          <?php the_excerpt(); ?>
-        </div>
-      </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-hs-3 col-xs-12 entry-thumb">
+      <a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-hs-9 col-xs-12 entry-excerpt">
+      <?php the_excerpt(); ?>
     </div>
   </div>
 </article>

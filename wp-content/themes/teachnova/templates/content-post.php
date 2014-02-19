@@ -4,35 +4,24 @@
 </pre> */ ?>
 <?php if (have_posts()) : the_post(); ?>
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 single-post">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-title">
-                    <h1 class="ch-title"><?php the_title(); ?></h1>
-                </div>
-                <div class="news-marker"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-img">
-                    <?php echo the_post_thumbnail('large'); ?>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-date italic">
-                    <?php echo the_date('d F Y');?> - <?php echo the_tags('#',', #','.');?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-hs-12 col-xs-12 post-content font-p">
-                    <?php the_content(); ?>
-                </div>
-            </div>
-            <?php get_template_part('templates/element-social-share');?>
-
-            <div class="row">
-                <div class="single-post-comments">
-                    <?php comments_template('/templates/comments.php'); ?>
-                </div>
-            </div>
+    <div class="header">
+        <div class="title">
+            <h1><?php the_title();?></h1>
         </div>
+        <div class="post-marker"></div>
+        <div class="post-image">
+            <?php echo the_post_thumbnail('large'); ?>
+        </div>
+        <div class="entry-meta">
+            <?php echo the_date('d F Y');?> - <?php echo the_tags('#',', #','.');?>
+        </div>
+    </div>
+    <div class="entry-content">
+        <?php the_content(); ?>
+    </div>
+    <?php get_template_part('templates/element-social-share');?>
+    <div class="entry-comments">
+        <?php comments_template('/templates/comments.php'); ?>
     </div>
 </article>
 <?php else : ?>

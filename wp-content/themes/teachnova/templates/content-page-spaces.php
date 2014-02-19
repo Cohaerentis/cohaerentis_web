@@ -9,6 +9,7 @@
     $args = array(
         'post_type'   => 'space',
         'post_status' => 'publish',
+        'nopaging' => true,
     );
     $spaces = get_posts($args);
     shuffle($spaces);

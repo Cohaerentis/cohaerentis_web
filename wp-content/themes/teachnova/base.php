@@ -29,6 +29,7 @@
       wrout("Main template : " . var_export(Roots_Wrapping::$main_template, true));
       wrout("Frontpage : " . var_export(is_front_page(), true));
       /* */ ?>
+      <div class="row">
         <main class="<?php echo roots_main_class(); ?> main" role="main">
           <?php include roots_template_path(); ?>
         </main><!-- /.main -->
@@ -37,6 +38,7 @@
             <?php include roots_sidebar_path('side'); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
+      </div><!-- /.row -->
     </div><!-- /.content -->
   </div><!-- /.container -->
 </div><!--  /.wrap -->
