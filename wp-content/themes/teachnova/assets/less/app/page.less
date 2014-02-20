@@ -98,26 +98,6 @@
    }
 }
 
-/*
-.social_media{
-   text-align: center;
-   p{
-      font-size: 1.2em;
-      font-size: Lato-Regular;
-   }
-   .glyphicons-social{
-      font-size: 80px;
-   }
-}
-.redes{
-   .linked_in{ color: #1B85BD; }
-   .twitter{ color: #55ACEE; }
-   .rss{ color: #FA8502; }
-   .facebook{ color: #3B5998; }
-   .google_plus{ color: #F23F27; }
-}
-*/
-
 /* ==========================================================================
    Contacto: AAA
    ========================================================================== */
@@ -185,76 +165,46 @@
       border-radius: 0;
    }
 }
-/*
-.contact-form{
-   margin-bottom: 20px;
-   .contact-title{
-      padding: 0;
-      margin-bottom: 10px;
-      h1{
-         font-size: 30px;
-         margin-left: 10px;
-      }
+.contact-info {
+   background-color: snow;
+   margin: 0 0 20px 0;
+   i {
+      // font-size: 20px;
+      margin-right: 4px;
+      color: @icon-box-bg;
    }
-   .box-msg{
-      padding: 0;
-      margin-bottom: 10px;
-      textarea{
-         width: 100%;
-         padding: 20px;
-         border: none;
-      }
+   p {
+      margin: 0 0 5px 0;
    }
-
-   .mandatory{
-      font-size: 0.9em;
-      color: white;
-      font-family: Lato-LightItalic;
-      float: right;
-      position: relative;
-      top: -30px;
-      left: -10px;
-   }
-
-   .form {
-      .box-text{
-         border: 1px solid #999;
-         border-left: none;
-         background-color: white;
-         height: 40px;
-         font-family: Lato-LightItalic;
+   img{
+      .ch-img;
+      display:none; // hide qr in mobile devices.
+      width: 100px;
+      @media (min-width: @screen-hs-min) {
+         display: inline;
+         float: right;
          margin-bottom: 10px;
       }
-      input[type=text]{
-         outline: none;
-         border: none;
-         background-color: transparent;
-         color: #3a3a3a;
-         margin: 0;
-         padding: 0;
-         padding-top: 10px;
-         width: 90%
-      }
-      input[type=email]{
-         outline: none;
-         border: none;
-         background-color: transparent;
-         color: #3a3a3a;
-         margin: 0;
-         padding: 0;
-         padding-top: 10px;
-         width: 90%
-      }
-      input[type=submit]{
-         float: right;
-         padding: 10px 30px 10px 30px;
-         background-color: @icon-box-bg;
-         border:  none;
-         color: snow;
+      @media (min-width: @screen-sm-min) {}
+      @media (min-width: @screen-md-min) {}
+      @media (min-width: @screen-lg-min) {}
+   }
+}
+.social-contact {
+   padding: 16px;
+   .social-contact-info {
+      a {
+         color: @ch-text-color;
+         font-weight: bold;
+         &:hover {
+            color: @ch-blue;
+            font-weight: bold;
+         }
       }
    }
 }
-*/
+
+/*
 .contact-info{
    h1{
       .ch-title;
@@ -300,3 +250,4 @@
    margin: 0;
    margin-left: 5px;
 }
+*/
