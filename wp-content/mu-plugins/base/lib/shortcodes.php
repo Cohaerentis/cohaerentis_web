@@ -250,6 +250,24 @@ function base_shortcode_tn_featured($atts, $content) {
 add_shortcode($prefix . 'featured', 'base_shortcode_tn_featured');
 
 /**
+ * [tn_theme_option] shortcode
+ *
+ * Example:
+ * [tn_theme_option name='email']
+ */
+function base_shortcode_tn_theme_option($atts, $content) {
+   extract(shortcode_atts(array(
+      'name'         => '',
+   ), $atts));
+
+   ob_start();
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-theme-option.php');
+   $html = ob_get_clean();
+   return preg_replace('(\n|\r)', ' ', $html);
+}
+add_shortcode($prefix . 'theme_option', 'base_shortcode_tn_theme_option');
+
+/**
  * [tn_gmap] shortcode
  *
  * Example:
