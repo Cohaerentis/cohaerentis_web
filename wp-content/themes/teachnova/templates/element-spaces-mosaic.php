@@ -15,8 +15,7 @@
                         </div>
                      <?php else: ?>
                         <div class="box-img">
-                            <img src="<?php echo $space->img; ?>" class="img-responsive"
-                             alt="<?php echo $term->label; ?>" title="<?php echo $space->post_title; ?>">
+                            <?php echo $space->img; ?>
                         </div>
                      <?php endif; ?>
                     <div class="box-label"><?php echo $space->post_title; ?></div>
