@@ -2,7 +2,7 @@
     $linkedin          = of_get_option('linkedin', false);
     $facebook          = of_get_option('facebook', false);
     $twitter           = of_get_option('twitter', false);
-    $linkedin          = of_get_option('linkedin', false);
+    $google            = of_get_option('google', false);
     $address           = of_get_option('address', false);
     $email             = of_get_option('email', false);
     $phone             = of_get_option('phone', false);
@@ -95,6 +95,9 @@
                             <?php endif; ?>
                             <?php if (!empty($twitter)) : ?>
                                 <li><a href="<?php echo $twitter; ?>" class="glyphicons-social twitter"></a></li>
+                            <?php endif; ?>
+                            <?php if (!empty($google)) : ?>
+                                <li><a href="<?php echo $google; ?>" class="glyphicons-social google_plus"></a></li>
                             <?php endif; ?>
                             <li><a href="<?php bloginfo('rss_url') ?>" class="glyphicons-social rss"></a></li>
                         </ul>

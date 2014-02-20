@@ -63,6 +63,13 @@ function optionsframework_options() {
       'type' => 'text');
 
    $options[] = array(
+      'name' => __('Google +'),
+      'desc' => __('Google + account URL.'),
+      'id' => 'google',
+      'std' => '',
+      'type' => 'text');
+
+   $options[] = array(
       'name' => __('Contact Settings'),
       'type' => 'heading');
 

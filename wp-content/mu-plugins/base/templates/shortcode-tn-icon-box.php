@@ -3,6 +3,9 @@
     if (!empty($css_id)) $param_id = 'id="' . $css_id . '"';
     $tag = 'div';
     $param_href = '';
+    if (empty($href) && !empty($href_option)) {
+        $href = of_get_option($href_option, false);
+    }
     if (!empty($href)) {
         $tag = 'a';
         $param_href = 'href="' . $href . '"';

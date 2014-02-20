@@ -182,6 +182,7 @@ function tn_shortcode_tn_icon_box($atts, $content) {
    extract(shortcode_atts(array(
       'label'        => '',
       'href'         => '',
+      'href_option'  => '',
       'css_id'       => '',
       'css_class'    => '',
    ), $atts));
