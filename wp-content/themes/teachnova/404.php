@@ -3,7 +3,7 @@
 <div class="alert alert-warning">
   <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
 </div>
-
+<?php /*
 <p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
 <ul>
   <li><?php _e('a mistyped address', 'roots'); ?></li>
@@ -11,3 +11,4 @@
 </ul>
 
 <?php get_search_form(); ?>
+*/ ?>
