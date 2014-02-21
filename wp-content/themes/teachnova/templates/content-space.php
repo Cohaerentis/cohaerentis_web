@@ -19,6 +19,11 @@ ini_set( 'display_errors', 'On' );
       $gallery = $nggdb->find_gallery($galleryname);
       if (!empty($gallery->gid)) $images = $nggdb->get_gallery($gallery->gid);
     }
+
+    $share          = new stdClass();
+    $share->link    = get_permalink();
+    $share->title   = trim(strip_tags($name));
+    $share->summary = trim(strip_tags(get_the_excerpt()));
 ?>
 <article <?php post_class() ?> id="space-<?php echo $post->ID; ?>">
     <div class="header">
@@ -78,7 +83,7 @@ ini_set( 'display_errors', 'On' );
     <div class="entry-content">
         <?php the_content(); ?>
     </div>
-    <?php get_template_part('templates/element-social-share'); ?>
+    <?php include_element('templates/element', 'social-share', array('share' => $share)); ?>
 </article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>

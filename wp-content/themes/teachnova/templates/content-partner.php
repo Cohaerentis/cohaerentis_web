@@ -21,6 +21,12 @@ ini_set( 'display_errors', 'On' );
                   'title' => $name);
     $logo        = get_the_post_thumbnail($post->ID, 'thumbnail', $attr);
     $infographic = get_post_meta( $post->ID, 'partner_infographic', true );
+    $permalink   = get_permalink( $post->ID );
+
+    $share          = new stdClass();
+    $share->link    = $permalink;
+    $share->title   = trim(strip_tags($name));
+    $share->summary = trim(strip_tags($description));
 ?>
 <?php if (have_posts()) : the_post(); ?>
 <article <?php post_class() ?> id="page-<?php echo $post->ID; ?>">
@@ -54,7 +60,7 @@ ini_set( 'display_errors', 'On' );
             <?php the_content();?>
         </div>
         <div class="single-partner-share">
-            <?php get_template_part('templates/element-social-share'); ?>
+            <?php include_element('templates/element', 'social-share', array('share' => $share)); ?>
         </div>
     </div>
 </article>

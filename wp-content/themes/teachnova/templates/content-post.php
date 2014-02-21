@@ -2,7 +2,14 @@
     Post_type: Post
     File: content-post
 </pre> */ ?>
-<?php if (have_posts()) : the_post(); ?>
+<?php
+    if (have_posts()) : the_post();
+
+    $share          = new stdClass();
+    $share->link    = get_permalink();
+    $share->title   = trim(strip_tags(get_the_title()));
+    $share->summary = trim(strip_tags(get_the_excerpt()));
+?>
 <article <?php post_class() ?> id="page-<?php echo $term->term_id; ?>">
     <div class="header">
         <div class="title">
@@ -19,7 +26,7 @@
     <div class="entry-content">
         <?php the_content(); ?>
     </div>
-    <?php get_template_part('templates/element-social-share');?>
+    <?php include_element('templates/element', 'social-share', array('share' => $share)); ?>
     <div class="entry-comments">
         <?php comments_template('/templates/comments.php'); ?>
     </div>

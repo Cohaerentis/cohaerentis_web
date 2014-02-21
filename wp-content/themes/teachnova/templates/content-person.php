@@ -35,6 +35,12 @@ ini_set( 'display_errors', 'On' );
                   'alt'   => $name,
                   'title' => $name);
     $photo      = get_the_post_thumbnail($post->ID, 'medium', $attr);
+    $permalink  = get_permalink( $post->ID );
+
+    $share          = new stdClass();
+    $share->link    = $permalink;
+    $share->title   = trim(strip_tags($name));
+    $share->summary = trim(strip_tags($position));
 ?>
 <article <?php post_class() ?> id="page-<?php echo $post->ID; ?>">
     <div class="single-person">
@@ -75,7 +81,7 @@ ini_set( 'display_errors', 'On' );
             <?php the_content();?>
         </div>
         <div class="single-person-share">
-            <?php get_template_part('templates/element-social-share'); ?>
+            <?php include_element('templates/element', 'social-share', array('share' => $share)); ?>
         </div>
     </div>
 </article>

@@ -11,13 +11,17 @@ ini_set( 'display_errors', 'On' );
 <?php if (have_posts()) : the_post(); ?>
 <?php
     $name        = get_the_title();
-    $url         = get_permalink($post->ID);
+    $url         = get_permalink();
     $description = get_post_meta( $post->ID, 'subservice_description', true );
     $download    = get_post_meta( $post->ID, 'subservice_download', true );
     $related     = get_post_meta( $post->ID, 'subservice_related' );
     $qr          = get_post_meta( $post->ID, 'subservice_qr' );
     if (empty($qr)) $qr = TN_QR::encode($url);
 
+    $share          = new stdClass();
+    $share->link    = $permalink;
+    $share->title   = trim(strip_tags($name));
+    $share->summary = trim(strip_tags($description));
 ?>
 <article <?php post_class() ?> id="subservice-<?php echo $term->term_id; ?>">
     <div class="subservice-title">
@@ -55,7 +59,7 @@ ini_set( 'display_errors', 'On' );
             <?php endif;?>
         </div>
     </div>
-    <?php get_template_part('templates/element-social-share'); ?>
+    <?php include_element('templates/element', 'social-share', array('share' => $share)); ?>
 </article>
 <?php else : ?>
     <?php get_template_part('templates/element-if-noresults'); ?>
