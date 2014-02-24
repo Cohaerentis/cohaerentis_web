@@ -28,7 +28,7 @@ function osc_theme_row($params, $content = null) {
 
     // AEA - Allow user to set custom HTML tag
     // $result = '<div class="row ' . $css_class . '">';
-    $result = '<' . $tag . ' class="row ' . implode(' ', $classes) . '">';
+    $result = '<' . $tag . ' class="row ' . implode(' ', $classes) . EBS_CONTAINER_CLASS . '">';
     //echo '<textarea>'.$content.'</textarea>';
     $content = str_replace("]<br />", ']', $content);
     $content = str_replace("<br />\n[", '[', $content);
@@ -133,7 +133,7 @@ function osc_theme_column($params, $content = null) {
     }
     // AEA - Allow user to set custom HTML tag
     // $result = '<div class="col-lg-' . $lg . ' ' . implode(' ', $classes) . '">';
-    $result = '<' . $tag . ' class="' . implode(' ', $classes) . '">';
+    $result = '<' . $tag . ' class="' . implode(' ', $classes) . EBS_CONTAINER_CLASS . '">';
     $result .= do_shortcode($content);
     // AEA - Allow user to set custom HTML tag
     // $result .= '</div>';
@@ -149,6 +149,7 @@ add_shortcode('sub2column', 'osc_theme_column');
 add_shortcode('sub3column', 'osc_theme_column');
 add_shortcode('sub4column', 'osc_theme_column');
 
+// AEA - Applying DRY Principle
 function osc_theme_layout($params, $content = null) {
     extract(shortcode_atts(array(
         'md' => '',
@@ -175,7 +176,7 @@ function osc_theme_layout($params, $content = null) {
     }
     // AEA - Horizontal Small Devices
     // $result = '<div class="col-lg-6 ' . $mds . ' ' . $sms . ' ' . $xss . ' col-lg-offset-' . $off . '  one-half">';
-    $result = '<div class="' . $cols . ' col-lg-offset-' . $off . ' ' . $extra . ' ' . $css_class . '">';
+    $result = '<div class="' . $cols . ' col-lg-offset-' . $off . ' ' . $extra . ' ' . $css_class . EBS_CONTAINER_CLASS . '">';
     $result .= do_shortcode($content);
     $result .= '</div>';
 

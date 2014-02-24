@@ -1,43 +1,19 @@
-var gDropdown={
+var dropdown={
     title:"Button Dropdown Shortcode",
-    id :'#oscitas-form-dropdown'
+    id :'oscitas-form-dropdown',
+    pluginName: 'dropdown'
 };
 (function() {
-    tinymce.create('tinymce.plugins.oscitasDropdown', {
-        init : function(ed, url) {
-            ed.addButton('oscitasdropdown', {
-                title : 'Button Dropdown Shortcode',
-                image : url+'/icon.png',
-                onclick : function() {
-                    create_oscitas_dropdown();
-                    open_dialogue(gDropdown.id);
-                }
-            });
-        },
-        createControl : function(n, cm) {
-            return null;
-        },
-        getInfo : function() {
-            return {
-                longname : "Button Dropdown Shortcode",
-                author : 'Oscitas Themes',
-                authorurl : 'http://www.oscitasthemes.com/',
-                infourl : 'http://www.oscitasthemes.com/',
-                version : "2.0.0"
-            };
-        }
-    });
-    tinymce.PluginManager.add('oscitasdropdown', tinymce.plugins.oscitasDropdown);
+    _create_tinyMCE_options(dropdown);
 })();
 
-
-function create_oscitas_dropdown(){
-    if(jQuery('#oscitas-form-dropdown').length){
-        jQuery('#oscitas-form-dropdown').remove();
+function create_oscitas_dropdown(pluginObj){
+    if(jQuery(pluginObj.hashId).length){
+        jQuery(pluginObj.hashId).remove();
     }
     // creates a form to be displayed everytime the button is clicked
     // you should achieve this using AJAX instead of direct html code like this
-    var form = jQuery('<div id="oscitas-form-dropdown" class="oscitas-container"><table id="oscitas-table" class="form-table">\
+    var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th class="main_dp_th"><label for="oscitas-dropdown-heading" >Dropdown Button Features</label></th>\
 				<td><table class="tb_multiple_column_upper">\
@@ -140,6 +116,8 @@ function create_oscitas_dropdown(){
 
         var cusclass;
         if(table.find('#oscitas-dropdown-class').val()!=''){
+            // AEA - Rename 'class' parameter by 'css_class'
+            // cusclass= ' class="'+table.find('#oscitas-dropdown-class').val()+'"';
             cusclass= ' css_class="'+table.find('#oscitas-dropdown-class').val()+'"';
         }
         else{
@@ -178,7 +156,7 @@ function create_oscitas_dropdown(){
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 
-        close_dialogue(gDropdown.id);
+        close_dialogue(pluginObj.hashId);
     });
 }
 
