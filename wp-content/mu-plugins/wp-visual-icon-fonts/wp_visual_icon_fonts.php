@@ -3,7 +3,7 @@
 Plugin Name: WordPress Visual Icon Fonts
 Plugin URI: http://wordpress.org/plugins/
 Description: Easily and quickly add an extended 'Font Awesome' icon font icons to your content in the visual editor, visual icon management, search and filter all at your fingertips with this handy plugin.
-Version: 0.5.6
+Version: 0.5.7
 Author:  Paul van Zyl
 Author URI: http://profiles.wordpress.org/pushplaybang/
 */
@@ -30,6 +30,7 @@ Author URI: http://profiles.wordpress.org/pushplaybang/
  * **********************************************************************
  *
  */
+
 
 // Include Options
 include 'wpvi-options.php';
@@ -136,3 +137,15 @@ add_action('admin_head', 'wpvi_include_icon_list');
 add_action('admin_head', 'wpvi_admin');
 add_action( 'wp_enqueue_scripts', 'wp_v_icon_frontend_styles' );
 
+
+/* add a settings link to the plugin management page
+  - - - - - - - - - - - - - - - - - - - - - - - - - */
+function wpvi_plugin_add_settings_link( $links ) {
+    $settings_link = '<a href="options-general.php?page=wpvi_plugin_options">Settings</a>';
+    array_push( $links, $settings_link );
+    return $links;
+}
+
+$plugin = plugin_basename( __FILE__ );
+
+add_filter( "plugin_action_links_$plugin", 'wpvi_plugin_add_settings_link' );
