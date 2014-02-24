@@ -9,7 +9,7 @@
       <?php endif; ?>
             <li class="col-lg-3 col-md-3 col-sm-3 col-hs-6 col-xs-6">
               <figure>
-                <?php echo $customer->img; ?>
+                <a href="<?php echo $customer->url ?>" target="_blank"><?php echo $customer->img; ?></a>
                 <figcaption><?php echo $customer->caption; ?></figcaption>
               </figure>
             </li>
