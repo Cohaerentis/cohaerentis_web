@@ -23,7 +23,7 @@ $prefix = 'tn_';
  * Example:
  * [tn_follow]
  */
-function tn_shortcode_follow($atts) {
+function base_shortcode_follow($atts) {
    extract(shortcode_atts(array(
       'title' => '',
       'description' => '',
@@ -42,7 +42,7 @@ function tn_shortcode_follow($atts) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'follow', 'tn_shortcode_follow');
+add_shortcode($prefix . 'follow', 'base_shortcode_follow');
 
 /**
  * [tn_yt_videos_mosaic] shortcode
@@ -54,7 +54,7 @@ add_shortcode($prefix . 'follow', 'tn_shortcode_follow');
  * Example:
  * [tn_yt_videos_mosaic ytuser="youruserid"]
  */
-function tn_shortcode_yt_videos_mosaic($atts) {
+function base_shortcode_yt_videos_mosaic($atts) {
    extract(shortcode_atts(array(
       'ytuser' => '',
       'n' => 8,
@@ -66,7 +66,7 @@ function tn_shortcode_yt_videos_mosaic($atts) {
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'yt_videos_mosaic', 'tn_shortcode_yt_videos_mosaic');
+add_shortcode($prefix . 'yt_videos_mosaic', 'base_shortcode_yt_videos_mosaic');
 
 /**
  * [tn_modal] shortcode
@@ -74,7 +74,7 @@ add_shortcode($prefix . 'yt_videos_mosaic', 'tn_shortcode_yt_videos_mosaic');
  * Example:
  * [tn_modal type='hotelchain']
  */
-function tn_shortcode_modal($atts, $content) {
+function base_shortcode_modal($atts, $content) {
    extract(shortcode_atts(array(
       'title'        => '',
       'btn_label'    => 'Open Modal',
@@ -90,11 +90,11 @@ function tn_shortcode_modal($atts, $content) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-modal.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-modal.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'modal', 'tn_shortcode_modal');
+add_shortcode($prefix . 'modal', 'base_shortcode_modal');
 
 /**
  * [tn_glyphicon] shortcode
@@ -102,7 +102,7 @@ add_shortcode($prefix . 'modal', 'tn_shortcode_modal');
  * Example:
  * [tn_glyphicon name='info-circle']
  */
-function tn_shortcode_glyphicon($atts) {
+function base_shortcode_glyphicon($atts) {
    extract(shortcode_atts(array(
       'type'         => 'regular', // regular, halflings, social, filetypes
       'name'         => 'info',
@@ -116,7 +116,7 @@ function tn_shortcode_glyphicon($atts) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-glyphicon.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-glyphicon.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
@@ -128,7 +128,7 @@ add_shortcode($prefix . 'glyphicon', 'tn_shortcode_glyphicon');
  * Example:
  * [tn_fa_icon name='info-circle']
  */
-function tn_shortcode_fa_icon($atts) {
+function base_shortcode_fa_icon($atts) {
    extract(shortcode_atts(array(
       'name'         => 'info',
       'tag'          => 'i',
@@ -146,11 +146,11 @@ function tn_shortcode_fa_icon($atts) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-fa-icon.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-fa-icon.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'fa_icon', 'tn_shortcode_fa_icon');
+add_shortcode($prefix . 'fa_icon', 'base_shortcode_fa_icon');
 
 /**
  * [tn_fa_stack] shortcode
@@ -158,7 +158,7 @@ add_shortcode($prefix . 'fa_icon', 'tn_shortcode_fa_icon');
  * Example:
  * [tn_fa_stack]
  */
-function tn_shortcode_fa_stack($atts, $content) {
+function base_shortcode_fa_stack($atts, $content) {
    extract(shortcode_atts(array(
       'size'         => '', // lg, x2, x3, x4, x5
       'css_id'       => '',
@@ -166,11 +166,11 @@ function tn_shortcode_fa_stack($atts, $content) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-fa-stack.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-fa-stack.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'fa_stack', 'tn_shortcode_fa_stack');
+add_shortcode($prefix . 'fa_stack', 'base_shortcode_fa_stack');
 
 /**
  * [tn_icon_box] shortcode
@@ -178,7 +178,7 @@ add_shortcode($prefix . 'fa_stack', 'tn_shortcode_fa_stack');
  * Example:
  * [tn_icon_box]
  */
-function tn_shortcode_tn_icon_box($atts, $content) {
+function base_shortcode_icon_box($atts, $content) {
    extract(shortcode_atts(array(
       'label'        => '',
       'href'         => '',
@@ -188,11 +188,11 @@ function tn_shortcode_tn_icon_box($atts, $content) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-icon-box.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-icon-box.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'icon_box', 'tn_shortcode_tn_icon_box');
+add_shortcode($prefix . 'icon_box', 'base_shortcode_icon_box');
 
 /**
  * [tn_p] shortcode
@@ -200,18 +200,18 @@ add_shortcode($prefix . 'icon_box', 'tn_shortcode_tn_icon_box');
  * Example:
  * [tn_p css_class="featured"]
  */
-function base_shortcode_tn_p($atts, $content) {
+function base_shortcode_p($atts, $content) {
    extract(shortcode_atts(array(
       'css_id'       => '',
       'css_class'    => '',
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-p.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-p.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'p', 'base_shortcode_tn_p');
+add_shortcode($prefix . 'p', 'base_shortcode_p');
 
 /**
  * [tn_br] shortcode
@@ -219,16 +219,16 @@ add_shortcode($prefix . 'p', 'base_shortcode_tn_p');
  * Example:
  * [tn_br]
  */
-function base_shortcode_tn_br($atts, $content) {
+function base_shortcode_br($atts, $content) {
    extract(shortcode_atts(array(
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-br.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-br.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'br', 'base_shortcode_tn_br');
+add_shortcode($prefix . 'br', 'base_shortcode_br');
 
 /**
  * [tn_featured] shortcode
@@ -236,7 +236,7 @@ add_shortcode($prefix . 'br', 'base_shortcode_tn_br');
  * Example:
  * [tn_featured]
  */
-function base_shortcode_tn_featured($atts, $content) {
+function base_shortcode_featured($atts, $content) {
    extract(shortcode_atts(array(
       'tag'          => 'div',
       'css_id'       => '',
@@ -244,11 +244,11 @@ function base_shortcode_tn_featured($atts, $content) {
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-featured.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-featured.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'featured', 'base_shortcode_tn_featured');
+add_shortcode($prefix . 'featured', 'base_shortcode_featured');
 
 /**
  * [tn_theme_option] shortcode
@@ -256,17 +256,17 @@ add_shortcode($prefix . 'featured', 'base_shortcode_tn_featured');
  * Example:
  * [tn_theme_option name='email']
  */
-function base_shortcode_tn_theme_option($atts, $content) {
+function base_shortcode_theme_option($atts, $content) {
    extract(shortcode_atts(array(
       'name'         => '',
    ), $atts));
 
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-theme-option.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-theme-option.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'theme_option', 'base_shortcode_tn_theme_option');
+add_shortcode($prefix . 'theme_option', 'base_shortcode_theme_option');
 
 /**
  * [tn_gmap] shortcode
@@ -274,7 +274,7 @@ add_shortcode($prefix . 'theme_option', 'base_shortcode_tn_theme_option');
  * Example:
  * [tn_gmap address="Laredo, Cantabria, Spain"]
  */
-function base_shortcode_tn_gmap( $atts = null, $content = null ) {
+function base_shortcode_gmap( $atts = null, $content = null ) {
    extract(shortcode_atts(array(
       'width'        => 600,
       'height'       => 400,
@@ -298,8 +298,8 @@ function base_shortcode_tn_gmap( $atts = null, $content = null ) {
       'css_id'       => '',
    ), $atts));
    ob_start();
-   include(dirname(dirname(__FILE__)) . '/templates/shortcode-tn-gmap.php');
+   include(dirname(dirname(__FILE__)) . '/templates/shortcode-gmap.php');
    $html = ob_get_clean();
    return preg_replace('(\n|\r)', ' ', $html);
 }
-add_shortcode($prefix . 'gmap', 'base_shortcode_tn_gmap');
+add_shortcode($prefix . 'gmap', 'base_shortcode_gmap');
